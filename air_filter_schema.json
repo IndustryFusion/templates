@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://industry-fusion.org/types/v0.1/plasma-cutter",
-    "title": "Plasma cutter template",
-    "description": "Properties for type plasma cutter",
+    "$id": "https://industry-fusion.org/types/v0.1/air-filter",
+    "title": "Air filter template",
+    "description": "Properties for type air filter",
     "type": "object",
     "properties": {
         "urn_id": {
@@ -163,10 +163,6 @@
             "title": "Electrical Power (max.)",
             "description": "Electrical Power",
             "unit": "W"
-        },
-        "hasFilter": {
-            "relationship": "https://industry-fusion.org/types/v0.1/air-filter",
-            "$ref": "air_filter_schema.json"
         }
     }
 }
