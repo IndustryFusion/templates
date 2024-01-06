@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://industry-fusion.org/types/v0.1/air-filter",
+    "$id": "https://industry-fusion.org/types/v0.1/airFilter",
     "title": "Air filter template",
     "description": "Properties for type air filter",
     "type": "object",
