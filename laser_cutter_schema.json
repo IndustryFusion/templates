@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://industry-fusion.org/types/v0.1/laser-cutter",
+    "$id": "https://industry-fusion.org/types/v0.1/laserCutter",
     "title": "Laser cutter template",
     "description": "Properties for type laser cutter",
     "type": "object",
