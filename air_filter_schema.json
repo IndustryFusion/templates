@@ -22,6 +22,11 @@
             "description": "State of the Asset in Fleet Manager",
             "readOnly": true
         },
+        "asset_category": {
+            "type": "string",
+            "title": "Asset Category",
+            "description": "Category of the asset"
+        },
         "asset_manufacturer_name": {
             "type": "string",
             "title": "Asset Manufacturer Name",
