@@ -182,7 +182,7 @@
         },
         "hasFilter": {
             "relationship": "https://industry-fusion.org/types/v0.1/airFilter",
-            "$ref": "air_filter_schema.json"
+            "$ref": "airFilter_schema.json"
         }
     }
 }
