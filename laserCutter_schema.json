@@ -183,6 +183,14 @@
         "hasFilter": {
             "relationship": "https://industry-fusion.org/types/v0.1/airFilter",
             "$ref": "airFilter_schema.json"
+        },
+        "hasSource": {
+            "relationship": "https://industry-fusion.org/types/v0.1/powerSource",
+            "$ref": "powerSource_schema.json"
+        },
+        "hasTracker": {
+            "relationship": "https://industry-fusion.org/types/v0.1/airTracker",
+            "$ref": "airTracker_schema.json"
         }
     }
 }

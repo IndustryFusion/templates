@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://industry-fusion.org/types/v0.1/plasmaCutter",
-    "title": "Plasma cutter template",
-    "description": "Properties for type plasma cutter",
+    "$id": "https://industry-fusion.org/types/v0.1/powerSource",
+    "title": "Power source template",
+    "description": "Properties for type power source",
     "type": "object",
     "properties": {
         "urn_id": {
@@ -179,18 +179,6 @@
             "title": "Electrical Power (max.)",
             "description": "Electrical Power",
             "unit": "W"
-        },
-        "hasFilter": {
-            "relationship": "https://industry-fusion.org/types/v0.1/airFilter",
-            "$ref": "airFilter_schema.json"
-        },
-        "hasSource": {
-            "relationship": "https://industry-fusion.org/types/v0.1/powerSource",
-            "$ref": "powerSource_schema.json"
-        },
-        "hasTracker": {
-            "relationship": "https://industry-fusion.org/types/v0.1/airTracker",
-            "$ref": "airTracker_schema.json"
         }
     }
 }
