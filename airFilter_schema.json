@@ -173,6 +173,10 @@
             "title": "Electrical Power (max.)",
             "description": "Electrical Power",
             "unit": "W"
+        },
+        "hasCatridge": {
+            "relationship": ""
+            "$ref": "filterCatridge_schema.json"
         }
     }
 }
