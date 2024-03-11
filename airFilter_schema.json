@@ -175,8 +175,9 @@
             "unit": "W"
         },
         "hasCatridge": {
-            "relationship": ""
-            "$ref": "filterCatridge_schema.json"
+            "relationship": "https://industry-fusion.org/types/v0.1/filterCatridge"
+            "$ref": "filterCatridge_schema.json",
+            "type": "material"
         }
     }
 }
