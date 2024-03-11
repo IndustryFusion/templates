@@ -176,15 +176,23 @@
         },
         "hasFilter": {
             "relationship": "https://industry-fusion.org/types/v0.1/airFilter",
-            "$ref": "airFilter_schema.json"
+            "$ref": "airFilter_schema.json",
+            "type": "machine"
         },
         "hasSource": {
             "relationship": "https://industry-fusion.org/types/v0.1/powerSource",
-            "$ref": "powerSource_schema.json"
+            "$ref": "powerSource_schema.json",
+            "type": "machine"
         },
         "hasTracker": {
             "relationship": "https://industry-fusion.org/types/v0.1/airTracker",
-            "$ref": "airTracker_schema.json"
+            "$ref": "airTracker_schema.json",
+            "type": "machine"
+        },
+         "hasWorkpiece": {
+            "relationship": "https://industry-fusion.org/types/v0.1/metalWorkpiece",
+            "$ref": "metalWorkpiece_schema.json",
+            "type": "material"
         }
     }
 }
