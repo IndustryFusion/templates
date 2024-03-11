@@ -188,6 +188,11 @@
             "relationship": "https://industry-fusion.org/types/v0.1/airTracker",
             "$ref": "airTracker_schema.json",
             "type": "machine"
+        },
+        "hasWorkpiece": {
+            "relationship": "https://industry-fusion.org/types/v0.1/metalWorkpiece",
+            "$ref": "metalWorkpiece_schema.json",
+            "type": "material"
         }
     }
 }
