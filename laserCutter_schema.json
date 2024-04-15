@@ -5,6 +5,12 @@
     "description": "Properties for type laser cutter",
     "type": "object",
     "properties": {
+        "ifric_template_id": {
+            "type": "string",
+            "title": "IFRIC ID for Template",
+            "description": "ID mapping for ECLASS",
+            "default": "0173-1#01-AKJ976#017"
+        },
         "asset_status": {
             "type": "string",
             "title": "Asset Status",
