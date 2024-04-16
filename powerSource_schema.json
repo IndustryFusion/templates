@@ -5,6 +5,12 @@
     "description": "Properties for type power source",
     "type": "object",
     "properties": {
+        "ifric_template_id": {
+            "type": "string",
+            "title": "IFRIC Template ID",
+            "description": "ID mapping for ECLASS",
+            "default": "0173-1#01-AKJ982#017"
+        },
         "creation_date": {
             "type": "string",
             "title": "Creation Date",

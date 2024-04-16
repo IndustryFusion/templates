@@ -7,7 +7,7 @@
     "properties": {
         "ifric_template_id": {
             "type": "string",
-            "title": "IFRIC ID for Template",
+            "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
             "default": "0173-1#01-AKJ975#017"
         },
