@@ -9,7 +9,8 @@
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
-            "default": "0173-1#01-AGV474#005"
+            "default": "0173-1#01-AGV474#005",
+            "readOnly": true
         },
         "creation_date": {
             "type": "string",
