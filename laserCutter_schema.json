@@ -201,7 +201,6 @@
             "$ref": "metalWorkpiece_schema.json",
             "class": "material"
         },
-        ,
         "hasCooler": {
             "relationship": "https://industry-fusion.org/types/v0.1/laserCooler",
             "$ref": "laserCooler_schema.json",
