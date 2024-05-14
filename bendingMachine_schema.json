@@ -9,7 +9,7 @@
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
-            "default": "",
+            "default": "No classification in ECLASS",
             "readOnly": true
         },
         "asset_status": {
