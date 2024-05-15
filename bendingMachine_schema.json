@@ -180,21 +180,6 @@
             "title": "Electrical Power (max.)",
             "description": "Electrical Power",
             "unit": "W"
-        },
-        "hasFilter": {
-            "relationship": "https://industry-fusion.org/types/v0.1/airFilter",
-            "$ref": "airFilter_schema.json",
-            "class": "machine"
-        },
-        "hasTracker": {
-            "relationship": "https://industry-fusion.org/types/v0.1/airTracker",
-            "$ref": "airTracker_schema.json",
-            "class": "machine"
-        },
-        "hasWorkpiece": {
-            "relationship": "https://industry-fusion.org/types/v0.1/metalWorkpiece",
-            "$ref": "metalWorkpiece_schema.json",
-            "class": "material"
         }
     }
 }
