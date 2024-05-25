@@ -1,0 +1,230 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/airFilter",
+    "title": "Air filter template",
+    "description": "Properties for type air filter",
+    "type": "object",
+    "properties": {
+        "iffs:ifric_template_id": {
+            "type": "string",
+            "title": "IFRIC Template ID",
+            "description": "ID mapping for ECLASS",
+            "default": "0173-1#01-AKL755#017",
+            "readOnly": true
+        },
+        "iffs:creation_date": {
+            "type": "string",
+            "title": "Creation Date",
+            "description": "Date of the creation of asset"
+        },
+        "iffs:asset_status": {
+            "type": "string",
+            "title": "Asset Status",
+            "description": "State of the Asset in Fleet Manager",
+            "readOnly": true
+        },
+        "iffs:asset_category": {
+            "type": "string",
+            "title": "Asset Category",
+            "description": "Category of the asset"
+        },
+        "iffs:asset_manufacturer_name": {
+            "type": "string",
+            "title": "Asset Manufacturer Name",
+            "description": "The manufacturer of the asset"
+        },
+        "iffs:logo_manufacturer": {
+            "type": "object",
+            "title": "Logo Manufacturer",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "Logo of the manufacturer"
+        },
+        "iffs:product_name": {
+            "type": "string",
+            "title": "Product Name",
+            "description": "Name of the asset from the manufacturer"
+        },
+        "iffs:asset_serial_number": {
+            "type": "string",
+            "title": "Serial Number",
+            "description": "Serial number of asset"
+        },
+        "iffs:product_icon": {
+            "type": "object",
+            "title": "Product Icon",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "The production icon of the asset"
+        },
+        "iffs:manufacturing_year": {
+            "type": "number",
+            "title": "Year of manufacturing",
+            "description": "The manufacturer year of the asset"
+        },
+        "iffs:documentation": {
+            "type": "object",
+            "title": "Operating Manual",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "The legally required documentation for the machine"
+        },
+        "iffs:asset_communication_protocol": {
+            "type": "array",
+            "title": "Communication Protocol",
+            "description": "The communication protocol of the asset",
+            "enum": [
+                "opc-ua",
+                "mqtt",
+                "modbus",
+                "http"
+            ]
+        },
+        "iffs:ce_marking": {
+            "type": "object",
+            "title": "CE-Marking",
+            "description": "The ce-marking of the asset",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf"
+        },
+        "iffs:height": {
+            "type": "number",
+            "title": "Height",
+            "description": "The height of the asset in millimeters",
+            "unit": "mm"
+        },
+        "iffs:width": {
+            "type": "number",
+            "title": "Width",
+            "description": "the width of the asset in millimeters",
+            "unit": "mm"
+        },
+        "iffs:length": {
+            "type": "number",
+            "title": "Length",
+            "description": "the length of the asset in millimeters",
+            "unit": "mm"
+        },
+        "iffs:weigth": {
+            "type": "number",
+            "title": "Weight",
+            "description": "the length of the asset in kilograms",
+            "unit": "kg"
+        },
+        "iffs:ambient_operating_temperature_min": {
+            "type": "number",
+            "title": "Ambient Operating Temperature (min.)",
+            "description": "The min temperature in °C",
+            "unit": "°C"
+        },
+        "iffs:ambient_operating_temperature_max": {
+            "type": "number",
+            "title": "Ambient Operating Temperature (max.)",
+            "description": "The max temperature in °C",
+            "unit": "°C"
+        },
+        "iffs:relative_humidity_min": {
+            "type": "number",
+            "title": "Relative Humidity (min.)",
+            "description": "The min humidity in percentage",
+            "unit": "%"
+        },
+        "iffs:relative_humidity_max": {
+            "type": "number",
+            "title": "Relative Humidity (max.)",
+            "description": "The max humidity in percentage",
+            "unit": "%"
+        },
+        "iffs:atmospheric_pressure_min": {
+            "type": "number",
+            "title": "Atmospheric Pressure (min.)",
+            "description": "The min pressure in mbar",
+            "unit": "mbar"
+        },
+        "iffs:atmospheric_pressure_max": {
+            "type": "number",
+            "title": "Atmospheric Pressure (max.)",
+            "description": "the max pressure in mbar",
+            "unit": "mbar"
+        },
+        "iffs:dustiness_max": {
+            "type": "number",
+            "title": "Dust Density (max.)",
+            "description": "The max dust density in mg/m³",
+            "unit": "mg/m³"
+        },
+        "iffs:supply_voltage": {
+            "type": "number",
+            "title": "Supply Voltage (max.)",
+            "description": "Supply voltage",
+            "unit": "V"
+        },
+        "iffs:frequency": {
+            "type": "number",
+            "title": "Frequency (max.)",
+            "description": "Frequency",
+            "unit": "Hz"
+        },
+        "iffs:voltage_type": {
+            "type": "array",
+            "title": "Voltage Type",
+            "description": "Voltage type",
+            "enum": [
+                "AC",
+                "DC",
+                "3-phase AC"
+            ]
+        },
+        "iffs:electric_power": {
+            "type": "number",
+            "title": "Electrical Power (max.)",
+            "description": "Electrical Power",
+            "unit": "W"
+        },
+        "iffr:machine_state": {
+            "type": "number",
+            "title": "Machine State",
+            "description": "Status of the machine"
+        },
+        "iffr:power_consumption": {
+            "type": "number",
+            "title": "Power Consumption",
+            "description": "Power Consumption of the machine",
+            "unit": "Kw"
+        },
+        "iffr:operating_hours": {
+            "type": "number",
+            "title": "Operating Hours",
+            "description": "Operating Hours of the machine"
+        },
+        "iffr:input_pressure": {
+            "type": "number",
+            "title": "Input Pressure",
+            "description": "Input Pressure of the machine",
+            "unit": "Kg/ms2"
+        },
+        "iffr:motor_frequency": {
+            "type": "number",
+            "title": "Motor Frequency",
+            "description": "Motor Frequency of the machine",
+            "unit": "Hz"
+        },
+        "iffr:pressure_difference": {
+            "type": "number",
+            "title": "Pressure Difference",
+            "description": "Pressure Difference of the machine",
+            "unit": "Pa"
+        },
+        "iffr:volumentric_flow_rate_hours": {
+            "type": "number",
+            "title": "volumentric Flow Rate Hours",
+            "description": "volumentric Flow Rate Hours of the machine",
+            "unit": "m3/s"
+        },
+        "iffBaseEntities:hasCatridge": {
+            "relationship": "https://industry-fusion.org/types/v0.1/filterCatridge",
+            "$ref": "filterCatridge_schema.json",
+            "class": "material"
+        }
+    }
+}
