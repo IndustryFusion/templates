@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://industry-fusion.org/types/v0.1/laserCutter",
+    "$id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/laserCutter",
     "title": "Laser cutter template",
     "description": "Properties for type laser cutter",
     "type": "object",
@@ -282,23 +282,23 @@
             "unit": "W"
         },
         "iffBaseEntities:hasFilter": {
-            "relationship": "https://industry-fusion.org/types/v0.1/airFilter",
+            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/airFilter",
             "$ref": "airFilter_schema.json"
         },
         "iffBaseEntities:hasSource": {
-            "relationship": "https://industry-fusion.org/types/v0.1/powerSource",
+            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/powerSource",
             "$ref": "powerSource_schema.json"
         },
         "iffBaseEntities:hasTracker": {
-            "relationship": "https://industry-fusion.org/types/v0.1/airTracker",
+            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/airTracker",
             "$ref": "airTracker_schema.json"
         },
         "iffBaseEntities:hasWorkpiece": {
-            "relationship": "https://industry-fusion.org/types/v0.1/metalWorkpiece",
+            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/metalWorkpiece",
             "$ref": "metalWorkpiece_schema.json"
         },
         "iffBaseEntities:hasCooler": {
-            "relationship": "https://industry-fusion.org/types/v0.1/laserCooler",
+            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/laserCooler",
             "$ref": "laserCooler_schema.json"
         }
     }
