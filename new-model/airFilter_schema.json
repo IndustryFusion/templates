@@ -372,5 +372,6 @@
             "datatype": "xsd:url",
             "title": "URI of the product",
             "description": "unique global identification of the product using an universal resource identifier (URI)"
+          }
     }
 }
