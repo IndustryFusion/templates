@@ -1,0 +1,83 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://industry-fusion.org/types/v0.1/metalWorkpiece",
+    "title": "Metal Workpiece template",
+    "description": "Properties for type Metal Workpiece",
+    "type": "object",
+    "properties": {
+        "iffs:ifric_template_id": {
+            "type": "string",
+            "title": "IFRIC Template ID",
+            "description": "ID mapping for ECLASS",
+            "default": "0173-1#01-AGV474#005",
+            "readOnly": true
+        },
+        "iffs:creation_date": {
+            "type": "string",
+            "title": "Creation Date",
+            "description": "Date of the creation of asset"
+        },
+        "iffs:asset_status": {
+            "type": "string",
+            "title": "Asset Status",
+            "description": "State of the Asset in Fleet Manager",
+            "readOnly": true
+        },
+        "iffs:asset_category": {
+            "type": "string",
+            "title": "Asset Category",
+            "description": "Category of the asset"
+        },
+        "iffs:asset_manufacturer_name": {
+            "type": "string",
+            "title": "Asset Manufacturer Name",
+            "description": "The manufacturer of the asset"
+        },
+        "iffs:product_name": {
+            "type": "string",
+            "title": "Product Name",
+            "description": "Name of the asset from the manufacturer"
+        },
+        "iffs:asset_serial_number": {
+            "type": "string",
+            "title": "Serial Number",
+            "description": "Serial number of asset"
+        },
+        "iffs:product_icon": {
+            "type": "object",
+            "title": "Product Icon",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "The production icon of the asset"
+        },
+        "iffs:manufacturing_year": {
+            "type": "number",
+            "title": "Year of manufacturing",
+            "description": "The manufacturer year of the asset"
+        },
+        "iffs:height": {
+            "type": "number",
+            "title": "Height",
+            "description": "The height of the asset in millimeters",
+            "unit": "mm"
+        },
+        "iffs:width": {
+            "type": "number",
+            "title": "Width",
+            "description": "the width of the asset in millimeters",
+            "unit": "mm"
+        },
+        "iffs:length": {
+            "type": "number",
+            "title": "Length",
+            "description": "the length of the asset in millimeters",
+            "unit": "mm"
+        },
+        "iffs:weigth": {
+            "type": "number",
+            "title": "Weight",
+            "description": "the length of the asset in kilograms",
+            "unit": "kg"
+        }
+    }
+}

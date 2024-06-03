@@ -225,6 +225,152 @@
             "relationship": "https://industry-fusion.org/types/v0.1/filterCatridge",
             "$ref": "filterCatridge_schema.json",
             "class": "material"
-        }
+        },  
+        "eclass:automation_interface_present": {
+            "type": "string",
+            "datatype": "xsd:boolean",
+            "title": "automation interface present",
+            "description": "specification whether the device is equipped with an automation interface",
+            "enum":[
+              "No",
+              "Yes"
+            ]
+          },
+          "eclass:water_cooling_present": {
+            "type": "string",
+            "datatype": "xsd:boolean",
+            "title": "water cooling present",
+            "description": "specification whether a water cooling exists",
+            "enum":[
+              "No",
+              "Yes"
+            ]
+          },
+          "eclass:s_sign_present": {
+            "type": "string",
+            "datatype": "xsd:boolean",
+            "title": "S-sign (VDE 0544) present",
+            "description": "specification whether the S-sign exists",
+            "enum":[
+              "No",
+              "Yes"
+            ]
+          },
+          "eclass:length": {
+            "type": "string",
+            "datatype": "xsd:double",
+            "title": "length",
+            "description": "for objects with orientation in preferred position during use the dimension perpendicular to diameter/height/width/depth",
+            "unit": "mm"
+          },
+          "eclass:power_adjustment": {
+            "type": "string",
+            "title": "power adjustment",
+            "description": "information about the possibility to adjust the electric initial effective power",
+            "enum": [
+              "continuously",
+              "level designed",
+              "level switched"
+            ]
+          },
+          "eclass:water_cooling_retrofittable": {
+            "type": "string",
+            "datatype": "xsd:boolean",
+            "title": "water cooling retrofittable",
+            "description": "specification whether water cooling can be retrofitted",
+            "enum":[
+              "No",
+              "Yes"
+            ]
+          },
+          "eclass:height": {
+            "type": "string",
+            "datatype": "xsd:double",
+            "title": "height",
+            "description": "for objects with orientation in preferred position during use the dimension perpendicular to diameter/length/width/depth",
+            "unit": "mm"
+          },
+          "eclass:empty_weight": {
+            "type": "string",
+            "datatype": "xsd:double",
+            "title": "empty weight",
+            "description": "mass of the object without add-on part and operating materials",
+            "unit": "kg"
+          },
+          "eclass:fuse": {
+            "type": "string",
+            "datatype": "xsd:double",
+            "title": "fuse (time lag)",
+            "description": "specification of the amperage of the overcurrent protection device. A fuse is action-delayed if the amperage can be over the maximum allowed value for a short time without reacting",
+            "unit": "A"
+          },
+          "eclass:width": {
+            "type": "string",
+            "datatype": "xsd:double",
+            "title": "width",
+            "description": "for objects with orientation in preferred position during use the dimension perpendicular to height/ length/depth",
+            "unit": "mm"
+          },
+          "eclass:address_link": {
+            "type": "string",
+            "title": "address of additional link",
+            "description": "web site address where information about the product or contact is given"
+          },
+          "eclass:brand": {
+            "type": "string",
+            "title": "Brand",
+            "description": "Part of the naming for the support and the recognition of the brand position of products and services consisting of words, numbers, letters or other characters. Registered brands and trademarks are indicated with the appropriate protective signs (® or TM)"
+          },
+          "eclass:supplier_product_order_suffix": {
+            "type": "string",
+            "datatype": "xsd:string",
+            "title": "Supplier product order suffix",
+            "description": "By the supplier awarded string for the identification of additional attributes, not by a structured supplier item number may be expressed"
+          },
+          "eclass:supplier_product_root": {
+            "type": "string",
+            "datatype": "xsd:string",
+            "title": "Supplier product root",
+            "description": "Top level of a 3 level supplier specific product hierarchy"
+          },
+          "eclass:supplier_article_number": {
+            "type": "string",
+            "title": "product article number of supplier",
+            "description": "unique product order identifier of the supplier"
+          },
+          "eclass:supplier_product_designation": {
+            "type": "string",
+            "datatype": "xsd:string",
+            "title": "Supplier product designation",
+            "description": "Short description of the product (short text)"
+          },
+          "eclass:supplier_name": {
+            "type": "string",
+            "title": "name of supplier",
+            "description": "name of supplier which provides the customer with a product or a service"
+          },
+          "eclass:product_type": {
+            "type": "string",
+            "datatype": "xsd:string",
+            "title": "Product type",
+            "description": "Characteristic to differentiate between different products of a product family or special variants"
+          },
+          "eclass:manufacturer_product_designation": {
+            "type": "string",
+            "datatype": "xsd:string",
+            "title": "Manufacturer product designation",
+            "description": "Short description of the product (short text)"
+          },
+          "eclass:gln_manufacturer": {
+            "type": "string",
+            "datatype": "xsd:integer",
+            "title": "GLN of manufacturer",
+            "description": "internationally unique identification number for the manufacturer of the device or the product and for the physical location"
+          },
+          "eclass:uri_product": {
+            "type": "string",
+            "datatype": "xsd:url",
+            "title": "URI of the product",
+            "description": "unique global identification of the product using an universal resource identifier (URI)"
     }
 }

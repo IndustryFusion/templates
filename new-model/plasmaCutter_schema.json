@@ -1,27 +1,27 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/laserCutter",
-    "title": "Laser cutter template",
-    "description": "Properties for type laser cutter",
+    "$id": "https://industry-fusion.org/types/v0.1/plasmaCutter",
+    "title": "Plasma cutter template",
+    "description": "Properties for type plasma cutter",
     "type": "object",
     "properties": {
         "iffs:ifric_template_id": {
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
-            "default": "0173-1#01-AKJ976#017",
-            "readOnly": true
-        },
-        "iffs:asset_status": {
-            "type": "string",
-            "title": "Asset Status",
-            "description": "State of the Asset in Fleet Manager",
+            "default": "0173-1#01-AKJ975#017",
             "readOnly": true
         },
         "iffs:creation_date": {
             "type": "string",
             "title": "Creation Date",
             "description": "Date of the creation of asset"
+        },
+        "iffs:asset_status": {
+            "type": "string",
+            "title": "Asset Status",
+            "description": "State of the Asset in Fleet Manager",
+            "readOnly": true
         },
         "iffs:asset_category": {
             "type": "string",
@@ -105,7 +105,7 @@
             "description": "the length of the asset in millimeters",
             "unit": "mm"
         },
-        "iffs:weight": {
+        "iffs:weigth": {
             "type": "number",
             "title": "Weight",
             "description": "the length of the asset in kilograms",
@@ -181,159 +181,65 @@
             "description": "Electrical Power",
             "unit": "W"
         },
-        "iffr:machine_state": {
-            "type": "number",
-            "title": "Machine State",
-            "description": "State of the live machine",
-            "readOnly": true
-        },
-        "iffr:volatge_l1": {
-            "type": "number",
-            "title": "L1 Voltage",
-            "description": "Voltage at L1",
-            "readOnly": true,
-            "unit": "V"
-        },
-        "iffr:volatge_l2": {
-            "type": "number",
-            "title": "L2 Voltage",
-            "description": "Voltage at L2",
-            "readOnly": true,
-            "unit": "V"
-        },
-        "iffr:volatge_l3": {
-            "type": "number",
-            "title": "L3 Voltage",
-            "description": "Voltage at L3",
-            "readOnly": true,
-            "unit": "V"
-        },
-        "iffr:current_strength_l1": {
-            "type": "number",
-            "title": "L1 Current",
-            "description": "Current at L1",
-            "readOnly": true,
-            "unit": "A"
-        },
-        "iffr:current_strength_l2": {
-            "type": "number",
-            "title": "L2 Current",
-            "description": "Current at L2",
-            "readOnly": true,
-            "unit": "A"
-        },
-        "iffr:current_strength_l3": {
-            "type": "number",
-            "title": "L3 Current",
-            "description": "Current at L3",
-            "readOnly": true,
-            "unit": "A"
-        },
-        "iffr:medium_name": {
-            "type": "string",
-            "title": "Gas Medium Name",
-            "description": "Name of the Gas",
-            "readOnly": true
-        },
-        "iffr:target_pressure": {
-            "type": "number",
-            "title": "Required Pressure of Gas",
-            "description": "Required Gas Pressure",
-            "readOnly": true,
-            "unit": "Bar"
-        },
-        "iffr:material_thickness": {
-            "type": "number",
-            "title": "Material Thickness",
-            "description": "Thickness of the Material",
-            "readOnly": true,
-            "unit": "MM"
-        },
-        "iffr:cutter_head_speed": {
-            "type": "number",
-            "title": "Speed of the Cutter Head",
-            "description": "Cutter Head Speed",
-            "readOnly": true,
-            "unit": "RPM"
-        },
-         "iffr:machine_position_x": {
-            "type": "number",
-            "title": "X Co-ordinate of Cutter",
-            "description": "X Co-ordinate of Cutter",
-            "readOnly": true
-        },
-        "iffr:machine_position_y": {
-            "type": "number",
-            "title": "Y Co-ordinate of Cutter",
-            "description": "Y Co-ordinate of Cutter",
-            "readOnly": true
-        },
-        "iffr:machine_position_z": {
-            "type": "number",
-            "title": "Z Co-ordinate of Cutter",
-            "description": "Z Co-ordinate of Cutter",
-            "readOnly": true
-        },
-        "iffr:power_consumption": {
-            "type": "number",
-            "title": "Active Power Consumption",
-            "description": "Power Consumption of the Machine",
-            "readOnly": true,
-            "unit": "W"
-        },
         "iffBaseEntities:hasFilter": {
-            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/airFilter",
-            "$ref": "airFilter_schema.json"
+            "relationship": "https://industry-fusion.org/types/v0.1/airFilter",
+            "$ref": "airFilter_schema.json",
+            "class": "machine"
         },
         "iffBaseEntities:hasSource": {
-            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/powerSource",
-            "$ref": "powerSource_schema.json"
+            "relationship": "https://industry-fusion.org/types/v0.1/powerSource",
+            "$ref": "powerSource_schema.json",
+            "class": "machine"
         },
         "iffBaseEntities:hasTracker": {
-            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/airTracker",
-            "$ref": "airTracker_schema.json"
+            "relationship": "https://industry-fusion.org/types/v0.1/airTracker",
+            "$ref": "airTracker_schema.json",
+            "class": "machine"
         },
-        "iffBaseEntities:hasWorkpiece": {
-            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/metalWorkpiece",
-            "$ref": "metalWorkpiece_schema.json"
+         "iffBaseEntities:hasWorkpiece": {
+            "relationship": "https://industry-fusion.org/types/v0.1/metalWorkpiece",
+            "$ref": "metalWorkpiece_schema.json",
+            "class": "material"
         },
-        "iffBaseEntities:hasCooler": {
-            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/laserCooler",
-            "$ref": "laserCooler_schema.json"
-        },
-          "eclass:hs_code_wco": {
+        "eclass:remote_control_present": {
             "type": "string",
-            "datatype": "xsd:integer",
-            "title": "HS-Code of the WCO",
-            "description": "Internationally applied 4 to 6-digit coding of classes of goods as defined by the Harmonized System (HS) of the World Customs Organization (WCO)"
-          },
-          "eclass:customs_tariff_number_use": {
-            "type": "string",
-            "datatype": "string",
-            "title": "Use of customs tariff number",
-            "description": "Indicates what the tariff number is for (for example, import or export)",
+            "datatype": "xsd:boolean",
+            "title": "remote control present",
+            "description": "specification whether the device is equipped with a remote control",
             "enum":[
-              "import",
-              "export",
-              "other"
+              "No",
+              "Yes"
             ]
           },
-          "eclass:customs_tariff_number_type": {
+          "eclass:automation_interface_present": {
             "type": "string",
-            "title": "Type of customs tariff number",
-            "description": "Describes the membership of the tariff number to a specific type in terms of structure and meaning and thus also defines its general context",
+            "datatype": "xsd:boolean",
+            "title": "automation interface present",
+            "description": "specification whether the device is equipped with an automation interface",
             "enum":[
-              "TARIC",
-              "AHTN 2012",
-              "AHTN 2017",
-              "PDK 2012",
-              "PDK 2017"
+              "No",
+              "Yes"
             ]
           },
-          "eclass:customs_tariff_number": {
+          "eclass:water_cooling_present": {
             "type": "string",
-            "title": "Customs tariff number",
-            "description": "Nomenclature of goods in accordance with a regulation relating to customs tariff and statistical purposes for application to a specific country and / or region. The structure of the customs tariff number is defined by the type otherwise indicated"
+            "datatype": "xsd:boolean",
+            "title": "water cooling present",
+            "description": "specification whether a water cooling exists",
+            "enum":[
+              "No",
+              "Yes"
+            ]
+          },
+          "eclass:power_adjustment": {
+            "type": "string",
+            "title": "power adjustment",
+            "description": "information about the possibility to adjust the electric initial effective power",
+            "enum": [
+              "continuously",
+              "level designed",
+              "level switched"
+            ]
           },
           "eclass:height": {
             "type": "string",
@@ -349,11 +255,18 @@
             "description": "mass of the object without add-on part and operating materials",
             "unit": "kg"
           },
-          "eclass:fuse": {
+          "eclass:cutting_current_60%": {
             "type": "string",
             "datatype": "xsd:double",
-            "title": "fuse (time lag)",
-            "description": "specification of the amperage of the overcurrent protection device. A fuse is action-delayed if the amperage can be over the maximum allowed value for a short time without reacting",
+            "title": "cutting current (at 60% ED/40°C)",
+            "description": "percentage specification of the permitted operating interval of an operating medium at the specified cutting current after an obligatory rest period",
+            "unit": "A"
+          },
+          "eclass:cutting_current_40%": {
+            "type": "string",
+            "datatype": "xsd:double",
+            "title": "cutting current (at 40% ED/40°C)",
+            "description": "percentage specification of the permitted operating interval of an operating medium at the specified cutting current after an obligatory rest period",
             "unit": "A"
           },
           "eclass:cutting_current_35%": {
@@ -432,5 +345,6 @@
             "title": "URI of the product",
             "description": "unique global identification of the product using an universal resource identifier (URI)"
           }
+
     }
 }
