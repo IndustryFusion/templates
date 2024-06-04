@@ -87,18 +87,6 @@
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf"
         },
-        "iffs:height": {
-            "type": "number",
-            "title": "Height",
-            "description": "The height of the asset in millimeters",
-            "unit": "mm"
-        },
-        "iffs:width": {
-            "type": "number",
-            "title": "Width",
-            "description": "the width of the asset in millimeters",
-            "unit": "mm"
-        },
         "iffs:length": {
             "type": "number",
             "title": "Length",
@@ -223,8 +211,7 @@
         },
         "iffBaseEntities:hasCatridge": {
             "relationship": "https://industry-fusion.org/types/v0.1/filterCatridge",
-            "$ref": "filterCatridge_schema.json",
-            "class": "material"
+            "$ref": "filterCatridge_schema.json"
         },  
         "eclass:automation_interface_present": {
             "type": "string",
@@ -255,13 +242,6 @@
               "No",
               "Yes"
             ]
-          },
-          "eclass:length": {
-            "type": "string",
-            "datatype": "xsd:double",
-            "title": "length",
-            "description": "for objects with orientation in preferred position during use the dimension perpendicular to diameter/height/width/depth",
-            "unit": "mm"
           },
           "eclass:power_adjustment": {
             "type": "string",
@@ -303,13 +283,6 @@
             "title": "fuse (time lag)",
             "description": "specification of the amperage of the overcurrent protection device. A fuse is action-delayed if the amperage can be over the maximum allowed value for a short time without reacting",
             "unit": "A"
-          },
-          "eclass:width": {
-            "type": "string",
-            "datatype": "xsd:double",
-            "title": "width",
-            "description": "for objects with orientation in preferred position during use the dimension perpendicular to height/ length/depth",
-            "unit": "mm"
           },
           "eclass:address_link": {
             "type": "string",

@@ -108,7 +108,7 @@
         "iffs:weight": {
             "type": "number",
             "title": "Weight",
-            "description": "the length of the asset in kilograms",
+            "description": "the weight of the asset in kilograms",
             "unit": "kg"
         },
         "iffs:ambient_operating_temperature_min": {
@@ -334,13 +334,6 @@
             "type": "string",
             "title": "Customs tariff number",
             "description": "Nomenclature of goods in accordance with a regulation relating to customs tariff and statistical purposes for application to a specific country and / or region. The structure of the customs tariff number is defined by the type otherwise indicated"
-          },
-          "eclass:height": {
-            "type": "string",
-            "datatype": "xsd:double",
-            "title": "height",
-            "description": "for objects with orientation in preferred position during use the dimension perpendicular to diameter/length/width/depth",
-            "unit": "mm"
           },
           "eclass:empty_weight": {
             "type": "string",

@@ -105,10 +105,10 @@
             "description": "the length of the asset in millimeters",
             "unit": "mm"
         },
-        "iffs:weigth": {
+        "iffs:Weight": {
             "type": "number",
             "title": "Weight",
-            "description": "the length of the asset in kilograms",
+            "description": "the Weight of the asset in kilograms",
             "unit": "kg"
         },
         "iffs:ambient_operating_temperature_min": {

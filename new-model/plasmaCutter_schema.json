@@ -105,10 +105,10 @@
             "description": "the length of the asset in millimeters",
             "unit": "mm"
         },
-        "iffs:weigth": {
+        "iffs:Weight": {
             "type": "number",
             "title": "Weight",
-            "description": "the length of the asset in kilograms",
+            "description": "the weight of the asset in kilograms",
             "unit": "kg"
         },
         "iffs:ambient_operating_temperature_min": {
@@ -240,13 +240,6 @@
               "level designed",
               "level switched"
             ]
-          },
-          "eclass:height": {
-            "type": "string",
-            "datatype": "xsd:double",
-            "title": "height",
-            "description": "for objects with orientation in preferred position during use the dimension perpendicular to diameter/length/width/depth",
-            "unit": "mm"
           },
           "eclass:empty_weight": {
             "type": "string",
