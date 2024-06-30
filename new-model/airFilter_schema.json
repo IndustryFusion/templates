@@ -5,69 +5,102 @@
     "description": "Properties for type air filter",
     "type": "object",
     "properties": {
-        "ifric_template_id": {
+        "eclass_template_id": {
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
             "default": "0173-1#01-AKL755#017",
-            "readOnly": true
+            "readOnly": true,
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
         },
         "creation_date": {
             "type": "string",
             "title": "Creation Date",
-            "description": "Date of the creation of asset"
+            "description": "Date of the creation of asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "application"
         },
         "asset_status": {
             "type": "string",
             "title": "Asset Status",
             "description": "State of the Asset in Fleet Manager",
-            "readOnly": true
+            "readOnly": true,
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "application"
         },
         "asset_category": {
             "type": "string",
             "title": "Asset Category",
-            "description": "Category of the asset"
+            "description": "Category of the asset",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
         },
         "asset_manufacturer_name": {
             "type": "string",
             "title": "Asset Manufacturer Name",
-            "description": "The manufacturer of the asset"
+            "description": "The manufacturer of the asset",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "logo_manufacturer": {
             "type": "object",
             "title": "Logo Manufacturer",
             "contentEncoding": "base64",
             "contentMediaType": "image/png",
-            "description": "Logo of the manufacturer"
+            "description": "Logo of the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "product_name": {
             "type": "string",
             "title": "Product Name",
-            "description": "Name of the asset from the manufacturer"
+            "description": "Name of the asset from the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "asset_serial_number": {
             "type": "string",
             "title": "Serial Number",
-            "description": "Serial number of asset"
+            "description": "Serial number of asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
         },
         "product_icon": {
             "type": "object",
             "title": "Product Icon",
             "contentEncoding": "base64",
             "contentMediaType": "image/png",
-            "description": "The production icon of the asset"
+            "description": "The production icon of the asset",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "manufacturing_year": {
             "type": "number",
             "title": "Year of manufacturing",
-            "description": "The manufacturer year of the asset"
+            "description": "The manufacturer year of the asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
         },
         "documentation": {
             "type": "object",
             "title": "Operating Manual",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "description": "The legally required documentation for the machine"
+            "description": "The legally required documentation for the machine",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "asset_communication_protocol": {
             "type": "array",
@@ -78,80 +111,119 @@
                 "mqtt",
                 "modbus",
                 "http"
-            ]
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "ce_marking": {
             "type": "object",
             "title": "CE-Marking",
             "description": "The ce-marking of the asset",
             "contentEncoding": "base64",
-            "contentMediaType": "application/pdf"
+            "contentMediaType": "application/pdf",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "length": {
             "type": "number",
             "title": "Length",
             "description": "the length of the asset in millimeters",
-            "unit": "mm"
+            "unit": "mm",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "weigth": {
             "type": "number",
             "title": "Weight",
             "description": "the length of the asset in kilograms",
-            "unit": "kg"
+            "unit": "kg",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "ambient_operating_temperature_min": {
             "type": "number",
             "title": "Ambient Operating Temperature (min.)",
             "description": "The min temperature in °C",
-            "unit": "°C"
+            "unit": "°C",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "ambient_operating_temperature_max": {
             "type": "number",
             "title": "Ambient Operating Temperature (max.)",
             "description": "The max temperature in °C",
-            "unit": "°C"
+            "unit": "°C",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "relative_humidity_min": {
             "type": "number",
             "title": "Relative Humidity (min.)",
             "description": "The min humidity in percentage",
-            "unit": "%"
+            "unit": "%",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "relative_humidity_max": {
             "type": "number",
             "title": "Relative Humidity (max.)",
             "description": "The max humidity in percentage",
-            "unit": "%"
+            "unit": "%",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "atmospheric_pressure_min": {
             "type": "number",
             "title": "Atmospheric Pressure (min.)",
             "description": "The min pressure in mbar",
-            "unit": "mbar"
+            "unit": "mbar",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "atmospheric_pressure_max": {
             "type": "number",
             "title": "Atmospheric Pressure (max.)",
             "description": "the max pressure in mbar",
-            "unit": "mbar"
+            "unit": "mbar",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "dustiness_max": {
             "type": "number",
             "title": "Dust Density (max.)",
             "description": "The max dust density in mg/m³",
-            "unit": "mg/m³"
+            "unit": "mg/m³",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "supply_voltage": {
             "type": "number",
             "title": "Supply Voltage (max.)",
             "description": "Supply voltage",
-            "unit": "V"
+            "unit": "V",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "frequency": {
             "type": "number",
             "title": "Frequency (max.)",
             "description": "Frequency",
-            "unit": "Hz"
+            "unit": "Hz",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "voltage_type": {
             "type": "array",
@@ -161,57 +233,89 @@
                 "AC",
                 "DC",
                 "3-phase AC"
-            ]
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "electric_power": {
             "type": "number",
             "title": "Electrical Power (max.)",
             "description": "Electrical Power",
-            "unit": "W"
+            "unit": "W",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         },
         "machine_state": {
             "type": "number",
             "title": "Machine State",
-            "description": "Status of the machine"
+            "description": "Status of the machine",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
         },
         "power_consumption": {
             "type": "number",
             "title": "Power Consumption",
             "description": "Power Consumption of the machine",
-            "unit": "Kw"
+            "unit": "Kw",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
         },
         "operating_hours": {
             "type": "number",
             "title": "Operating Hours",
-            "description": "Operating Hours of the machine"
+            "description": "Operating Hours of the machine",
+            "unit": "Hr"
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
         },
         "input_pressure": {
             "type": "number",
             "title": "Input Pressure",
             "description": "Input Pressure of the machine",
-            "unit": "Kg/ms2"
+            "unit": "Kg/ms2",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
         },
         "motor_frequency": {
             "type": "number",
             "title": "Motor Frequency",
             "description": "Motor Frequency of the machine",
-            "unit": "Hz"
+            "unit": "Hz",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
         },
         "pressure_difference": {
             "type": "number",
             "title": "Pressure Difference",
             "description": "Pressure Difference of the machine",
-            "unit": "Pa"
+            "unit": "Pa",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
         },
         "volumentric_flow_rate_hours": {
             "type": "number",
             "title": "volumentric Flow Rate Hours",
             "description": "volumentric Flow Rate Hours of the machine",
-            "unit": "m3/s"
+            "unit": "m3/s",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
         },
         "hasCatridge": {
-            "relationship": "https://industry-fusion.org/types/v0.1/filterCatridge",
-            "$ref": "filterCatridge_schema.json"
+            "relationship": "https://industry-fusion.org/base/v0.1/filterCatridge",
+            "$ref": "filterCatridge_schema.json",
+            "segment": "component",
+            "class": "material",
+            "model": false,
+            "owner_ref": "application"
         },  
         "eclass:automation_interface_present": {
             "type": "string",
@@ -221,7 +325,10 @@
             "enum":[
               "No",
               "Yes"
-            ]
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
           "eclass:water_cooling_present": {
             "type": "string",
@@ -231,7 +338,10 @@
             "enum":[
               "No",
               "Yes"
-            ]
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
           "eclass:s_sign_present": {
             "type": "string",
@@ -241,7 +351,10 @@
             "enum":[
               "No",
               "Yes"
-            ]
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
           "eclass:power_adjustment": {
             "type": "string",
@@ -251,7 +364,10 @@
               "continuously",
               "level designed",
               "level switched"
-            ]
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
           "eclass:water_cooling_retrofittable": {
             "type": "string",
@@ -261,90 +377,135 @@
             "enum":[
               "No",
               "Yes"
-            ]
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
           "eclass:height": {
             "type": "string",
             "datatype": "xsd:double",
             "title": "height",
             "description": "for objects with orientation in preferred position during use the dimension perpendicular to diameter/length/width/depth",
-            "unit": "mm"
+            "unit": "mm",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
           "eclass:empty_weight": {
             "type": "string",
             "datatype": "xsd:double",
             "title": "empty weight",
             "description": "mass of the object without add-on part and operating materials",
-            "unit": "kg"
+            "unit": "kg",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
           "eclass:fuse": {
             "type": "string",
             "datatype": "xsd:double",
             "title": "fuse (time lag)",
             "description": "specification of the amperage of the overcurrent protection device. A fuse is action-delayed if the amperage can be over the maximum allowed value for a short time without reacting",
-            "unit": "A"
+            "unit": "A",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
           "eclass:address_link": {
             "type": "string",
             "title": "address of additional link",
-            "description": "web site address where information about the product or contact is given"
+            "description": "web site address where information about the product or contact is given",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
           "eclass:brand": {
             "type": "string",
             "title": "Brand",
-            "description": "Part of the naming for the support and the recognition of the brand position of products and services consisting of words, numbers, letters or other characters. Registered brands and trademarks are indicated with the appropriate protective signs (® or TM)"
+            "description": "Part of the naming for the support and the recognition of the brand position of products and services consisting of words, numbers, letters or other characters. Registered brands and trademarks are indicated with the appropriate protective signs (® or TM)",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
-          "eclass:supplier_product_order_suffix": {
+          "eclass:retailer_product_order_suffix": {
             "type": "string",
             "datatype": "xsd:string",
-            "title": "Supplier product order suffix",
-            "description": "By the supplier awarded string for the identification of additional attributes, not by a structured supplier item number may be expressed"
+            "title": "retailer product order suffix",
+            "description": "By the retailer awarded string for the identification of additional attributes, not by a structured retailer item number may be expressed",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "retailer"
           },
-          "eclass:supplier_product_root": {
+          "eclass:retailer_product_root": {
             "type": "string",
             "datatype": "xsd:string",
-            "title": "Supplier product root",
-            "description": "Top level of a 3 level supplier specific product hierarchy"
+            "title": "retailer product root",
+            "description": "Top level of a 3 level retailer specific product hierarchy",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "retailer"
           },
-          "eclass:supplier_article_number": {
+          "eclass:retailer_article_number": {
             "type": "string",
-            "title": "product article number of supplier",
-            "description": "unique product order identifier of the supplier"
+            "title": "product article number of retailer",
+            "description": "unique product order identifier of the retailer",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "retailer"
           },
-          "eclass:supplier_product_designation": {
+          "eclass:retailer_product_designation": {
             "type": "string",
             "datatype": "xsd:string",
-            "title": "Supplier product designation",
-            "description": "Short description of the product (short text)"
+            "title": "retailer product designation",
+            "description": "Short description of the product (short text)",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "retailer"
           },
-          "eclass:supplier_name": {
+          "eclass:retailer_name": {
             "type": "string",
-            "title": "name of supplier",
-            "description": "name of supplier which provides the customer with a product or a service"
+            "title": "name of retailer",
+            "description": "name of retailer which provides the customer with a product or a service",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "retailer"
           },
           "eclass:product_type": {
             "type": "string",
             "datatype": "xsd:string",
             "title": "Product type",
-            "description": "Characteristic to differentiate between different products of a product family or special variants"
+            "description": "Characteristic to differentiate between different products of a product family or special variants",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
           "eclass:manufacturer_product_designation": {
             "type": "string",
             "datatype": "xsd:string",
             "title": "Manufacturer product designation",
-            "description": "Short description of the product (short text)"
+            "description": "Short description of the product (short text)",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
           "eclass:gln_manufacturer": {
             "type": "string",
             "datatype": "xsd:integer",
             "title": "GLN of manufacturer",
-            "description": "internationally unique identification number for the manufacturer of the device or the product and for the physical location"
+            "description": "internationally unique identification number for the manufacturer of the device or the product and for the physical location",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
           },
           "eclass:uri_product": {
             "type": "string",
             "datatype": "xsd:url",
             "title": "URI of the product",
             "description": "unique global identification of the product using an universal resource identifier (URI)"
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
           }
     }
 }
