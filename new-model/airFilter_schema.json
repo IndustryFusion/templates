@@ -268,7 +268,7 @@
             "type": "number",
             "title": "Operating Hours",
             "description": "Operating Hours of the machine",
-            "unit": "Hr"
+            "unit": "Hr",
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -502,7 +502,7 @@
             "type": "string",
             "datatype": "xsd:url",
             "title": "URI of the product",
-            "description": "unique global identification of the product using an universal resource identifier (URI)"
+            "description": "unique global identification of the product using an universal resource identifier (URI)",
             "segment": "identification",
             "model": false,
             "owner_ref": "manufacturer"
