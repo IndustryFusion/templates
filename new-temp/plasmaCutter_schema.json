@@ -5,7 +5,7 @@
     "description": "Properties for type plasma cutter",
     "type": "object",
     "properties": {
-        "ifric_template_id": {
+        "eclass_template_id": {
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
