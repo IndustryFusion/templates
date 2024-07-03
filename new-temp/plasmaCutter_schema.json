@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://industry-fusion.org/types/v0.1/plasmaCutter",
+    "$id": "https://industry-fusion.org/base/v0.1/plasmaCutter",
     "title": "Plasma cutter template",
     "description": "Properties for type plasma cutter",
     "type": "object",

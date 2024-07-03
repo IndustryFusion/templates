@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/laserCutter",
+    "$id": "https://industry-fusion.org/base/v0.1/laserCutter",
     "title": "Laser cutter template",
     "description": "Properties for type laser cutter",
     "type": "object",
