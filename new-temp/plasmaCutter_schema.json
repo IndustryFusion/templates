@@ -268,6 +268,7 @@
       "hasFilter": {
         "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/airFilter",
         "$ref": "airFilter_schema.json",
+        "relationship_type": "peer",
         "segment": "component",
         "class": "machine",
         "model": false,
@@ -276,6 +277,7 @@
     "hasSource": {
         "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/powerSource",
         "$ref": "powerSource_schema.json",
+        "relationship_type": "peer",
         "segment": "component",
         "class": "machine",
         "model": false,
@@ -284,6 +286,7 @@
     "hasTracker": {
         "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/airTracker",
         "$ref": "airTracker_schema.json",
+        "relationship_type": "subcomponent",
         "segment": "component",
         "class": "machine",
         "model": false,
@@ -292,6 +295,7 @@
     "hasWorkpiece": {
         "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/metalWorkpiece",
         "$ref": "metalWorkpiece_schema.json",
+        "relationship_type": "peer",
         "segment": "component",
         "class": "material",
         "model": false,

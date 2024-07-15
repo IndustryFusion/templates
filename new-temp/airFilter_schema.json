@@ -312,6 +312,7 @@
         "hasCatridge": {
             "relationship": "https://industry-fusion.org/base/v0.1/filterCatridge",
             "$ref": "filterCatridge_schema.json",
+            "relationship_type": "subcomponent",
             "segment": "component",
             "class": "material",
             "model": false,
