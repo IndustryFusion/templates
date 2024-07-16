@@ -1,0 +1,23 @@
+{
+    "erp_name": "osd",
+    "fields": {
+        "ProductInformation": {
+            "ArticleName": "product_name",
+            "ArticleNumber": "asset_serial_number"
+        },
+        "Documents": [
+            {
+                "DocumentName": "",
+                "DocumentExtension": "",
+                "DocumentHyperLink": "documentation",
+                "DocumentType": ""
+            },
+            {
+                "DocumentName": "Griff",
+                "DocumentExtension": "jpg",
+                "DocumentHyperLink": "product_icon",
+                "DocumentType": "image"
+            }
+        ]
+    }
+}

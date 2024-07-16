@@ -1,0 +1,42 @@
+{
+   
+    "erp_name": "osd",
+    "fields": {
+            "ProductInformation": {
+            "ArticleName": "product_name",
+            "ArticleNumber": "asset_serial_number",
+            "ArticleAvailabilityStatusColor": "#339C76",
+            "ArticleAvailabilityStatusMessage": "Ab Lager verfügbar",
+            "ArticleAvailableQuantity": 1.0,
+            "ArticleQuantity": 1.0,
+            "ArticleQuantityUnit": "ST",
+            "ArticleQuantityUnitIso": "PCE",
+            "ArticleQuantityUnitIsoName": "Stück",
+            "ArticlePositionNumber": 1,
+            "ArticleMinQuantity": 1.0,
+            "ArticlePrice": 4.86,
+            "ArticlePriceUnit": 1
+            },
+            "TechnicalDetails": null,
+            "Currency": "EUR",
+            "Documents": [
+            {
+            "DocumentName": "",
+            "DocumentExtension": "",
+            "DocumentHyperLink": "http://Beispiel.de",
+            "DocumentType": ""
+            },
+            {
+            "DocumentName": "Griff",
+            "DocumentExtension": "jpg",
+            "DocumentHyperLink": " http://Beispiel.de/Griff.jpg",
+            "DocumentType": "image"
+            }
+            ],
+            "TotalPrice": 2.95,
+            "ReferencedArticles": null,
+            "PriceListArticles": null
+            }
+            
+    }
+}

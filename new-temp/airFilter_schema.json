@@ -4,6 +4,7 @@
     "title": "Air filter template",
     "description": "Properties for type air filter",
     "type": "object",
+    "required": ["eclass_template_id",  "asset_category", "product_name", "asset_serial_number", "length", "weight", "product_icon", "creation_date", "logo_manufacturer" ],
     "properties": {
         "eclass_template_id": {
             "type": "string",
@@ -135,7 +136,7 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "weigth": {
+        "weight": {
             "type": "number",
             "title": "Weight",
             "description": "the length of the asset in kilograms",

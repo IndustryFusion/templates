@@ -1,0 +1,316 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://industry-fusion.org/base/v0.1/common",
+    "title": "Common template",
+    "description": "Properties for type common",
+    "type": "object",
+    "properties": {
+        "asset_status": {
+            "type": "string",
+            "title": "Asset Status",
+            "description": "State of the Asset in Scorpio",
+            "readOnly": true,
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "creation_date": {
+            "type": "string",
+            "title": "Creation Date",
+            "description": "Date of the creation of asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "asset_manufacturer_name": {
+            "type": "string",
+            "title": "Asset Manufacturer Name",
+            "description": "The manufacturer of the asset",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "logo_manufacturer": {
+            "type": "object",
+            "title": "Logo Manufacturer",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "Logo of the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "product_name": {
+            "type": "string",
+            "title": "Product Name",
+            "description": "Model name/Name of the asset from the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "asset_serial_number": {
+            "type": "string",
+            "title": "Serial Number",
+            "description": "Serial number of machine/product",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "product_icon": {
+            "type": "object",
+            "title": "Product Icon",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "The production icon of the asset",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "manufacturing_year": {
+            "type": "number",
+            "title": "Year of manufacturing",
+            "description": "The manufacturer year of the asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "documentation": {
+            "type": "object",
+            "title": "Operating Manual",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "The legally required documentation for the machine",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ce_marking": {
+            "type": "object",
+            "title": "CE-Marking",
+            "description": "The ce-marking of the asset",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "height": {
+            "type": "number",
+            "title": "Height",
+            "description": "The height of the asset in millimeters",
+            "unit": "mm",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "width": {
+            "type": "number",
+            "title": "Width",
+            "description": "the width of the asset in millimeters",
+            "unit": "mm",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "length": {
+            "type": "number",
+            "title": "Length",
+            "description": "the length of the asset in millimeters",
+            "unit": "mm",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "weigth": {
+            "type": "number",
+            "title": "Weight",
+            "description": "the length of the asset in kilograms",
+            "unit": "kg",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ambient_operating_temperature_min": {
+            "type": "number",
+            "title": "Ambient Operating Temperature (min.)",
+            "description": "The min temperature in °C",
+            "unit": "°C",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ambient_operating_temperature_max": {
+            "type": "number",
+            "title": "Ambient Operating Temperature (max.)",
+            "description": "The max temperature in °C",
+            "unit": "°C",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "supply_voltage": {
+            "type": "number",
+            "title": "Supply Voltage (max.)",
+            "description": "Supply voltage",
+            "unit": "V",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "voltage_type": {
+            "type": "array",
+            "title": "Voltage Type",
+            "description": "Voltage type",
+            "enum": [
+                "AC",
+                "DC",
+                "3-phase AC"
+            ],
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "electric_power": {
+            "type": "number",
+            "title": "Electrical Power (max.)",
+            "description": "Electrical Power",
+            "unit": "W",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+          "eclass:hs_code_wco": {
+            "type": "string",
+            "datatype": "xsd:integer",
+            "title": "HS-Code of the WCO",
+            "description": "Internationally applied 4 to 6-digit coding of classes of goods as defined by the Harmonized System (HS) of the World Customs Organization (WCO)",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+          "eclass:customs_tariff_number_use": {
+            "type": "string",
+            "datatype": "string",
+            "title": "Use of customs tariff number",
+            "description": "Indicates what the tariff number is for (for example, import or export)",
+            "enum":[
+              "import",
+              "export",
+              "other"
+            ],
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+          },
+          "eclass:customs_tariff_number_type": {
+            "type": "string",
+            "title": "Type of customs tariff number",
+            "description": "Describes the membership of the tariff number to a specific type in terms of structure and meaning and thus also defines its general context",
+            "enum":[
+              "TARIC",
+              "AHTN 2012",
+              "AHTN 2017",
+              "PDK 2012",
+              "PDK 2017"
+            ],
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+          },
+          "eclass:customs_tariff_number": {
+            "type": "string",
+            "title": "Customs tariff number",
+            "description": "Nomenclature of goods in accordance with a regulation relating to customs tariff and statistical purposes for application to a specific country and / or region. The structure of the customs tariff number is defined by the type otherwise indicated",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+          "eclass:empty_weight": {
+            "type": "string",
+            "datatype": "xsd:double",
+            "title": "empty weight",
+            "description": "mass of the object without add-on part and operating materials",
+            "unit": "kg",
+            "segment": "documentation",
+            "model": false,
+            "owner_ref": "manufacturer"
+          },
+          "eclass:address_link": {
+            "type": "string",
+            "title": "address of additional link",
+            "description": "web site address where information about the product or contact is given",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+          },
+          "eclass:brand": {
+            "type": "string",
+            "title": "Brand",
+            "description": "Part of the naming for the support and the recognition of the brand position of products and services consisting of words, numbers, letters or other characters. Registered brands and trademarks are indicated with the appropriate protective signs (® or TM)",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+          },
+          "eclass:retailer_product_order_suffix": {
+            "type": "string",
+            "datatype": "xsd:string",
+            "title": "retailer product order suffix",
+            "description": "By the retailer awarded string for the identification of additional attributes, not by a structured retailer item number may be expressed",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "retailer"
+          },
+          "eclass:retailer_product_root": {
+            "type": "string",
+            "datatype": "xsd:string",
+            "title": "retailer product root",
+            "description": "Top level of a 3 level retailer specific product hierarchy",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "retailer"
+          },
+          "eclass:retailer_article_number": {
+            "type": "string",
+            "title": "product article number of retailer",
+            "description": "unique product order identifier of the retailer",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "retailer"
+          },
+          "eclass:retailer_product_designation": {
+            "type": "string",
+            "datatype": "xsd:string",
+            "title": "retailer product designation",
+            "description": "Short description of the product (short text)",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "retailer"
+          },
+          "eclass:retailer_name": {
+            "type": "string",
+            "title": "name of retailer",
+            "description": "name of retailer which provides the customer with a product or a service",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "retailer"
+          },
+          "eclass:product_type": {
+            "type": "string",
+            "datatype": "xsd:string",
+            "title": "Product type",
+            "description": "Characteristic to differentiate between different products of a product family or special variants",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+          },
+          "eclass:gln_manufacturer": {
+            "type": "string",
+            "datatype": "xsd:integer",
+            "title": "GLN of manufacturer",
+            "description": "internationally unique identification number for the manufacturer of the device or the product and for the physical location",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+          }
+    }
+}

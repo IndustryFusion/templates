@@ -1,0 +1,60 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://industry-fusion.org/base/v0.1/filterCatridge",
+    "title": "Filter catridge template",
+    "description": "Properties for type filter catridge",
+    "type": "object",
+    "required": ["eclass_template_id",  "asset_category", "product_name", "asset_serial_number", "length", "weight", "product_icon", "creation_date", "logo_manufacturer" ],
+    "properties": {
+        "eclass_template_id": {
+            "type": "string",
+            "title": "IFRIC Template ID",
+            "description": "ID mapping for ECLASS",
+            "default": "No classification in ECLASS",
+            "readOnly": true,
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
+        },
+        "asset_manufacturer_name": {
+            "type": "string",
+            "title": "Asset Manufacturer Name",
+            "description": "The manufacturer of the asset",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "asset_communication_protocol": {
+            "type": "array",
+            "title": "Communication Protocol",
+            "description": "The communication protocol of the asset",
+            "enum": [
+                "opc-ua",
+                "mqtt",
+                "modbus",
+                "http"
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "length": {
+            "type": "number",
+            "title": "Length",
+            "description": "the length of the asset in millimeters",
+            "unit": "mm",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "hasCatridge": {
+            "relationship": "https://industry-fusion.org/base/v0.1/filterCatridge",
+            "$ref": "filterCatridge_schema.json",
+            "relationship_type": "subcomponent",
+            "segment": "component",
+            "class": "material",
+            "model": false,
+            "owner_ref": "application"
+        }
+    }
+}
