@@ -1,1 +1,10 @@
-{"erp_name":"monitor","fields":{"products":{"name":"product_name","serial_number":"asset_serial_number","manufacturing_date":"manufacturing_year"}}}
+{
+  "erp_name": "monitor",
+  "fields": {
+    "products": {
+      "name": "product_name",
+      "serial_number": "asset_serial_number",
+      "manufacturing_date": "manufacturing_year"
+    }
+  }
+}
