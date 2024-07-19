@@ -4,8 +4,7 @@
     "products": {
       "name": "product_name",
       "serial_number": "asset_serial_number",
-      "manufacturing_date": "manufacturing_year",
-      "check": "check"
+      "manufacturing_date": "manufacturing_year"
     }
   }
 }
