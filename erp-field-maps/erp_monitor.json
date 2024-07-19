@@ -6,7 +6,7 @@
       "serial_number": "asset_serial_number",
       "manufacturing_date": "manufacturing_year",
       "voltage": "voltage_type",
-      "date": "creation_date"
+      "year": "manufacturing_year"
     }
   }
 }
