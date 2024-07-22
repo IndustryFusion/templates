@@ -8,7 +8,8 @@
       "voltage": "voltage_type",
       "year": "manufacturing_year",
       "power": "electric_power",
-      "icon": "product_icon"
+      "icon": "product_icon",
+      "length": "length"
     }
   }
 }
