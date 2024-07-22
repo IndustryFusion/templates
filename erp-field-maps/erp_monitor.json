@@ -7,7 +7,8 @@
       "manufacturing_date": "manufacturing_year",
       "voltage": "voltage_type",
       "year": "manufacturing_year",
-      "power": "electric_power"
+      "power": "electric_power",
+      "icon": "product_icon"
     }
   }
 }
