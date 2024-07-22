@@ -9,7 +9,8 @@
       "year": "manufacturing_year",
       "power": "electric_power",
       "icon": "product_icon",
-      "length": "length"
+      "length": "length",
+      "status": "asset_status"
     }
   }
 }
