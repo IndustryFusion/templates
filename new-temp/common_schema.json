@@ -5,6 +5,16 @@
     "description": "Properties for type common",
     "type": "object",
     "properties": {
+         "eclass_template_id": {
+            "type": "string",
+            "title": "IFRIC Template ID",
+            "description": "ID mapping for ECLASS",
+            "default": "No classification in ECLASS",
+            "readOnly": true,
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
+        },
         "asset_status": {
             "type": "string",
             "title": "Asset Status",
