@@ -10,7 +10,8 @@
       "power": "electric_power",
       "icon": "product_icon",
       "length": "length",
-      "status": "asset_status"
+      "status": "asset_status",
+      "creation_date": "creation_date"
     }
   }
 }
