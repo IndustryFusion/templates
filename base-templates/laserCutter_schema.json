@@ -16,11 +16,90 @@
             "model": true,
             "owner_ref": "application"
         },
+        "asset_status": {
+            "type": "string",
+            "title": "Asset Status",
+            "description": "State of the Asset in Fleet Manager",
+            "readOnly": true,
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "creation_date": {
+            "type": "string",
+            "title": "Creation Date",
+            "description": "Date of the creation of asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "asset_category": {
+            "type": "string",
+            "title": "Asset Category",
+            "description": "Category of the asset",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
+        },
         "asset_manufacturer_name": {
             "type": "string",
             "title": "Asset Manufacturer Name",
             "description": "The manufacturer of the asset",
             "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "logo_manufacturer": {
+            "type": "object",
+            "title": "Logo Manufacturer",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "Logo of the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "product_name": {
+            "type": "string",
+            "title": "Product Name",
+            "description": "Model name/Name of the asset from the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "asset_serial_number": {
+            "type": "string",
+            "title": "Serial Number",
+            "description": "Serial number of machine/product",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "product_icon": {
+            "type": "object",
+            "title": "Product Icon",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "The production icon of the asset",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "manufacturing_year": {
+            "type": "number",
+            "title": "Year of manufacturing",
+            "description": "The manufacturer year of the asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "documentation": {
+            "type": "object",
+            "title": "Operating Manual",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "The legally required documentation for the machine",
+            "segment": "documentation",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -38,6 +117,34 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
+        "ce_marking": {
+            "type": "object",
+            "title": "CE-Marking",
+            "description": "The ce-marking of the asset",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "height": {
+            "type": "number",
+            "title": "Height",
+            "description": "The height of the asset in millimeters",
+            "unit": "mm",
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "width": {
+            "type": "number",
+            "title": "Width",
+            "description": "the width of the asset in millimeters",
+            "unit": "mm",
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
         "length": {
             "type": "number",
             "title": "Length",
@@ -47,12 +154,303 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "hasCatridge": {
-            "relationship": "https://industry-fusion.org/base/v0.1/filterCatridge",
-            "$ref": "filterCatridge_schema.json",
+        "weigth": {
+            "type": "number",
+            "title": "Weight",
+            "description": "the length of the asset in kilograms",
+            "unit": "kg",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ambient_operating_temperature_min": {
+            "type": "number",
+            "title": "Ambient Operating Temperature (min.)",
+            "description": "The min temperature in °C",
+            "unit": "°C",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ambient_operating_temperature_max": {
+            "type": "number",
+            "title": "Ambient Operating Temperature (max.)",
+            "description": "The max temperature in °C",
+            "unit": "°C",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "relative_humidity_min": {
+            "type": "number",
+            "title": "Relative Humidity (min.)",
+            "description": "The min humidity in percentage",
+            "unit": "%",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "relative_humidity_max": {
+            "type": "number",
+            "title": "Relative Humidity (max.)",
+            "description": "The max humidity in percentage",
+            "unit": "%",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "atmospheric_pressure_min": {
+            "type": "number",
+            "title": "Atmospheric Pressure (min.)",
+            "description": "The min pressure in mbar",
+            "unit": "mbar",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "atmospheric_pressure_max": {
+            "type": "number",
+            "title": "Atmospheric Pressure (max.)",
+            "description": "the max pressure in mbar",
+            "unit": "mbar",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "dustiness_max": {
+            "type": "number",
+            "title": "Dust Density (max.)",
+            "description": "The max dust density in mg/m³",
+            "unit": "mg/m³",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "supply_voltage": {
+            "type": "number",
+            "title": "Supply Voltage (max.)",
+            "description": "Supply voltage",
+            "unit": "V",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "frequency": {
+            "type": "number",
+            "title": "Frequency (max.)",
+            "description": "Frequency",
+            "unit": "Hz",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "voltage_type": {
+            "type": "array",
+            "title": "Voltage Type",
+            "description": "Voltage type",
+            "enum": [
+                "AC",
+                "DC",
+                "3-phase AC"
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "electric_power": {
+            "type": "number",
+            "title": "Electrical Power (max.)",
+            "description": "Electrical Power",
+            "unit": "W",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "machine_state": {
+            "type": "number",
+            "title": "Machine State",
+            "description": "Status of the machine",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "volatge_l1": {
+            "type": "number",
+            "title": "L1 Voltage",
+            "description": "Voltage at L1",
+            "readOnly": true,
+            "unit": "V",
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "volatge_l2": {
+            "type": "number",
+            "title": "L2 Voltage",
+            "description": "Voltage at L2",
+            "readOnly": true,
+            "unit": "V",
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "volatge_l3": {
+            "type": "number",
+            "title": "L3 Voltage",
+            "description": "Voltage at L3",
+            "readOnly": true,
+            "unit": "V",
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "current_strength_l1": {
+            "type": "number",
+            "title": "L1 Current",
+            "description": "Current at L1",
+            "readOnly": true,
+            "unit": "A",
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "current_strength_l2": {
+            "type": "number",
+            "title": "L2 Current",
+            "description": "Current at L2",
+            "readOnly": true,
+            "unit": "A",
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "current_strength_l3": {
+            "type": "number",
+            "title": "L3 Current",
+            "description": "Current at L3",
+            "readOnly": true,
+            "unit": "A",
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "medium_name": {
+            "type": "string",
+            "title": "Gas Medium Name",
+            "description": "Name of the Gas",
+            "readOnly": true,
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "target_pressure": {
+            "type": "number",
+            "title": "Required Pressure of Gas",
+            "description": "Required Gas Pressure",
+            "readOnly": true,
+            "unit": "Bar",
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "material_thickness": {
+            "type": "number",
+            "title": "Material Thickness",
+            "description": "Thickness of the Material",
+            "readOnly": true,
+            "unit": "MM",
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "cutter_head_speed": {
+            "type": "number",
+            "title": "Speed of the Cutter Head",
+            "description": "Cutter Head Speed",
+            "readOnly": true,
+            "unit": "RPM",
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+         "machine_position_x": {
+            "type": "number",
+            "title": "X Co-ordinate of Cutter",
+            "description": "X Co-ordinate of Cutter",
+            "readOnly": true,
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "machine_position_y": {
+            "type": "number",
+            "title": "Y Co-ordinate of Cutter",
+            "description": "Y Co-ordinate of Cutter",
+            "readOnly": true,
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "machine_position_z": {
+            "type": "number",
+            "title": "Z Co-ordinate of Cutter",
+            "description": "Z Co-ordinate of Cutter",
+            "readOnly": true,
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "power_consumption": {
+            "type": "number",
+            "title": "Power Consumption",
+            "description": "Power Consumption of the machine",
+            "unit": "Kw",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "hasFilter": {
+            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/airFilter",
+            "$ref": "airFilter_schema.json",
+            "relationship_type": "peer",
+            "segment": "component",
+            "class": "machine",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "hasSource": {
+            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/powerSource",
+            "$ref": "powerSource_schema.json",
+            "relationship_type": "peer",
+            "segment": "component",
+            "class": "machine",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "hasTracker": {
+            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/airTracker",
+            "$ref": "airTracker_schema.json",
             "relationship_type": "subcomponent",
             "segment": "component",
+            "class": "machine",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "hasWorkpiece": {
+            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/metalWorkpiece",
+            "$ref": "metalWorkpiece_schema.json",
+            "relationship_type": "peer",
+            "segment": "component",
             "class": "material",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "hasCooler": {
+            "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/laserCooler",
+            "$ref": "laserCooler_schema.json",
+            "relationship_type": "subcomponent",
+            "segment": "component",
+            "class": "machine",
             "model": false,
             "owner_ref": "application"
         }
