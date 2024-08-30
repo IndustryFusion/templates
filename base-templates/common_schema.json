@@ -29,6 +29,7 @@
             "title": "Creation Date",
             "description": "Date of the creation of asset",
             "segment": "parameter",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
