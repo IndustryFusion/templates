@@ -22,6 +22,7 @@
             "description": "Date of the creation of asset",
             "segment": "parameter",
             "model": false,
+            "readOnly" : true,
             "owner_ref": "application"
         },
         "asset_manufacturer_name": {
