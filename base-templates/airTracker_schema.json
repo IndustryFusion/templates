@@ -21,6 +21,7 @@
             "title": "Creation Date",
             "description": "Date of the creation of asset",
             "segment": "parameter",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -268,10 +269,11 @@
             "owner_ref": "manufacturer"
         },
         "machine_state": {
-            "type": "string",
+            "type": "number",
             "title": "Machine State",
             "description": "Machine State",
             "segment": "realtime",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -281,6 +283,7 @@
             "description": "Dustiness",
             "unit": "mg/m3",
             "segment": "realtime",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -289,6 +292,7 @@
             "title": "Temperature",
             "description": "Temperature",
             "unit": "°C",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -298,6 +302,7 @@
             "title": "Humidity",
             "description": "Humidity",
             "unit": "%",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -307,6 +312,7 @@
             "title": "Noise",
             "description": "Noise",
             "unit": "dB",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
