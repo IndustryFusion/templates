@@ -21,6 +21,7 @@
             "title": "Creation Date",
             "description": "Date of the creation of asset",
             "segment": "parameter",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -268,9 +269,10 @@
             "owner_ref": "manufacturer"
         },
         "machine_state": {
-            "type": "string",
+            "type": "number",
             "title": "Machine State",
             "description": "Real state of the machine",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -280,6 +282,7 @@
             "title": "Power Consumption",
             "description": "Power Consumption",
             "unit": "W",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -289,6 +292,7 @@
             "title": "Total Current",
             "description": "Total Current",
             "unit": "A",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -298,6 +302,7 @@
             "title": "Active Current",
             "description": "Active Current",
             "unit": "A",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -307,6 +312,7 @@
             "title": "Active Voltage",
             "description": "Active Voltage",
             "unit": "V",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
