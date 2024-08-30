@@ -272,6 +272,7 @@
             "type": "number",
             "title": "Machine State",
             "description": "Status of the machine",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
