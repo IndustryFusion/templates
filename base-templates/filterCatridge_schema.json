@@ -4,16 +4,24 @@
     "title": "Filter catridge template",
     "description": "Properties for type filter catridge",
     "type": "object",
-    "required": ["eclass_template_id",  "asset_category", "product_name", "asset_serial_number", "length", "weight", "product_icon", "creation_date", "logo_manufacturer" ],
+    "required": ["product_name", "asset_serial_number"],
     "properties": {
         "eclass_template_id": {
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
-            "default": "No classification in ECLASS",
+            "default": "0173-1#01-ACL243#017",
             "readOnly": true,
             "segment": "identification",
             "model": true,
+            "owner_ref": "application"
+        },
+        "creation_date": {
+            "type": "string",
+            "title": "Creation Date",
+            "description": "Date of the creation of asset",
+            "segment": "parameter",
+            "model": false,
             "owner_ref": "application"
         },
         "asset_manufacturer_name": {
@@ -21,6 +29,78 @@
             "title": "Asset Manufacturer Name",
             "description": "The manufacturer of the asset",
             "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "asset_category": {
+            "type": "string",
+            "title": "Asset Category",
+            "description": "Category of the asset",
+            "readOnly": true,
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
+        },
+        "asset_status": {
+            "type": "string",
+            "title": "Asset Status",
+            "description": "State of the Asset in application"
+            "readOnly": true,
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "logo_manufacturer": {
+            "type": "object",
+            "title": "Logo of the Manufacturer",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "Logo of the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "product_name": {
+            "type": "string",
+            "title": "Product Name",
+            "description": "Name of the asset from the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "asset_serial_number": {
+            "type": "string",
+            "title": "Serial Number",
+            "description": "Serial number of asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "product_icon": {
+            "type": "object",
+            "title": "Product Icon",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "The production icon of the asset",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "manufacturing_year": {
+            "type": "number",
+            "title": "Year of manufacturing",
+            "description": "The manufacturer year of the asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "documentation": {
+            "type": "object",
+            "title": "Operating Manual",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "The legally required documentation for the machine",
+            "segment": "documentation",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -38,6 +118,34 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
+        "ce_marking": {
+            "type": "object",
+            "title": "CE-Marking",
+            "description": "The ce-marking of the asset",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "height": {
+            "type": "number",
+            "title": "Height",
+            "description": "The height of the asset in millimeters",
+            "unit": "mm",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "width": {
+            "type": "number",
+            "title": "Width",
+            "description": "the width of the asset in millimeters",
+            "unit": "mm",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
         "length": {
             "type": "number",
             "title": "Length",
@@ -47,14 +155,14 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "hasCatridge": {
-            "relationship": "https://industry-fusion.org/base/v0.1/filterCatridge",
-            "$ref": "filterCatridge_schema.json",
-            "relationship_type": "subcomponent",
-            "segment": "component",
-            "class": "material",
-            "model": false,
-            "owner_ref": "application"
+        "weight": {
+            "type": "number",
+            "title": "Weight",
+            "description": "the weight of the asset in kilograms",
+            "unit": "kg",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         }
     }
 }
