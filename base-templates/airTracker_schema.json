@@ -158,7 +158,7 @@
         "weight": {
             "type": "number",
             "title": "Weight",
-            "description": "the length of the asset in kilograms",
+            "description": "the weight of the asset in kilograms",
             "unit": "kg",
             "segment": "parameter",
             "model": true,
