@@ -4,7 +4,7 @@
     "title": "Plasma cutter template",
     "description": "Properties for type plasma cutter",
     "type": "object",
-    "required": ["eclass_template_id",  "asset_category", "product_name", "asset_serial_number", "length", "weight", "product_icon", "creation_date", "logo_manufacturer" ],
+    "required": ["asset_category", "product_name"],
     "properties": {
         "eclass_template_id": {
             "type": "string",
@@ -20,16 +20,16 @@
             "type": "string",
             "title": "Creation Date",
             "description": "Date of the creation of asset",
-            "segment": "documentation",
-            "model": true,
-            "owner_ref": "manufacturer"
-        },
-        "asset_status": {
-            "type": "string",
-            "title": "Asset Status",
-            "description": "State of the Asset in Fleet Manager",
+            "segment": "parameter",
             "readOnly": true,
-            "segment": "documentation",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "asset_manufacturer_name": {
+            "type": "string",
+            "title": "Asset Manufacturer Name",
+            "description": "The manufacturer of the asset",
+            "segment": "identification",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -37,235 +37,245 @@
             "type": "string",
             "title": "Asset Category",
             "description": "Category of the asset",
+            "readOnly": true,
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
+        },
+        "asset_status": {
+            "type": "string",
+            "title": "Asset Status",
+            "description": "State of the Asset in application"
+            "readOnly": true,
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "logo_manufacturer": {
+            "type": "object",
+            "title": "Logo of the Manufacturer",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "Logo of the manufacturer",
             "segment": "identification",
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "asset_manufacturer_name": {
-          "type": "string",
-          "title": "Asset Manufacturer Name",
-          "description": "The manufacturer of the asset",
-          "segment": "identification",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "logo_manufacturer": {
-          "type": "object",
-          "title": "Logo Manufacturer",
-          "contentEncoding": "base64",
-          "contentMediaType": "image/png",
-          "description": "Logo of the manufacturer",
-          "segment": "identification",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "product_name": {
-          "type": "string",
-          "title": "Product Name",
-          "description": "Model name/Name of the asset from the manufacturer",
-          "segment": "identification",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "asset_serial_number": {
-          "type": "string",
-          "title": "Serial Number",
-          "description": "Serial number of machine/product",
-          "segment": "identification",
-          "model": false,
-          "owner_ref": "manufacturer"
-      },
-      "product_icon": {
-          "type": "object",
-          "title": "Product Icon",
-          "contentEncoding": "base64",
-          "contentMediaType": "image/png",
-          "description": "The production icon of the asset",
-          "segment": "identification",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "manufacturing_year": {
-          "type": "number",
-          "title": "Year of manufacturing",
-          "description": "The manufacturer year of the asset",
-          "segment": "identification",
-          "model": false,
-          "owner_ref": "manufacturer"
-      },
-      "documentation": {
-          "type": "object",
-          "title": "Operating Manual",
-          "contentEncoding": "base64",
-          "contentMediaType": "application/pdf",
-          "description": "The legally required documentation for the machine",
-          "segment": "documentation",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "asset_communication_protocol": {
-          "type": "array",
-          "title": "Communication Protocol",
-          "description": "The communication protocol of the asset",
-          "enum": [
-              "opc-ua",
-              "mqtt",
-              "modbus",
-              "http"
-          ],
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "ce_marking": {
-          "type": "object",
-          "title": "CE-Marking",
-          "description": "The ce-marking of the asset",
-          "contentEncoding": "base64",
-          "contentMediaType": "application/pdf",
-          "segment": "documentation",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "height": {
-          "type": "number",
-          "title": "Height",
-          "description": "The height of the asset in millimeters",
-          "unit": "mm",
-          "segment": "parameter",
-          "model": false,
-          "owner_ref": "manufacturer"
-      },
-      "width": {
-          "type": "number",
-          "title": "Width",
-          "description": "the width of the asset in millimeters",
-          "unit": "mm",
-          "segment": "parameter",
-          "model": false,
-          "owner_ref": "manufacturer"
-      },
-      "length": {
-          "type": "number",
-          "title": "Length",
-          "description": "the length of the asset in millimeters",
-          "unit": "mm",
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "weigth": {
-          "type": "number",
-          "title": "Weight",
-          "description": "the length of the asset in kilograms",
-          "unit": "kg",
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "ambient_operating_temperature_min": {
-          "type": "number",
-          "title": "Ambient Operating Temperature (min.)",
-          "description": "The min temperature in °C",
-          "unit": "°C",
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "ambient_operating_temperature_max": {
-          "type": "number",
-          "title": "Ambient Operating Temperature (max.)",
-          "description": "The max temperature in °C",
-          "unit": "°C",
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "relative_humidity_min": {
-          "type": "number",
-          "title": "Relative Humidity (min.)",
-          "description": "The min humidity in percentage",
-          "unit": "%",
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "relative_humidity_max": {
-          "type": "number",
-          "title": "Relative Humidity (max.)",
-          "description": "The max humidity in percentage",
-          "unit": "%",
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "atmospheric_pressure_min": {
-          "type": "number",
-          "title": "Atmospheric Pressure (min.)",
-          "description": "The min pressure in mbar",
-          "unit": "mbar",
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "atmospheric_pressure_max": {
-          "type": "number",
-          "title": "Atmospheric Pressure (max.)",
-          "description": "the max pressure in mbar",
-          "unit": "mbar",
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "dustiness_max": {
-          "type": "number",
-          "title": "Dust Density (max.)",
-          "description": "The max dust density in mg/m³",
-          "unit": "mg/m³",
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "supply_voltage": {
-          "type": "number",
-          "title": "Supply Voltage (max.)",
-          "description": "Supply voltage",
-          "unit": "V",
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "frequency": {
-          "type": "number",
-          "title": "Frequency (max.)",
-          "description": "Frequency",
-          "unit": "Hz",
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "voltage_type": {
-          "type": "array",
-          "title": "Voltage Type",
-          "description": "Voltage type",
-          "enum": [
-              "AC",
-              "DC",
-              "3-phase AC"
-          ],
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
-      "electric_power": {
-          "type": "number",
-          "title": "Electrical Power (max.)",
-          "description": "Electrical Power",
-          "unit": "W",
-          "segment": "parameter",
-          "model": true,
-          "owner_ref": "manufacturer"
-      },
+        "product_name": {
+            "type": "string",
+            "title": "Product Name",
+            "description": "Name of the asset from the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "asset_serial_number": {
+            "type": "string",
+            "title": "Serial Number",
+            "description": "Serial number of asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "product_icon": {
+            "type": "object",
+            "title": "Product Icon",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "The production icon of the asset",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "manufacturing_year": {
+            "type": "number",
+            "title": "Year of manufacturing",
+            "description": "The manufacturer year of the asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "documentation": {
+            "type": "object",
+            "title": "Operating Manual",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "The legally required documentation for the machine",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "asset_communication_protocol": {
+            "type": "array",
+            "title": "Communication Protocol",
+            "description": "The communication protocol of the asset",
+            "enum": [
+                "opc-ua",
+                "mqtt",
+                "modbus",
+                "http"
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ce_marking": {
+            "type": "object",
+            "title": "CE-Marking",
+            "description": "The ce-marking of the asset",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "height": {
+            "type": "number",
+            "title": "Height",
+            "description": "The height of the asset in millimeters",
+            "unit": "mm",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "width": {
+            "type": "number",
+            "title": "Width",
+            "description": "the width of the asset in millimeters",
+            "unit": "mm",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "length": {
+            "type": "number",
+            "title": "Length",
+            "description": "the length of the asset in millimeters",
+            "unit": "mm",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "weight": {
+            "type": "number",
+            "title": "Weight",
+            "description": "the weight of the asset in kilograms",
+            "unit": "kg",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ambient_operating_temperature_min": {
+            "type": "number",
+            "title": "Ambient Operating Temperature (min.)",
+            "description": "The min temperature in °C",
+            "unit": "°C",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ambient_operating_temperature_max": {
+            "type": "number",
+            "title": "Ambient Operating Temperature (max.)",
+            "description": "The max temperature in °C",
+            "unit": "°C",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "relative_humidity_min": {
+            "type": "number",
+            "title": "Relative Humidity (min.)",
+            "description": "The min humidity in percentage",
+            "unit": "%",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "relative_humidity_max": {
+            "type": "number",
+            "title": "Relative Humidity (max.)",
+            "description": "The max humidity in percentage",
+            "unit": "%",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "atmospheric_pressure_min": {
+            "type": "number",
+            "title": "Atmospheric Pressure (min.)",
+            "description": "The min pressure in mbar",
+            "unit": "mbar",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "atmospheric_pressure_max": {
+            "type": "number",
+            "title": "Atmospheric Pressure (max.)",
+            "description": "the max pressure in mbar",
+            "unit": "mbar",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "dustiness_max": {
+            "type": "number",
+            "title": "Dust Density (max.)",
+            "description": "The max dust density in mg/m³",
+            "unit": "mg/m³",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "supply_voltage": {
+            "type": "number",
+            "title": "Supply Voltage (max.)",
+            "description": "Supply voltage",
+            "unit": "V",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "frequency": {
+            "type": "number",
+            "title": "Frequency (max.)",
+            "description": "Frequency",
+            "unit": "Hz",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "voltage_type": {
+            "type": "array",
+            "title": "Voltage Type",
+            "description": "Voltage type",
+            "enum": [
+                "AC",
+                "DC",
+                "3-phase AC"
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "electric_power": {
+            "type": "number",
+            "title": "Electrical Power (max.)",
+            "description": "Electrical Power",
+            "unit": "W",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "machine_state": {
+            "type": "number",
+            "title": "Machine State",
+            "description": "Status of the machine",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
       "hasFilter": {
         "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/airFilter",
         "$ref": "airFilter_schema.json",
