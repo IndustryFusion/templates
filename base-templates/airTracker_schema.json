@@ -4,16 +4,24 @@
     "title": "Air tracker template",
     "description": "Properties for type air tracker",
     "type": "object",
-    "required": ["eclass_template_id",  "asset_category", "product_name", "asset_serial_number", "length", "weight", "product_icon", "creation_date", "logo_manufacturer" ],
+    "required": ["product_name", "asset_serial_number"],
     "properties": {
         "eclass_template_id": {
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
-            "default": "No classification in ECLASS",
+            "default": "0173-1#01-ACL243#017",
             "readOnly": true,
             "segment": "identification",
             "model": true,
+            "owner_ref": "application"
+        },
+        "creation_date": {
+            "type": "string",
+            "title": "Creation Date",
+            "description": "Date of the creation of asset",
+            "segment": "parameter",
+            "model": false,
             "owner_ref": "application"
         },
         "asset_manufacturer_name": {
@@ -21,6 +29,78 @@
             "title": "Asset Manufacturer Name",
             "description": "The manufacturer of the asset",
             "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "asset_category": {
+            "type": "string",
+            "title": "Asset Category",
+            "description": "Category of the asset",
+            "readOnly": true,
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
+        },
+        "asset_status": {
+            "type": "string",
+            "title": "Asset Status",
+            "description": "State of the Asset in application"
+            "readOnly": true,
+            "segment": "parameter",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "logo_manufacturer": {
+            "type": "object",
+            "title": "Logo of the Manufacturer",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "Logo of the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "product_name": {
+            "type": "string",
+            "title": "Product Name",
+            "description": "Name of the asset from the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "asset_serial_number": {
+            "type": "string",
+            "title": "Serial Number",
+            "description": "Serial number of asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "product_icon": {
+            "type": "object",
+            "title": "Product Icon",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "The production icon of the asset",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "manufacturing_year": {
+            "type": "number",
+            "title": "Year of manufacturing",
+            "description": "The manufacturer year of the asset",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "documentation": {
+            "type": "object",
+            "title": "Operating Manual",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "The legally required documentation for the machine",
+            "segment": "documentation",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -38,6 +118,34 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
+        "ce_marking": {
+            "type": "object",
+            "title": "CE-Marking",
+            "description": "The ce-marking of the asset",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "height": {
+            "type": "number",
+            "title": "Height",
+            "description": "The height of the asset in millimeters",
+            "unit": "mm",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "width": {
+            "type": "number",
+            "title": "Width",
+            "description": "the width of the asset in millimeters",
+            "unit": "mm",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
         "length": {
             "type": "number",
             "title": "Length",
@@ -47,12 +155,159 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "hasCatridge": {
-            "relationship": "https://industry-fusion.org/base/v0.1/filterCatridge",
-            "$ref": "filterCatridge_schema.json",
-            "relationship_type": "subcomponent",
-            "segment": "component",
-            "class": "material",
+        "weigth": {
+            "type": "number",
+            "title": "Weight",
+            "description": "the length of the asset in kilograms",
+            "unit": "kg",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ambient_operating_temperature_min": {
+            "type": "number",
+            "title": "Ambient Operating Temperature (min.)",
+            "description": "The min temperature in °C",
+            "unit": "°C",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ambient_operating_temperature_max": {
+            "type": "number",
+            "title": "Ambient Operating Temperature (max.)",
+            "description": "The max temperature in °C",
+            "unit": "°C",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "relative_humidity_min": {
+            "type": "number",
+            "title": "Relative Humidity (min.)",
+            "description": "The min humidity in percentage",
+            "unit": "%",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "relative_humidity_max": {
+            "type": "number",
+            "title": "Relative Humidity (max.)",
+            "description": "The max humidity in percentage",
+            "unit": "%",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "atmospheric_pressure_min": {
+            "type": "number",
+            "title": "Atmospheric Pressure (min.)",
+            "description": "The min pressure in mbar",
+            "unit": "mbar",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "atmospheric_pressure_max": {
+            "type": "number",
+            "title": "Atmospheric Pressure (max.)",
+            "description": "the max pressure in mbar",
+            "unit": "mbar",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "dustiness_max": {
+            "type": "number",
+            "title": "Dust Density (max.)",
+            "description": "The max dust density in mg/m³",
+            "unit": "mg/m³",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "supply_voltage": {
+            "type": "number",
+            "title": "Supply Voltage (max.)",
+            "description": "Supply voltage",
+            "unit": "V",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "frequency": {
+            "type": "number",
+            "title": "Frequency (max.)",
+            "description": "Frequency",
+            "unit": "Hz",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "voltage_type": {
+            "type": "array",
+            "title": "Voltage Type",
+            "description": "Voltage type",
+            "enum": [
+                "AC",
+                "DC",
+                "3-phase AC"
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "electric_power": {
+            "type": "number",
+            "title": "Electrical Power (max.)",
+            "description": "Electrical Power",
+            "unit": "W",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "machine_state": {
+            "type": "string",
+            "title": "Machine State",
+            "description": "Machine State",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "dustiness": {
+            "type": "number",
+            "title": "Dustiness",
+            "description": "Dustiness",
+            "unit": "mg/m3",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "temperature": {
+            "type": "number",
+            "title": "Temperature",
+            "description": "Temperature",
+            "unit": "°C",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "humidity": {
+            "type": "number",
+            "title": "Humidity",
+            "description": "Humidity",
+            "unit": "%",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "noise": {
+            "type": "number",
+            "title": "Noise",
+            "description": "Noise",
+            "unit": "dB",
+            "segment": "realtime",
             "model": false,
             "owner_ref": "application"
         }
