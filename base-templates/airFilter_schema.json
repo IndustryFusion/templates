@@ -21,6 +21,7 @@
             "title": "Creation Date",
             "description": "Date of the creation of asset",
             "segment": "parameter",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -268,10 +269,11 @@
             "owner_ref": "manufacturer"
         },
         "machine_state": {
-            "type": "string",
+            "type": "number",
             "title": "Machine State",
             "description": "Real state of the machine",
             "segment": "realtime",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -280,6 +282,7 @@
             "title": "Power Consumption",
             "description": "Machine Power Consumption",
             "unit": "W",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -289,6 +292,7 @@
             "title": "Operating Hours",
             "description": "Total operating hours of the machine",
             "unit": "Hr",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -298,6 +302,7 @@
             "title": "Input Pressure",
             "description": "Input Pressure",
             "unit": "Pa",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -307,6 +312,7 @@
             "title": "Motor Frequency",
             "description": "Motor Frequency",
             "unit": "Hz",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -316,6 +322,7 @@
             "title": "Pressure Difference",
             "description": "Pressure Difference",
             "unit": "Pa",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -325,6 +332,7 @@
             "title": "Volumetric Flow Rate",
             "description": "Volumetric Flow Rate",
             "unit": "m3/s",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
