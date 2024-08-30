@@ -21,6 +21,7 @@
             "title": "Creation Date",
             "description": "Date of the creation of asset",
             "segment": "parameter",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -268,10 +269,11 @@
             "owner_ref": "manufacturer"
         },
         "machine_state": {
-            "type": "string",
+            "type": "number",
             "title": "Machine State",
             "description": "Machine State",
             "segment": "realtime",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -280,6 +282,7 @@
             "title": "GMS1 Minimum Pressure",
             "description": "GMS1 Minimum Pressure",
             "unit": "Pa",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -289,6 +292,7 @@
             "title": "GMS2 Minimum Pressure",
             "description": "GMS2 Minimum Pressure",
             "unit": "Pa",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -298,6 +302,7 @@
             "title": "GMS1 Right Tank Percentage",
             "description": "GMS1 Right Tank Percentage",
             "unit": "%",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -307,6 +312,7 @@
             "title": "GMS2 Right Tank Percentage",
             "description": "GMS2 Right Tank Percentage",
             "unit": "%",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -316,6 +322,7 @@
             "title": "GMS1 Left Tank Percentage",
             "description": "GMS1 Left Tank Percentage",
             "unit": "%",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -325,6 +332,7 @@
             "title": "GMS2 Left Tank Percentage",
             "description": "GMS2 Left Tank Percentage",
             "unit": "%",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -334,6 +342,7 @@
             "title": "GMS1 Liquid Gas Volume",
             "description": "GMS1 Liquid Gas Volume",
             "unit": "m3/kg",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -343,6 +352,7 @@
             "title": "GMS2 Liquid Gas Volume",
             "description": "GMS2 Liquid Gas Volume",
             "unit": "m3/kg",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -352,6 +362,7 @@
             "title": "GMS1 Source Switch Pressure",
             "description": "GMS1 Source Switch Pressure",
             "unit": "Pa",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -361,6 +372,7 @@
             "title": "GMS2 Source Switch Pressure",
             "description": "GMS2 Source Switch Pressure",
             "unit": "Pa",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -369,6 +381,7 @@
             "type": "number",
             "title": "GMS1 Operating Mode",
             "description": "GMS1 Operating Mode",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -378,6 +391,7 @@
             "title": "GMS2 Operating Mode",
             "description": "GMS2 Operating Mode",
             "segment": "realtime",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -387,6 +401,7 @@
             "description": "GMS1 Transmitter 1 Actual pressure",
             "unit": "Pa",
             "segment": "realtime",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -396,6 +411,7 @@
             "description": "GMS2 Transmitter 1 Actual pressure",
             "unit": "Pa",
             "segment": "realtime",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -406,6 +422,7 @@
             "unit": "Pa",
             "segment": "realtime",
             "model": false,
+            "readOnly" : true,
             "owner_ref": "application"
         },
         "gms2_transmitter_2_actual_pressure": {
@@ -414,6 +431,7 @@
             "description": "GMS2 Transmitter 2 Actual pressure",
             "unit": "Pa",
             "segment": "realtime",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -423,6 +441,7 @@
             "description": "GMS1 Transmitter 3 Actual pressure",
             "unit": "Pa",
             "segment": "realtime",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -432,6 +451,7 @@
             "description": "GMS2 Transmitter 3 Actual pressure",
             "unit": "Pa",
             "segment": "realtime",
+            "readOnly" : true,
             "model": false,
             "owner_ref": "application"
         },
@@ -440,6 +460,7 @@
             "title": "GMS1 Right Tank Volume",
             "description": "GMS1 Right Tank Volume",
             "unit": "m3/kg",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -449,6 +470,7 @@
             "title": "GMS2 Right Tank Volume",
             "description": "GMS2 Right Tank Volume",
             "unit": "m3/kg",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -458,6 +480,7 @@
             "title": "GMS1 Left Tank Volume",
             "description": "GMS1 Left Tank Volume",
             "unit": "m3/kg",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
@@ -467,6 +490,7 @@
             "title": "GMS2 Left Tank Volume",
             "description": "GMS2 Left Tank Volume",
             "unit": "m3/kg",
+            "readOnly" : true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
