@@ -272,45 +272,93 @@
             "type": "number",
             "title": "Machine State",
             "description": "Status of the machine",
+            "readOnly": true,
             "segment": "realtime",
             "model": false,
             "owner_ref": "application"
         },
-      "hasFilter": {
-        "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/airFilter",
-        "$ref": "airFilter_schema.json",
-        "relationship_type": "peer",
-        "segment": "component",
-        "class": "machine",
-        "model": false,
-        "owner_ref": "application"
-    },
-    "hasSource": {
-        "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/powerSource",
-        "$ref": "powerSource_schema.json",
-        "relationship_type": "peer",
-        "segment": "component",
-        "class": "machine",
-        "model": false,
-        "owner_ref": "application"
-    },
-    "hasTracker": {
-        "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/airTracker",
-        "$ref": "airTracker_schema.json",
-        "relationship_type": "subcomponent",
-        "segment": "component",
-        "class": "machine",
-        "model": false,
-        "owner_ref": "application"
-    },
-    "hasWorkpiece": {
-        "relationship": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/metalWorkpiece",
-        "$ref": "metalWorkpiece_schema.json",
-        "relationship_type": "peer",
-        "segment": "component",
-        "class": "material",
-        "model": false,
-        "owner_ref": "application"
-    }
+        "cutter_head_speed": {
+            "type": "number",
+            "title": "Speed of the Cutter Head",
+            "description": "Cutter Head Speed",
+            "readOnly": true,
+            "unit": "RPM",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+         "machine_position_x": {
+            "type": "number",
+            "title": "X Co-ordinate of Cutter",
+            "description": "X Co-ordinate of Cutter",
+            "readOnly": true,
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "machine_position_y": {
+            "type": "number",
+            "title": "Y Co-ordinate of Cutter",
+            "description": "Y Co-ordinate of Cutter",
+            "readOnly": true,
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "machine_position_z": {
+            "type": "number",
+            "title": "Z Co-ordinate of Cutter",
+            "description": "Z Co-ordinate of Cutter",
+            "readOnly": true,
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "power_consumption": {
+            "type": "number",
+            "title": "Power Consumption",
+            "description": "Power Consumption of the machine",
+            "unit": "Kw",
+            "segment": "realtime",
+            "readOnly": true,
+            "model": false,
+            "owner_ref": "application"
+        },
+        "hasFilter": {
+            "relationship": "https://industry-fusion.org/base/v0.1/airFilter",
+            "$ref": "airFilter_schema.json",
+            "relationship_type": "peer",
+            "segment": "component",
+            "class": "machine",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "hasSource": {
+            "relationship": "https://industry-fusion.org/base/v0.1/powerSource",
+            "$ref": "powerSource_schema.json",
+            "relationship_type": "subcomponent",
+            "segment": "component",
+            "class": "machine",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "hasTracker": {
+            "relationship": "https://industry-fusion.org/base/v0.1/airTracker",
+            "$ref": "airTracker_schema.json",
+            "relationship_type": "peer",
+            "segment": "component",
+            "class": "machine",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "hasWorkpiece": {
+            "relationship": "https://industry-fusion.org/base/v0.1/metalWorkpiece",
+            "$ref": "metalWorkpiece_schema.json",
+            "relationship_type": "peer",
+            "segment": "component",
+            "class": "material",
+            "model": false,
+            "owner_ref": "application"
+        }
     }
 }
