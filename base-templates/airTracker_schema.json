@@ -155,7 +155,7 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "weigth": {
+        "weight": {
             "type": "number",
             "title": "Weight",
             "description": "the length of the asset in kilograms",
