@@ -275,6 +275,42 @@
             "model": false,
             "owner_ref": "application"
         },
+        "power_consumption": {
+            "type": "number",
+            "title": "Power Consumption",
+            "description": "Power Consumption",
+            "unit": "W",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "total_current": {
+            "type": "number",
+            "title": "Total Current",
+            "description": "Total Current",
+            "unit": "A",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "active_current": {
+            "type": "number",
+            "title": "Active Current",
+            "description": "Active Current",
+            "unit": "A",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "active_voltage": {
+            "type": "number",
+            "title": "Active Voltage",
+            "description": "Active Voltage",
+            "unit": "V",
+            "segment": "realtime",
+            "model": false,
+            "owner_ref": "application"
+        },
         "hasWorkpiece": {
             "relationship": "https://industry-fusion.org/base/v0.1/metalWorkpiece",
             "$ref": "metalWorkpiece_schema.json",
