@@ -11,7 +11,8 @@
       "icon": "product_icon",
       "length": "length",
       "status": "asset_status",
-      "creation_date": "creation_date"
+      "creation_date": "creation_date",
+      "a": "ambient_operating_temperature_max"
     }
   }
 }
