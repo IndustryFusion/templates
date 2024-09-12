@@ -12,7 +12,8 @@
       "length": "length",
       "status": "asset_status",
       "creation_date": "creation_date",
-      "a": "ambient_operating_temperature_max"
+      "a": "ambient_operating_temperature_max",
+      "custom": "asset_status"
     }
   }
 }
