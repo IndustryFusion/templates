@@ -14,7 +14,8 @@
       "creation_date": "creation_date",
       "a": "ambient_operating_temperature_max",
       "custom": "asset_status",
-      "test": "manufacturing_year"
+      "test": "manufacturing_year",
+      "testprod": "length"
     }
   }
 }
