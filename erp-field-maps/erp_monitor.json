@@ -15,7 +15,8 @@
       "a": "ambient_operating_temperature_max",
       "custom": "asset_status",
       "test": "manufacturing_year",
-      "testprod": "length"
+      "testprod": "length",
+      "testprerelease": "weigth"
     }
   }
 }
