@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://industry-fusion.org/base/v0.1/common",
-    "title": "Common template",
-    "description": "Properties for common type",
+    "$id": "https://industry-fusion.org/base/v0.1/standardCandle",
+    "title": "Standard candle template",
+    "description": "Properties for standard candle type",
     "type": "object",
     "properties": {
          "eclass_template_id": {
