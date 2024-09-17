@@ -16,7 +16,8 @@
       "custom": "asset_status",
       "test": "manufacturing_year",
       "testprod": "length",
-      "testprerelease": "weigth"
+      "testprerelease": "weigth",
+      "validate": "ce_marking"
     }
   }
 }
