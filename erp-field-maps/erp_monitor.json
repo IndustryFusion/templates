@@ -17,7 +17,8 @@
       "test": "manufacturing_year",
       "testprod": "length",
       "testprerelease": "weigth",
-      "validate": "ce_marking"
+      "validate": "ce_marking",
+      "new val": "product_icon"
     }
   }
 }
