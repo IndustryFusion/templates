@@ -2,6 +2,7 @@
   "erp_name": "erp_monitor",
   "fields": {
     "products": {
+      "r": "asset_serial_number",
       "name": "product_name",
       "serial_number": "asset_serial_number",
       "manufacturing_date": "manufacturing_year",
