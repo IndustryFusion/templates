@@ -1,0 +1,84 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://industry-fusion.org/contracts/v0.1/predictiveMaintenanceLaserCutter",
+    "title": "Predictive maintenance for laser cutter",
+    "description": "Properties for predictive maintenance contract for laser cutter",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "title": "Unique ID of the contract",
+        "description": "Unique ID of the contract"
+      },
+      "asset_type": {
+        "type": "string",
+        "title": "Applicable Asset Type",
+        "description": "Applicable Asset Type",
+        "default": "https://industry-fusion.org/base/v0.1/laserCutter",
+        "readOnly": true
+      },
+      "name": {
+        "type": "string",
+        "title": "Name of the contract",
+        "description": "Name of the contract given by creator"
+      },
+      "consumer_company_ifric_id" : {
+        "type": "string",
+        "title": "IFRIC ID of the company"
+        "description": "Company IFRIC ID",
+        "readOnly": true
+      },
+      "contract_type": {
+        "type": "string",
+        "title": "type of the contract"
+        "description": "Company IFRIC ID",
+        "readOnly": true,
+        "default": "https://industry-fusion.org/contracts/v0.1/predictiveMaintenanceLaserCutter"
+      },
+      "contract_clauses": {
+        "type": "array",
+        "title": "Clauses of the contract"
+        "description": "Clauses of the contract",
+        "readOnly": true,
+        "enums": [
+            "abc1",
+            "abc2",
+            "abc3",
+            "abc4"
+        ]
+      },
+      "data_type" : {
+        "type": "array",
+        "title": "Clauses of the contract"
+        "description": "Clauses of the contract",
+        "readOnly": true,
+        "default": [
+            "alerts",
+            "live",
+            "logs"
+        ]
+      },
+      "interval": {
+        "type": "number",
+        "title": "Interval for datasharing",
+        "description": "Interval for datasharing",
+        "default": 10
+      },
+      "period": {
+        "type": "number",
+        "title": "Period of sharing in years",
+        "description": "Period of sharing in years",
+        "default": 5
+      },
+      "asset_properties" : {
+        "type": "array",
+        "title": "Properties of the asset to fetch"
+        "description": "Properties of the asset to fetch",
+        "readOnly": true,
+        "default": [
+            "https://industry-fusion.org/base/v0.1/machine_state",
+            "https://industry-fusion.org/base/v0.1/temperature"
+        ]
+      }
+    }
+}
