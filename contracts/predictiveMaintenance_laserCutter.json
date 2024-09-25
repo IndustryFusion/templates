@@ -117,8 +117,8 @@
       },
       "contract_binding_valid_till": {
         "type": "date",
-        "title": "Validity of the contract",
-        "description": "Validity of the contract",
+        "title": "Validity of the contract binding",
+        "description": "Validity of the contract binding",
         "default": 2,
         "app": "client"
       },
