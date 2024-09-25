@@ -106,21 +106,23 @@
         "description": "Interval for datasharing",
         "default": 30
         "unit": "Mins",
-        "app": "creator"
+        "app": "creator",
+        "minimum": 10,
+        "maximum": 60
       },
       "contract_valid_till": {
         "type": "date",
         "title": "Validity of the contract",
         "description": "Validity of the contract",
-        "default": 2,
-        "app": "creator"
+        "app": "creator",
+        "default_validity": "2 years"
       },
       "contract_binding_valid_till": {
         "type": "date",
         "title": "Validity of the contract binding",
         "description": "Validity of the contract binding",
-        "default": 2,
-        "app": "client"
+        "app": "client",
+        "default_validity": "2 years"
       },
       "asset_properties" : {
         "type": "array",
