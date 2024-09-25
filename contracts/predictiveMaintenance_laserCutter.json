@@ -84,7 +84,7 @@
         "enums": [
             "All data collected from the equipment during predictive maintenance activities, including sensor data, operational data, and performance metrics, shall remain the property of the data owner [provider]. The data processor [consumer] is granted limited access to the data solely for the purpose of performing predictive maintenance services as described in this agreement.",
             "The data processor [consumer] is authorized to process the data exclusively for the purposes of analyzing, predicting, and reporting potential equipment failures or performance issues. The processor shall not use, share, or process the data for any other purpose without the explicit consent of the data owner [provider]",
-            "Maintenance reports for this machine can be visulaized in the MicroStep application in your IF-X suite. Predictive Maintenance service would atleast need one year of data sharing to be effective. The service provider [provider] is solely responsible for issues or quality related to the service deliverables of the shared data."
+            "Maintenance reports for this machine can be visulaized in the data consumer's application in your IF-X suite. Predictive Maintenance service would atleast need one year of data sharing to be effective. The service provider [provider] is solely responsible for issues or quality related to the service deliverables of the shared data."
         ],
         "app": "creator"
       },
