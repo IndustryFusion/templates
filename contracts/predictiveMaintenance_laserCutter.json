@@ -78,7 +78,7 @@
       },
       "contract_clauses": {
         "type": "array",
-        "title": "Clauses of the contract"
+        "title": "Clauses of the contract",
         "description": "Clauses of the contract",
         "readOnly": true,
         "enums": [
@@ -104,7 +104,7 @@
         "type": "number",
         "title": "Interval for datasharing",
         "description": "Interval for datasharing",
-        "default": 30
+        "default": 30,
         "unit": "Mins",
         "app": "creator",
         "minimum": 10,
