@@ -2,24 +2,19 @@
   "erp_name": "erp_monitor",
   "fields": {
     "products": {
-      "r": "asset_serial_number",
-      "name": "product_name",
-      "serial_number": "asset_serial_number",
-      "manufacturing_date": "manufacturing_year",
-      "voltage": "voltage_type",
-      "year": "manufacturing_year",
-      "power": "electric_power",
-      "icon": "product_icon",
-      "length": "length",
-      "status": "asset_status",
-      "creation_date": "creation_date",
-      "a": "ambient_operating_temperature_max",
-      "custom": "asset_status",
-      "test": "manufacturing_year",
-      "testprod": "length",
-      "testprerelease": "weigth",
-      "validate": "ce_marking",
-      "new val": "product_icon"
+      "inventory_productRecords_serialNumberWithPartNumber": "asset_serial_number",
+      "inventory_parts_description": "product_name",
+      "inventory_productRecords_manufactureDate": "manufacturing_year",
+      "inventory_parts_extraDescription": "eclass:manufacturer_product_description",
+      "inventory_parts_length": "length",
+      "inventory_parts_width": "width",
+      "inventory_parts_height": "height",
+      "common_companies_name": "asset_manufacturer_name",
+      "inventory_parts_weightPerUnit": "weight,eclass:weight_of_item",
+      "inventory_parts_partNumber": "eclass:internal_article_number",
+      "inventory_parts_packagingWeightPerPackage": "eclass:weight_of_the_individual_packaging",
+      "inventory_packageTypes_defaultCode": "eclass:type_of_packaging",
+      "inventory_parts_quantityPerPackage": "eclass:quantity_of_products_per_pallet_layer"
     }
   }
 }
