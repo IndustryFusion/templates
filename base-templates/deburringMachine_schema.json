@@ -77,7 +77,7 @@
             "model": false,
             "owner_ref": "manufacturer"
         },
-        "product_icon": {
+        "product_image": {
             "type": "object",
             "title": "Product Icon",
             "contentEncoding": "base64",
