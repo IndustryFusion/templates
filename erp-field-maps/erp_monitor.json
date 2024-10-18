@@ -2,7 +2,7 @@
   "erp_name": "erp_monitor",
   "fields": {
     "products": {
-      "inventory_productRecords_serialNumberWithPartNumber": "asset_serial_number",
+      "inventory_productRecords_serialNumber": "asset_serial_number",
       "inventory_parts_description": "product_name",
       "inventory_productRecords_manufactureDate": "manufacturing_year",
       "inventory_parts_extraDescription": "eclass:manufacturer_product_description",
