@@ -197,6 +197,26 @@
             "segment": "identification",
             "model": true,
             "owner_ref": "manufacturer"
+        },
+        "certificates": {
+            "type": "object",
+            "title": "Certificates",
+            "description": "Certificates",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "badges_seals": {
+            "type": "object",
+            "title": "Badges / Seals",
+            "description": "Badges / Seals",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
         }
     }
 }
