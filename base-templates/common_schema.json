@@ -113,6 +113,14 @@
             "segment": "parameter",
             "model": true,
             "owner_ref": "manufacturer"
+        },
+        "stock_keeping_unit": {
+            "type": "number",
+            "title": "SKU",
+            "description": "SKU (Stock Keeping Unit)",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
         }
     }
 }
