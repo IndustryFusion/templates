@@ -132,7 +132,7 @@
             "segment": "parameter",
             "model": true,
             "owner_ref": "manufacturer"
-        }
+        },
         "stock_keeping_unit": {
             "type": "string",
             "title": "SKU",
