@@ -105,21 +105,45 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "weight": {
+        "overall_weight": {
             "type": "number",
-            "title": "Weight",
-            "description": "Weight in kilograms",
+            "title": "Overall Weight",
+            "description": "Overall Weight in kilograms",
             "unit": "kg",
             "segment": "parameter",
             "model": true,
             "owner_ref": "manufacturer"
         },
         "stock_keeping_unit": {
-            "type": "number",
+            "type": "string",
             "title": "SKU",
             "description": "SKU (Stock Keeping Unit)",
             "segment": "parameter",
             "model": true,
+            "owner_ref": "manufacturer"
+        },
+         "badge_number": {
+            "type": "number",
+            "title": "Badge Number",
+            "description": "Badge Number",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "country_of_manufacturing": {
+            "type": "string",
+            "title": "Country of Manufacturing",
+            "description": "Serial number of machine/product",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "cpnp_registration_date": {
+            "type": "string",
+            "title": "CPNP Registration Date",
+            "description": "Cosmetic product notification portal registration date",
+            "segment": "identification",
+            "model": false,
             "owner_ref": "manufacturer"
         }
     }
