@@ -25,7 +25,7 @@
             "owner_ref": "application"
         },
         "creation_date": {
-            "type": "string",
+            "type": "date",
             "title": "Creation Date",
             "description": "Date of the creation of asset",
             "segment": "model",
@@ -166,7 +166,7 @@
             "owner_ref": "manufacturer"
         },
         "production_date": {
-            "type": "string",
+            "type": "date",
             "title": "Production Date",
             "description": "Production Date",
             "segment": "model",
