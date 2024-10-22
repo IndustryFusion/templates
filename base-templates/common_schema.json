@@ -85,12 +85,22 @@
             "model": false,
             "owner_ref": "manufacturer"
         },
-        "documentation": {
+        "pif_documentation": {
             "type": "object",
-            "title": "Operating Manual",
+            "title": "Product Information File",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "description": "The legally required documentation for the machine",
+            "description": "The legally required documentation for the machine (PID)",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "additional_documentation": {
+            "type": "object",
+            "title": "Additional Documentation",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "Additional documentation",
             "segment": "documentation",
             "model": true,
             "owner_ref": "manufacturer"
@@ -127,15 +137,31 @@
             "title": "Badge Number",
             "description": "Badge Number",
             "segment": "parameter",
-            "model": true,
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "brand_owner": {
+            "type": "string",
+            "title": "Brand Owner",
+            "description": "Brand Owner (Company)",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "production_date": {
+            "type": "string",
+            "title": "Production Date",
+            "description": "Production Date",
+            "segment": "identification",
+            "model": false,
             "owner_ref": "manufacturer"
         },
         "country_of_manufacturing": {
             "type": "string",
             "title": "Country of Manufacturing",
-            "description": "Serial number of machine/product",
+            "description": "Country of Manufacturing",
             "segment": "identification",
-            "model": false,
+            "model": true,
             "owner_ref": "manufacturer"
         },
         "cpnp_registration_date": {
@@ -143,7 +169,33 @@
             "title": "CPNP Registration Date",
             "description": "Cosmetic product notification portal registration date",
             "segment": "identification",
-            "model": false,
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ingredients": {
+            "type": "array",
+            "title": "Ingredients",
+            "description": "Ingredients (from INCI Database)",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "allergens": {
+            "type": "string",
+            "title": "Allergens",
+            "description": "Allergens (from Allergen Database)",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "links": {
+            "type": "string",
+            "title": "Links",
+            "description": "Links from Manufacturer",
+            "segment": "identification",
+            "model": true,
             "owner_ref": "manufacturer"
         }
     }
