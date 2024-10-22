@@ -20,7 +20,7 @@
             "title": "Asset Status",
             "description": "State of the Asset in Scorpio",
             "readOnly": true,
-            "segment": "parameter",
+            "segment": "identification",
             "model": false,
             "owner_ref": "application"
         },
@@ -28,7 +28,7 @@
             "type": "string",
             "title": "Creation Date",
             "description": "Date of the creation of asset",
-            "segment": "parameter",
+            "segment": "model",
             "readOnly" : true,
             "model": false,
             "owner_ref": "application"
@@ -37,7 +37,7 @@
             "type": "string",
             "title": "Asset Manufacturer Name",
             "description": "The manufacturer of the asset",
-            "segment": "identification",
+            "segment": "model",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -55,7 +55,7 @@
             "type": "string",
             "title": "Product Name",
             "description": "Model name/Name of the asset from the manufacturer",
-            "segment": "identification",
+            "segment": "model",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -81,7 +81,7 @@
             "type": "number",
             "title": "Year of manufacturing",
             "description": "The manufacturer year of the asset",
-            "segment": "identification",
+            "segment": "model",
             "model": false,
             "owner_ref": "manufacturer"
         },
@@ -145,7 +145,7 @@
             "type": "string",
             "title": "SKU",
             "description": "SKU (Stock Keeping Unit)",
-            "segment": "parameter",
+            "segment": "identification",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -153,7 +153,7 @@
             "type": "number",
             "title": "Badge Number",
             "description": "Badge Number",
-            "segment": "parameter",
+            "segment": "resource",
             "model": false,
             "owner_ref": "manufacturer"
         },
@@ -161,7 +161,7 @@
             "type": "string",
             "title": "Brand Owner",
             "description": "Brand Owner (Company)",
-            "segment": "identification",
+            "segment": "model",
             "model": false,
             "owner_ref": "manufacturer"
         },
@@ -169,7 +169,7 @@
             "type": "string",
             "title": "Production Date",
             "description": "Production Date",
-            "segment": "identification",
+            "segment": "model",
             "model": false,
             "owner_ref": "manufacturer"
         },
@@ -177,7 +177,7 @@
             "type": "string",
             "title": "Country of Manufacturing",
             "description": "Country of Manufacturing",
-            "segment": "identification",
+            "segment": "model",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -185,7 +185,7 @@
             "type": "string",
             "title": "CPNP Registration Date",
             "description": "Cosmetic product notification portal registration date",
-            "segment": "identification",
+            "segment": "model",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -193,7 +193,7 @@
             "type": "array",
             "title": "Ingredients",
             "description": "Ingredients (from INCI Database)",
-            "segment": "identification",
+            "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -202,7 +202,7 @@
             "type": "string",
             "title": "Allergens",
             "description": "Allergens (from Allergen Database)",
-            "segment": "identification",
+            "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -211,7 +211,7 @@
             "type": "string",
             "title": "Links",
             "description": "Links from Manufacturer",
-            "segment": "identification",
+            "segment": "resource",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -221,7 +221,7 @@
             "description": "Certificates",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "documentation",
+            "segment": "resource",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -231,7 +231,7 @@
             "description": "Badges / Seals",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "documentation",
+            "segment": "resource",
             "model": true,
             "owner_ref": "manufacturer"
         }
