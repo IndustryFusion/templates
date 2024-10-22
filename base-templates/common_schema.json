@@ -124,6 +124,23 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
+        "net_weight": {
+            "type": "number",
+            "title": "Net Weight",
+            "description": "Net Weight in kilograms",
+            "unit": "kg",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+         "net_contents": {
+            "type": "number",
+            "title": "Net Contents",
+            "description": "Net Contents",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
         "stock_keeping_unit": {
             "type": "string",
             "title": "SKU",
