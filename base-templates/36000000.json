@@ -1,1 +1,240 @@
 
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://industry-fusion.org/base/v0.1/commonMachine",
+    "title": "Common template for machine products",
+    "description": "Properties for common machine type",
+    "type": "object",
+    "properties": {
+         "eclass_template_id": {
+            "type": "string",
+            "title": "IFRIC Template ID",
+            "description": "ID mapping for ECLASS",
+            "default": "0173-1#01-AAD302#008",
+            "readOnly": true,
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
+        },
+        "asset_status": {
+            "type": "string",
+            "title": "Asset Status",
+            "description": "State of the Asset in Scorpio",
+            "readOnly": true,
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "creation_date": {
+            "type": "date",
+            "title": "Creation Date",
+            "description": "Date of the creation of asset",
+            "segment": "model",
+            "readOnly" : true,
+            "model": false,
+            "owner_ref": "application"
+        },
+        "asset_manufacturer_name": {
+            "type": "string",
+            "title": "Asset Manufacturer Name",
+            "description": "The manufacturer of the asset",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "logo_manufacturer": {
+            "type": "object",
+            "title": "Logo Manufacturer",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "Logo of the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "product_name": {
+            "type": "string",
+            "title": "Product Name",
+            "description": "Model name/Name of the asset from the manufacturer",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "asset_serial_number": {
+            "type": "string",
+            "title": "Serial Number",
+            "description": "Serial number of machine/product",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "product_image": {
+            "type": "object",
+            "title": "Product Icon",
+            "contentEncoding": "base64",
+            "contentMediaType": "image/png",
+            "description": "The production icon of the asset",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "manufacturing_year": {
+            "type": "number",
+            "title": "Year of manufacturing",
+            "description": "The manufacturer year of the asset",
+            "segment": "model",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "pif_documentation": {
+            "type": "object",
+            "title": "Product Information File",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "The legally required documentation for the machine (PID)",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "additional_documentation": {
+            "type": "object",
+            "title": "Additional Documentation",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "Additional documentation",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ce_marking": {
+            "type": "object",
+            "title": "CE-Marking",
+            "description": "The ce-marking of the asset",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "overall_weight": {
+            "type": "number",
+            "title": "Overall Weight",
+            "description": "Overall Weight in kilograms",
+            "unit": "kg",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "net_weight": {
+            "type": "number",
+            "title": "Net Weight",
+            "description": "Net Weight in kilograms",
+            "unit": "kg",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+         "net_contents": {
+            "type": "number",
+            "title": "Net Contents",
+            "description": "Net Contents",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "stock_keeping_unit": {
+            "type": "string",
+            "title": "SKU",
+            "description": "SKU (Stock Keeping Unit)",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+         "badge_number": {
+            "type": "number",
+            "title": "Badge Number",
+            "description": "Badge Number",
+            "segment": "resource",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "brand_owner": {
+            "type": "string",
+            "title": "Brand Owner",
+            "description": "Brand Owner (Company)",
+            "segment": "model",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "production_date": {
+            "type": "date",
+            "title": "Production Date",
+            "description": "Production Date",
+            "segment": "model",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "country_of_manufacturing": {
+            "type": "string",
+            "title": "Country of Manufacturing",
+            "description": "Country of Manufacturing",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "cpnp_registration_date": {
+            "type": "string",
+            "title": "CPNP Registration Date",
+            "description": "Cosmetic product notification portal registration date",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "ingredients": {
+            "type": "array",
+            "title": "Ingredients",
+            "description": "Ingredients (from INCI Database)",
+            "segment": "content",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "allergens": {
+            "type": "string",
+            "title": "Allergens",
+            "description": "Allergens (from Allergen Database)",
+            "segment": "content",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "links": {
+            "type": "string",
+            "title": "Links",
+            "description": "Links from Manufacturer",
+            "segment": "resource",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "certificates": {
+            "type": "object",
+            "title": "Certificates",
+            "description": "Certificates",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "segment": "resource",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "badges_seals": {
+            "type": "object",
+            "title": "Badges / Seals",
+            "description": "Badges / Seals",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "segment": "resource",
+            "model": true,
+            "owner_ref": "manufacturer"
+        }
+    }
+}
