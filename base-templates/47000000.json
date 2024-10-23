@@ -13,8 +13,7 @@
             "readOnly": true,
             "segment": "identification",
             "model": true,
-            "owner_ref": "application",
-            ""
+            "owner_ref": "application"
         },
         "asset_status": {
             "type": "string",
