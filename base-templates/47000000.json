@@ -13,7 +13,8 @@
             "readOnly": true,
             "segment": "identification",
             "model": true,
-            "owner_ref": "application"
+            "owner_ref": "application",
+            ""
         },
         "asset_status": {
             "type": "string",
@@ -196,7 +197,7 @@
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": []
+            "enum": ["a", "b"]
         },
         "allergens": {
             "type": "string",
@@ -205,15 +206,7 @@
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": []
-        },
-        "links": {
-            "type": "string",
-            "title": "Links",
-            "description": "Links from Manufacturer",
-            "segment": "resource",
-            "model": true,
-            "owner_ref": "manufacturer"
+            "enum": ["a", "b"]
         },
         "certificates": {
             "type": "object",
