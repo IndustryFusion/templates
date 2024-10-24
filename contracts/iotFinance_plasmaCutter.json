@@ -1,0 +1,160 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://industry-fusion.org/contracts/v0.1/iotFinancePlasmaCutter",
+    "title": "IOT Analytics for laser cutter",
+    "description": "Properties for IOT analytics contract for laser cutter",
+    "type": "object",
+    "properties": {
+      "contract_binding_ifric_id": {
+        "type": "string",
+        "title": "Unique ID of the contract binding",
+        "description": "Unique ID of the contract binding (accepted by both parties)",
+        "readOnly": true,
+        "app": "client"
+      },
+      "contract_ifric_id": {
+        "type": "string",
+        "title": "Unique ID of the contract",
+        "description": "Unique ID of the contract",
+        "readOnly": true,
+        "app": "creator"
+      },
+      "asset_ifric_id": {
+        "type": "string",
+        "title": "Unique ID of the asset",
+        "description": "Unique ID of the asset",
+        "readOnly": true,
+        "app": "client"
+      },
+      "asset_type": {
+        "type": "string",
+        "title": "Applicable Asset Type",
+        "description": "Applicable Asset Type",
+        "default": "https://industry-fusion.org/base/v0.1/plasmaCutter",
+        "readOnly": true,
+        "app": "creator"
+      },
+      "contract_name": {
+        "type": "string",
+        "title": "Name of the contract",
+        "description": "Name of the contract given by creator",
+        "app": "creator"
+      },
+      "provider_company_name": {
+        "type": "string",
+        "title": "Name of the data provider",
+        "description": "Name of the data provider",
+        "readOnly": true,
+        "app": "client"
+      },
+      "consumer_company_name": {
+        "type": "string",
+        "title": "Name of the data consumer",
+        "description": "Name of the data consumer",
+        "readOnly": true,
+        "app": "creator"
+      },
+      "data_consumer_company_ifric_id" : {
+        "type": "string",
+        "title": "IFRIC ID of the consumer",
+        "description": "Consumer company IFRIC ID",
+        "readOnly": true,
+        "app": "creator"
+      },
+      "data_provider_company_ifric_id" : {
+        "type": "string",
+        "title": "IFRIC ID of the company",
+        "description": "Provider company IFRIC ID",
+        "readOnly": true,
+        "app": "client"
+      },
+      "contract_type": {
+        "type": "string",
+        "title": "type of the contract",
+        "description": "Company IFRIC ID",
+        "readOnly": true,
+        "default": "https://industry-fusion.org/contracts/v0.1/iotFinancePlasmaCutter",
+        "app": "creator"
+      },
+      "contract_clauses": {
+        "type": "array",
+        "title": "Clauses of the contract",
+        "description": "Clauses of the contract",
+        "readOnly": true,
+        "enums": [
+            "All data collected from IoT devices, including usage data, performance metrics, and other relevant operational data, shall remain the property of the data owner [provider]. The data processor [consumer] is granted limited access to the data solely for the purpose of evaluating and managing the financing terms as outlined in this agreement. The data processor must adhere to EU data protection laws, including the General Data Protection Regulation (GDPR).",
+            "The data processor [consumer] is authorized to process the IoT data solely for the purpose of assessing asset performance, usage patterns, and financial risk in relation to the financing agreement. Any use, sharing, or processing of the data beyond these purposes requires the explicit consent of the data owner [provider] and must comply with GDPR and other applicable EU regulations.",
+            "The data processor [consumer] shall implement appropriate security measures to safeguard the IoT data, including encryption, anonymization where applicable, and secure storage practices. All data processing activities must comply with GDPR and relevant EU data protection regulations to ensure the privacy and security of the data.",
+            "Financial reports, risk assessments, and performance analyses generated from the IoT data can be visualized within the data consumer's financial management system. These insights will be used to evaluate the asset's performance and align it with the terms of the financing agreement. The service provider [provider] is required to share sufficient data (typically a minimum of one year’s worth) to ensure accurate assessments for financing purposes.",
+            "Upon the termination of this agreement or upon request by the data owner [provider], the data processor [consumer] will securely delete or return all collected data, ensuring compliance with GDPR’s “right to be forgotten” principle."
+        ],
+        "app": "creator"
+      },
+      "data_type" : {
+        "type": "array",
+        "title": "Clauses of the contract",
+        "description": "Clauses of the contract",
+        "readOnly": true,
+        "default": [
+            "alerts",
+            "logs"
+        ],
+        "app": "creator"
+      },
+      "interval": {
+        "type": "number",
+        "title": "Interval for datasharing",
+        "description": "Interval for datasharing",
+        "default": 60,
+        "unit": "Mins",
+        "app": "creator",
+        "minimum": 10,
+        "maximum": 60
+      },
+      "contract_valid_till": {
+        "type": "date",
+        "title": "Validity of the contract",
+        "description": "Validity of the contract",
+        "app": "creator",
+        "default_validity": "3 years"
+      },
+      "contract_binding_valid_till": {
+        "type": "date",
+        "title": "Validity of the contract binding",
+        "description": "Validity of the contract binding",
+        "app": "client",
+        "default_validity": "3 years"
+      },
+      "asset_properties" : {
+        "type": "array",
+        "title": "Properties of the asset to fetch",
+        "description": "Properties of the asset to fetch",
+        "readOnly": true,
+        "default": [
+            "https://industry-fusion.org/base/v0.1/machine_state"
+        ],
+        "app": "creator"
+      },
+      "asset_certificate_data" : {
+        "type": "string",
+        "title": "Certificate data of the asset",
+        "description": "Certificate data of the asset",
+        "readOnly": true,
+        "app": "client"
+      },
+      "provider_company_certificate_data" : {
+        "type": "string",
+        "title": "Certificate data of the asset",
+        "description": "Certificate data of the asset",
+        "readOnly": true,
+        "app": "client"
+      },
+      "consumer_company_certificate_data" : {
+        "type": "string",
+        "title": "Certificate data of the data consumer",
+        "description": "Certificate data of the data consumer",
+        "readOnly": true,
+        "app": "creator"
+      }
+    }
+}
