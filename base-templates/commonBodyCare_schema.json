@@ -280,7 +280,7 @@
             "description": "Badges",
             "segment": "resource",
             "model": true,
-            "owner_ref": "manufacturer"
+            "owner_ref": "manufacturer",
             "enum": ["Vegan", "EU Bio", "Eco Cert", "Bioland"]
         },
         "links": {
@@ -289,7 +289,7 @@
             "description": "Links",
             "segment": "resource",
             "model": true,
-            "owner_ref": "manufacturer"
+            "owner_ref": "manufacturer",
             "enum": []
         },
         "shvc_substances": {
@@ -298,7 +298,7 @@
             "description": "SHVC Substances",
             "segment": "content",
             "model": true,
-            "owner_ref": "manufacturer"
+            "owner_ref": "manufacturer",
             "enum": ["a", "b"]
         },
         "recycling_codes": {
@@ -307,7 +307,7 @@
             "description": "Recycling codes of packaging",
             "segment": "packaging",
             "model": true,
-            "owner_ref": "manufacturer"
+            "owner_ref": "manufacturer",
             "enum": ["5 PP", "21 PAP", "70 GL"]
         },
         "width": {
@@ -316,7 +316,7 @@
             "description": "Width",
             "segment": "packaging",
             "model": true,
-            "unit": "MM"
+            "unit": "MM",
             "owner_ref": "manufacturer"
         },
         "height": {
@@ -325,7 +325,7 @@
             "description": "Height",
             "segment": "packaging",
             "model": true,
-            "unit": "MM"
+            "unit": "MM",
             "owner_ref": "manufacturer"
         },
         "depth": {
@@ -334,7 +334,7 @@
             "description": "Depth",
             "segment": "packaging",
             "model": true,
-            "unit": "MM"
+            "unit": "MM",
             "owner_ref": "manufacturer"
         }
     }
