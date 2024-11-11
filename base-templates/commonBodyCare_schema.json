@@ -26,7 +26,7 @@
         },
         "creation_date": {
             "type": "date",
-            "title": "Creation Date",
+            "title": "Asset Creation Date",
             "description": "Date of the creation of asset",
             "segment": "model",
             "readOnly" : true,
@@ -47,7 +47,7 @@
             "contentEncoding": "base64",
             "contentMediaType": "image/png",
             "description": "Logo of the manufacturer",
-            "segment": "identification",
+            "segment": "model",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -73,7 +73,7 @@
             "contentEncoding": "base64",
             "contentMediaType": "image/png",
             "description": "The production icon of the asset",
-            "segment": "identification",
+            "segment": "model",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -83,6 +83,14 @@
             "description": "The manufacturer year of the asset",
             "segment": "model",
             "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "description": {
+            "type": "string",
+            "title": "Description",
+            "description": "Description of the asset",
+            "segment": "model",
+            "model": true,
             "owner_ref": "manufacturer"
         },
         "pif_documentation": {
@@ -168,7 +176,7 @@
             "title": "Overall Weight",
             "description": "Overall Weight in kilograms",
             "unit": "kg",
-            "segment": "parameter",
+            "segment": "packaging",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -177,15 +185,15 @@
             "title": "Net Weight",
             "description": "Net Weight in kilograms",
             "unit": "kg",
-            "segment": "parameter",
+            "segment": "packaging",
             "model": true,
             "owner_ref": "manufacturer"
         },
          "net_contents": {
             "type": "number",
-            "title": "Net Contents",
-            "description": "Net Contents",
-            "segment": "parameter",
+            "title": "Net Content",
+            "description": "Net Content",
+            "segment": "packaging",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -230,7 +238,7 @@
             "owner_ref": "manufacturer"
         },
         "cpnp_registration_date": {
-            "type": "string",
+            "type": "date",
             "title": "CPNP Registration Date",
             "description": "Cosmetic product notification portal registration date",
             "segment": "model",
@@ -239,16 +247,16 @@
         },
         "ingredients": {
             "type": "array",
-            "title": "Ingredients",
+            "title": "INCI Ingredients",
             "description": "Ingredients (from INCI Database)",
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": ["a", "b"]
+            "enum": ["Aqua", "Glycerin", "Citrus Paradisi (Grapefruit) Peel Oil", "Anthemis Nobilis Flower Oil", "Sodium Cocoate", "Cannabis sativa Seed Oil", "Aloe Barbadensis Leaf Juice"]
         },
         "allergens": {
-            "type": "string",
-            "title": "Allergens",
+            "type": "array",
+            "title": "Contained Allergens",
             "description": "Allergens (from Allergen Database)",
             "segment": "content",
             "model": true,
@@ -283,6 +291,51 @@
             "model": true,
             "owner_ref": "manufacturer"
             "enum": []
+        },
+        "shvc_substances": {
+            "type": "array",
+            "title": "SHVC Substances",
+            "description": "SHVC Substances",
+            "segment": "content",
+            "model": true,
+            "owner_ref": "manufacturer"
+            "enum": ["a", "b"]
+        },
+        "recycling_codes": {
+            "type": "string",
+            "title": "Recycling codes of packaging",
+            "description": "Recycling codes of packaging",
+            "segment": "packaging",
+            "model": true,
+            "owner_ref": "manufacturer"
+            "enum": ["5 PP", "21 PAP", "70 GL"]
+        },
+        "width": {
+            "type": "string",
+            "title": "Width",
+            "description": "Width",
+            "segment": "packaging",
+            "model": true,
+            "unit": "MM"
+            "owner_ref": "manufacturer"
+        },
+        "height": {
+            "type": "string",
+            "title": "Height",
+            "description": "Height",
+            "segment": "packaging",
+            "model": true,
+            "unit": "MM"
+            "owner_ref": "manufacturer"
+        },
+        "depth": {
+            "type": "string",
+            "title": "Depth",
+            "description": "Depth",
+            "segment": "packaging",
+            "model": true,
+            "unit": "MM"
+            "owner_ref": "manufacturer"
         }
     }
 }
