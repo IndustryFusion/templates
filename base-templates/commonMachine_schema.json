@@ -9,7 +9,7 @@
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
-            "default": "0173-1#01-AAD302#008",
+            "default": "0173-1#01-AGE748#003",
             "readOnly": true,
             "segment": "identification",
             "model": true,
@@ -26,7 +26,7 @@
         },
         "creation_date": {
             "type": "date",
-            "title": "Creation Date",
+            "title": "Asset Creation Date",
             "description": "Date of the creation of asset",
             "segment": "model",
             "readOnly" : true,
@@ -47,7 +47,7 @@
             "contentEncoding": "base64",
             "contentMediaType": "image/png",
             "description": "Logo of the manufacturer",
-            "segment": "identification",
+            "segment": "model",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -73,7 +73,7 @@
             "contentEncoding": "base64",
             "contentMediaType": "image/png",
             "description": "The production icon of the asset",
-            "segment": "identification",
+            "segment": "model",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -85,6 +85,14 @@
             "model": false,
             "owner_ref": "manufacturer"
         },
+        "description": {
+            "type": "string",
+            "title": "Description",
+            "description": "Description of the asset",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
         "pif_documentation": {
             "type": "object",
             "title": "Product Information File",
@@ -93,17 +101,57 @@
             "description": "The legally required documentation for the machine (PID)",
             "segment": "documentation",
             "model": true,
-            "owner_ref": "manufacturer"
+            "owner_ref": "manufacturer",
+            "enum": []
         },
-        "additional_documentation": {
+        "additional_files": {
             "type": "object",
-            "title": "Additional Documentation",
+            "title": "Additional Files",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "description": "Additional documentation",
-            "segment": "documentation",
+            "description": "Additional Files related to asset",
+            "segment": "resource",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "instruction_documents": {
+            "type": "object",
+            "title": "Instructions",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "Additional instruction files related to asset",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "usage_instructions": {
+            "type": "string",
+            "title": "Usage Instructions",
+            "description": "Usage instructions of the product",
+            "segment": "instruction",
             "model": true,
             "owner_ref": "manufacturer"
+        },
+        "warning_message": {
+            "type": "string",
+            "title": "Warning Message",
+            "description": "Warning message for the user",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+         "user_manual": {
+            "type": "object",
+            "title": "User Manuals",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "User manual related to asset",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
         },
         "ce_marking": {
             "type": "object",
@@ -111,7 +159,7 @@
             "description": "The ce-marking of the asset",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "documentation",
+            "segment": "resource",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -120,7 +168,7 @@
             "title": "Overall Weight",
             "description": "Overall Weight in kilograms",
             "unit": "kg",
-            "segment": "parameter",
+            "segment": "packaging",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -129,15 +177,15 @@
             "title": "Net Weight",
             "description": "Net Weight in kilograms",
             "unit": "kg",
-            "segment": "parameter",
+            "segment": "packaging",
             "model": true,
             "owner_ref": "manufacturer"
         },
          "net_contents": {
             "type": "number",
-            "title": "Net Contents",
-            "description": "Net Contents",
-            "segment": "parameter",
+            "title": "Net Content",
+            "description": "Net Content",
+            "segment": "packaging",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -181,58 +229,69 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "cpnp_registration_date": {
-            "type": "string",
-            "title": "CPNP Registration Date",
-            "description": "Cosmetic product notification portal registration date",
-            "segment": "model",
+        "certifications": {
+            "type": "object",
+            "title": "Certifications",
+            "description": "Certifications for the product",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "segment": "resource",
             "model": true,
-            "owner_ref": "manufacturer"
+            "owner_ref": "manufacturer",
+            "enum": []
         },
-        "ingredients": {
+        "badges_seals": {
             "type": "array",
-            "title": "Ingredients",
-            "description": "Ingredients (from INCI Database)",
-            "segment": "content",
+            "title": "Badges",
+            "description": "Badges",
+            "segment": "resource",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": []
-        },
-        "allergens": {
-            "type": "string",
-            "title": "Allergens",
-            "description": "Allergens (from Allergen Database)",
-            "segment": "content",
-            "model": true,
-            "owner_ref": "manufacturer",
-            "enum": []
+            "enum": ["Eco Friendly", "Carbon Neutral", "Smart Technology", "IFF Ready"]
         },
         "links": {
             "type": "string",
             "title": "Links",
-            "description": "Links from Manufacturer",
+            "description": "Links",
             "segment": "resource",
             "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "recycling_codes": {
+            "type": "string",
+            "title": "Recycling codes of packaging",
+            "description": "Recycling codes of packaging",
+            "segment": "packaging",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": ["5 PP", "21 PAP", "70 GL"]
+        },
+        "width": {
+            "type": "string",
+            "title": "Width",
+            "description": "Width",
+            "segment": "packaging",
+            "model": true,
+            "unit": "MM",
             "owner_ref": "manufacturer"
         },
-        "certificates": {
-            "type": "object",
-            "title": "Certificates",
-            "description": "Certificates",
-            "contentEncoding": "base64",
-            "contentMediaType": "application/pdf",
-            "segment": "resource",
+        "height": {
+            "type": "string",
+            "title": "Height",
+            "description": "Height",
+            "segment": "packaging",
             "model": true,
+            "unit": "MM",
             "owner_ref": "manufacturer"
         },
-        "badges_seals": {
-            "type": "object",
-            "title": "Badges / Seals",
-            "description": "Badges / Seals",
-            "contentEncoding": "base64",
-            "contentMediaType": "application/pdf",
-            "segment": "resource",
+        "depth": {
+            "type": "string",
+            "title": "Depth",
+            "description": "Depth",
+            "segment": "packaging",
             "model": true,
+            "unit": "MM",
             "owner_ref": "manufacturer"
         }
     }
