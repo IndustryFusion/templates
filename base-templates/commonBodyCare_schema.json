@@ -93,17 +93,65 @@
             "description": "The legally required documentation for the machine (PID)",
             "segment": "documentation",
             "model": true,
-            "owner_ref": "manufacturer"
+            "owner_ref": "manufacturer",
+            "enum": []
         },
-        "additional_documentation": {
+        "additional_files": {
             "type": "object",
-            "title": "Additional Documentation",
+            "title": "Additional Files",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "description": "Additional documentation",
-            "segment": "documentation",
+            "description": "Additional Files related to asset",
+            "segment": "resource",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "instruction_documents": {
+            "type": "object",
+            "title": "Instructions",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "Additional instruction files related to asset",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "usage_instructions": {
+            "type": "string",
+            "title": "Usage Instructions",
+            "description": "Usage instructions of the product",
+            "segment": "instruction",
             "model": true,
             "owner_ref": "manufacturer"
+        },
+        "warning_message": {
+            "type": "string",
+            "title": "Warning Message",
+            "description": "Warning message for the user",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "best_before": {
+            "type": "date",
+            "title": "Best use before (POA)",
+            "description": "Best use before of the asset",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer"
+         },
+         "user_manual": {
+            "type": "object",
+            "title": "User Manuals",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "User manual related to asset",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
         },
         "ce_marking": {
             "type": "object",
@@ -111,7 +159,7 @@
             "description": "The ce-marking of the asset",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "documentation",
+            "segment": "resource",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -207,25 +255,34 @@
             "owner_ref": "manufacturer",
             "enum": ["a", "b"]
         },
-        "certificates": {
+        "certifications": {
             "type": "object",
-            "title": "Certificates",
-            "description": "Certificates",
+            "title": "Certifications",
+            "description": "Certifications for the product",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
             "segment": "resource",
             "model": true,
-            "owner_ref": "manufacturer"
+            "owner_ref": "manufacturer",
+            "enum": []
         },
         "badges_seals": {
-            "type": "object",
-            "title": "Badges / Seals",
-            "description": "Badges / Seals",
-            "contentEncoding": "base64",
-            "contentMediaType": "application/pdf",
+            "type": "array",
+            "title": "Badges",
+            "description": "Badges",
             "segment": "resource",
             "model": true,
             "owner_ref": "manufacturer"
+            "enum": ["Vegan", "EU Bio", "Eco Cert", "Bioland"]
+        },
+        "links": {
+            "type": "string",
+            "title": "Links",
+            "description": "Links",
+            "segment": "resource",
+            "model": true,
+            "owner_ref": "manufacturer"
+            "enum": []
         }
     }
 }
