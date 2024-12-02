@@ -1689,9 +1689,24 @@
             "model": true,
             "owner_ref": "manufacturer",
             "enum": [
-                "5 PP",
-                "21 PAP",
-                "70 GL"
+                "PET (Polyethylene Terephthalate)",
+                "HDPE (High-Density Polyethylene)",
+                "PVC (Polyvinyl Chloride)",
+                "LDPE (Low-Density Polyethylene)",
+                "PP (Polypropylene)",
+                "PS (Polystyrene)",
+                "Acrylic",
+                "Nylon",
+                "Polycarbonate",
+                "PAP 20: Corrugated fiberboard",
+                "PAP 21: Non-corrugated fiberboard",
+                "PAP 22: Paper",
+                "FE 40: Steel",
+                "ALU 41: Aluminum",
+                "GL 70: Clear glass",
+                "GL 71: Green glass",
+                "GL 72: Brown glass",
+                "COM 81: Compostable materials"
             ]
         },
         "width": {
