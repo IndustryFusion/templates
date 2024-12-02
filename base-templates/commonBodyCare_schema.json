@@ -5,7 +5,7 @@
     "description": "Properties for common body care type",
     "type": "object",
     "properties": {
-         "eclass_template_id": {
+        "eclass_template_id": {
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
@@ -38,7 +38,7 @@
             "title": "Asset Creation Date",
             "description": "Date of the creation of asset",
             "segment": "model",
-            "readOnly" : true,
+            "readOnly": true,
             "model": false,
             "owner_ref": "application"
         },
@@ -162,8 +162,8 @@
             "segment": "instruction",
             "model": true,
             "owner_ref": "manufacturer"
-         },
-         "user_manual": {
+        },
+        "user_manual": {
             "type": "object",
             "title": "User Manuals",
             "contentEncoding": "base64",
@@ -202,7 +202,7 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-         "net_contents": {
+        "net_contents": {
             "type": "number",
             "title": "Net Content",
             "description": "Net Content",
@@ -218,7 +218,7 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-         "badge_number": {
+        "badge_number": {
             "type": "number",
             "title": "Badge Number",
             "description": "Badge Number",
@@ -265,7 +265,15 @@
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": ["Aqua", "Glycerin", "Citrus Paradisi (Grapefruit) Peel Oil", "Anthemis Nobilis Flower Oil", "Sodium Cocoate", "Cannabis sativa Seed Oil", "Aloe Barbadensis Leaf Juice"]
+            "enum": [
+                "Aqua",
+                "Glycerin",
+                "Citrus Paradisi (Grapefruit) Peel Oil",
+                "Anthemis Nobilis Flower Oil",
+                "Sodium Cocoate",
+                "Cannabis sativa Seed Oil",
+                "Aloe Barbadensis Leaf Juice"
+            ]
         },
         "preservatives": {
             "type": "array",
@@ -274,7 +282,15 @@
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": ["Aqua", "Glycerin", "Citrus Paradisi (Grapefruit) Peel Oil", "Anthemis Nobilis Flower Oil", "Sodium Cocoate", "Cannabis sativa Seed Oil", "Aloe Barbadensis Leaf Juice"]
+            "enum": [
+                "Aqua",
+                "Glycerin",
+                "Citrus Paradisi (Grapefruit) Peel Oil",
+                "Anthemis Nobilis Flower Oil",
+                "Sodium Cocoate",
+                "Cannabis sativa Seed Oil",
+                "Aloe Barbadensis Leaf Juice"
+            ]
         },
         "colorants": {
             "type": "array",
@@ -283,7 +299,164 @@
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": ["CI 10006", "CI 10020", "CI 10316", "CI 11680", "CI 11710", "CI 11725", "CI 11920", "CI 12010", "CI 12085", "CI 12120", "CI 12370", "CI 12420", "CI 12480", "CI 12490", "CI 12700", "CI 13015", "CI 14270", "PONCEAUX SX (CI 14700)", "CI 14720", "CI 14815", "CI 15510", "CI 15525", "CI 15580", "CI 15620", "CI 15630", "CI 15800", "CI 15850", "CI 15865", "CI 15880", "CI 15980", "CI 15985", "CI 16035", "CI 16185", "CI 16230", "CI 16255", "CI 16290", "CI 17200", "CI 18050", "CI 18130", "CI 18690", "CI 18736", "CI 18820", "CI 18965", "CI 19140", "CI 20040", "CI 20470", "CI 21100", "CI 21108", "CI 21230 /SOLVENT YELLOW 29", "CI 24790", "CI 26100 /SOLVENT RED 23", "CI 27755", "CI 28440", "CI 40215", "CI 40800", "CI 40820", "CI 40825", "CI 40850", "CI 42045 /ACID BLUE 1", "CI 42051 /ACID BLUE 3", "CI 42053/ FAST GREEN FCF", "CI 42080", "CI 42090/ ACID BLUE 9", "ACID BLUE 9 AMMONIUM SALT", "ACID BLUE 9 ALUMINUM LAKE", "CI 42100", "CI 42170", "CI 42510", "CI 42520 / BASIC VIOLET 2", "CI 42735", "CI 44045", "CI 44090", "CI 45100/ ACID RED 52", "CI 45190 / ACID VIOLET 9", "CI 45220", "CI 45350", "CI 45370", "CI 45380 / ACID RED 87", "CI 45396", "CI 45405", "CI 45410", "CI 45430", "CI 47000 / SOLVENT YELLOW 33", "CI 47005", "CI 50325", "CI 50420", "CI 51319 / PIGMENT VIOLET 23", "CI 58000 / PIGMENT RED 83", "CI 59040", "CI 60724", "CI 60725 / SOLVENT VIOLET 13 / VIOLET 2", "CI 60730", "CI 61565", "CI 61570", "CI 61585", "CI 62045", "CI 69800", "CI 69825", "CI 71105", "CI 73000", "CI 73015", "CI 73360", "CI 73385", "CI 73900", "CI 73915", "CI 74100", "CI 74160", "CI 74180", "CI 74260", "CI 75100", "CI 75120", "CI 75125", "CI 75130", "CI 75135", "CI 75170", "CI 75300", "CI 75470", "CI 75810", "CI 77000", "CI 77002", "CI 77004", "CI 77007", "CI 77015", "CI 77120", "CI 77163", "CI 77220", "CI 77231", "CI 77266", "CI 77266", "CI 77267", "CI 77268:1", "CI 77288", "CI 77289", "CI 77346", "CI 77400", "CI 77480", "CI 77489", "CI 77491", "CI 77492", "CI 77499", "CI 77510", "CI 77713", "CI 77742", "CI 77745", "CI 77820", "TITANIUM DIOXIDE/CI 77891", "ZINC OXIDE", "LACTOFLAVIN / RIBOFLAVIN", "CARAMEL", "CAPSANTHIN, CAPSORUBIN", "BEETROOT RED", "ANTHOCYANINS", "ALUMINUM STEARATE / ZINC STEARATE / MAGNESIUM STEARATE / CALCIUM STEARATE", "BROMOTHYMOL BLUE", "BROMOCRESOL GREEN", "ACID RED 195"]
+            "enum": [
+                "CI 10006",
+                "CI 10020",
+                "CI 10316",
+                "CI 11680",
+                "CI 11710",
+                "CI 11725",
+                "CI 11920",
+                "CI 12010",
+                "CI 12085",
+                "CI 12120",
+                "CI 12370",
+                "CI 12420",
+                "CI 12480",
+                "CI 12490",
+                "CI 12700",
+                "CI 13015",
+                "CI 14270",
+                "PONCEAUX SX (CI 14700)",
+                "CI 14720",
+                "CI 14815",
+                "CI 15510",
+                "CI 15525",
+                "CI 15580",
+                "CI 15620",
+                "CI 15630",
+                "CI 15800",
+                "CI 15850",
+                "CI 15865",
+                "CI 15880",
+                "CI 15980",
+                "CI 15985",
+                "CI 16035",
+                "CI 16185",
+                "CI 16230",
+                "CI 16255",
+                "CI 16290",
+                "CI 17200",
+                "CI 18050",
+                "CI 18130",
+                "CI 18690",
+                "CI 18736",
+                "CI 18820",
+                "CI 18965",
+                "CI 19140",
+                "CI 20040",
+                "CI 20470",
+                "CI 21100",
+                "CI 21108",
+                "CI 21230 /SOLVENT YELLOW 29",
+                "CI 24790",
+                "CI 26100 /SOLVENT RED 23",
+                "CI 27755",
+                "CI 28440",
+                "CI 40215",
+                "CI 40800",
+                "CI 40820",
+                "CI 40825",
+                "CI 40850",
+                "CI 42045 /ACID BLUE 1",
+                "CI 42051 /ACID BLUE 3",
+                "CI 42053/ FAST GREEN FCF",
+                "CI 42080",
+                "CI 42090/ ACID BLUE 9",
+                "ACID BLUE 9 AMMONIUM SALT",
+                "ACID BLUE 9 ALUMINUM LAKE",
+                "CI 42100",
+                "CI 42170",
+                "CI 42510",
+                "CI 42520 / BASIC VIOLET 2",
+                "CI 42735",
+                "CI 44045",
+                "CI 44090",
+                "CI 45100/ ACID RED 52",
+                "CI 45190 / ACID VIOLET 9",
+                "CI 45220",
+                "CI 45350",
+                "CI 45370",
+                "CI 45380 / ACID RED 87",
+                "CI 45396",
+                "CI 45405",
+                "CI 45410",
+                "CI 45430",
+                "CI 47000 / SOLVENT YELLOW 33",
+                "CI 47005",
+                "CI 50325",
+                "CI 50420",
+                "CI 51319 / PIGMENT VIOLET 23",
+                "CI 58000 / PIGMENT RED 83",
+                "CI 59040",
+                "CI 60724",
+                "CI 60725 / SOLVENT VIOLET 13 / VIOLET 2",
+                "CI 60730",
+                "CI 61565",
+                "CI 61570",
+                "CI 61585",
+                "CI 62045",
+                "CI 69800",
+                "CI 69825",
+                "CI 71105",
+                "CI 73000",
+                "CI 73015",
+                "CI 73360",
+                "CI 73385",
+                "CI 73900",
+                "CI 73915",
+                "CI 74100",
+                "CI 74160",
+                "CI 74180",
+                "CI 74260",
+                "CI 75100",
+                "CI 75120",
+                "CI 75125",
+                "CI 75130",
+                "CI 75135",
+                "CI 75170",
+                "CI 75300",
+                "CI 75470",
+                "CI 75810",
+                "CI 77000",
+                "CI 77002",
+                "CI 77004",
+                "CI 77007",
+                "CI 77015",
+                "CI 77120",
+                "CI 77163",
+                "CI 77220",
+                "CI 77231",
+                "CI 77266",
+                "CI 77266",
+                "CI 77267",
+                "CI 77268:1",
+                "CI 77288",
+                "CI 77289",
+                "CI 77346",
+                "CI 77400",
+                "CI 77480",
+                "CI 77489",
+                "CI 77491",
+                "CI 77492",
+                "CI 77499",
+                "CI 77510",
+                "CI 77713",
+                "CI 77742",
+                "CI 77745",
+                "CI 77820",
+                "TITANIUM DIOXIDE/CI 77891",
+                "ZINC OXIDE",
+                "LACTOFLAVIN / RIBOFLAVIN",
+                "CARAMEL",
+                "CAPSANTHIN, CAPSORUBIN",
+                "BEETROOT RED",
+                "ANTHOCYANINS",
+                "ALUMINUM STEARATE / ZINC STEARATE / MAGNESIUM STEARATE / CALCIUM STEARATE",
+                "BROMOTHYMOL BLUE",
+                "BROMOCRESOL GREEN",
+                "ACID RED 195"
+            ]
         },
         "allergens": {
             "type": "array",
@@ -292,7 +465,10 @@
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": ["a", "b"]
+            "enum": [
+                "a",
+                "b"
+            ]
         },
         "certifications": {
             "type": "object",
@@ -312,7 +488,12 @@
             "segment": "resource",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": ["Vegan", "EU Bio", "Eco Cert", "Bioland"]
+            "enum": [
+                "Vegan",
+                "EU Bio",
+                "Eco Cert",
+                "Bioland"
+            ]
         },
         "links": {
             "type": "string",
@@ -330,7 +511,10 @@
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": ["a", "b"]
+            "enum": [
+                "a",
+                "b"
+            ]
         },
         "recycling_codes": {
             "type": "string",
@@ -339,7 +523,11 @@
             "segment": "packaging",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": ["5 PP", "21 PAP", "70 GL"]
+            "enum": [
+                "5 PP",
+                "21 PAP",
+                "70 GL"
+            ]
         },
         "width": {
             "type": "string",
