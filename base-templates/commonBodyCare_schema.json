@@ -267,6 +267,15 @@
             "owner_ref": "manufacturer",
             "enum": ["Aqua", "Glycerin", "Citrus Paradisi (Grapefruit) Peel Oil", "Anthemis Nobilis Flower Oil", "Sodium Cocoate", "Cannabis sativa Seed Oil", "Aloe Barbadensis Leaf Juice"]
         },
+        "preservatives": {
+            "type": "array",
+            "title": "Preservatives",
+            "description": "Preservatives (from INCI Database)",
+            "segment": "content",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": ["Aqua", "Glycerin", "Citrus Paradisi (Grapefruit) Peel Oil", "Anthemis Nobilis Flower Oil", "Sodium Cocoate", "Cannabis sativa Seed Oil", "Aloe Barbadensis Leaf Juice"]
+        },
         "colorants": {
             "type": "array",
             "title": "Colorants",
