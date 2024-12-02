@@ -24,6 +24,15 @@
             "model": false,
             "owner_ref": "application"
         },
+        "asset_category": {
+            "type": "string",
+            "title": "Asset Category",
+            "description": "Category of the asset",
+            "readOnly": true,
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
+        },
         "creation_date": {
             "type": "date",
             "title": "Asset Creation Date",
