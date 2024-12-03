@@ -29,7 +29,7 @@
             "title": "Asset Category",
             "description": "Category of the asset",
             "readOnly": true,
-            "segment": "identification",
+            "segment": "model",
             "model": true,
             "owner_ref": "application"
         },
@@ -96,7 +96,7 @@
         "batch_number": {
             "type": "string",
             "title": "Batch Number",
-            "description": "Batch number",
+            "description": "Batch number of the product",
             "segment": "identification",
             "model": false,
             "owner_ref": "manufacturer"
