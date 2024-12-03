@@ -77,6 +77,14 @@
             "model": false,
             "owner_ref": "manufacturer"
         },
+        "batch_number": {
+            "type": "string",
+            "title": "Batch Number",
+            "description": "Batch number",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
         "product_image": {
             "type": "object",
             "title": "Product Icon",
@@ -85,14 +93,6 @@
             "description": "The production icon of the asset",
             "segment": "model",
             "model": true,
-            "owner_ref": "manufacturer"
-        },
-        "manufacturing_year": {
-            "type": "number",
-            "title": "Year of manufacturing",
-            "description": "The manufacturer year of the asset",
-            "segment": "model",
-            "model": false,
             "owner_ref": "manufacturer"
         },
         "description": {
@@ -160,7 +160,7 @@
             "title": "Best use before (POA)",
             "description": "Best use before of the asset",
             "segment": "instruction",
-            "model": true,
+            "model": false,
             "owner_ref": "manufacturer"
         },
         "user_manual": {
@@ -218,20 +218,12 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "badge_number": {
-            "type": "number",
-            "title": "Badge Number",
-            "description": "Badge Number",
-            "segment": "resource",
-            "model": false,
-            "owner_ref": "manufacturer"
-        },
         "brand_owner": {
             "type": "string",
             "title": "Brand Owner",
             "description": "Brand Owner (Company)",
             "segment": "model",
-            "model": false,
+            "model": true,
             "owner_ref": "manufacturer"
         },
         "production_date": {
