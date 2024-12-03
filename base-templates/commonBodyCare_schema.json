@@ -50,6 +50,22 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
+        "asset_manufacturer_address": {
+            "type": "string",
+            "title": "Asset Manufacturer Address",
+            "description": "Address of the manufacturer",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "eu_regulation_reference": {
+            "type": "string",
+            "title": "EU Regulation Reference",
+            "description": "Specific regulations or directives adhered to",
+            "segment": "resource",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
         "logo_manufacturer": {
             "type": "object",
             "title": "Logo Manufacturer",
@@ -104,6 +120,32 @@
             "owner_ref": "manufacturer",
             "translation": true
         },
+        "place_of_manufacture": {
+            "type": "string",
+            "title": "Place of Manufacture",
+            "description": "Place of the origin of the product",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "co2_emmision_per_unit": {
+            "type": "string",
+            "title": "Co2 Emissions Per Unit",
+            "description": "Co2 Emissions Per Unit",
+            "segment": "model",
+            "model": true,
+            "unit": "kg",
+            "owner_ref": "manufacturer"
+        },
+        "hazard_references": {
+            "type": "array",
+            "title": "Hazard References",
+            "description": "Hazard References",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [ "Flammable", "Excessive Alcohol", "Dangerous Chemicals", "May Cause Skin Irritation", "May Cause Eye Irritation", "Allergetic to Some Users", "Non-Ingestible"]
+        },
         "pif_documentation": {
             "type": "object",
             "title": "Product Information File",
@@ -133,6 +175,28 @@
             "contentMediaType": "application/pdf",
             "description": "Additional instruction files related to asset",
             "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "disposal_guidelines": {
+            "type": "object",
+            "title": "Disposal Guidelines",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "Disposal guidelines of the asset",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "complaince_documentation": {
+            "type": "object",
+            "title": "Complaince Documents",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "Complaince documents of the asset",
+            "segment": "resource",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -246,6 +310,14 @@
             "type": "date",
             "title": "CPNP Registration Date",
             "description": "Cosmetic product notification portal registration date",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "cpnp_registration_number": {
+            "type": "string",
+            "title": "CPNP Registration Number",
+            "description": "Cosmetic product notification portal registration number",
             "segment": "model",
             "model": true,
             "owner_ref": "manufacturer"
@@ -1660,7 +1732,7 @@
             "enum": [
                 "Vegan",
                 "EU Bio",
-                "Eco Cert",
+                "Eco Certified",
                 "Bioland"
             ]
         },
