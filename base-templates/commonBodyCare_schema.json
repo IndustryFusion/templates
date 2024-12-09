@@ -329,6 +329,7 @@
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
+            "quantity": "%",
             "enum": [
                 "THIOGLYCOLIC ACID",
                 "THIOGLYCOLIC ACID ESTERS",
@@ -754,6 +755,7 @@
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
+            "quantity": "%",
             "enum": [
                 "CAMPHOR BENZALKONIUM METHOSULFATE",
                 "HOMOSALATE",
@@ -799,6 +801,7 @@
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
+            "quantity": "%",
             "enum": [
                 "AMMONIUM BENZOATE",
                 "BUTYL BENZOATE",
@@ -930,6 +933,7 @@
             "description": "Colarants (from INCI Database)",
             "segment": "content",
             "model": true,
+            "quantity": "%",
             "owner_ref": "manufacturer",
             "enum": [
                 "CI 10006",
@@ -1096,6 +1100,7 @@
             "description": "Allergens (from Allergen Database)",
             "segment": "content",
             "model": true,
+            "quantity": "%",
             "owner_ref": "manufacturer",
             "enum": [
                 "BENZYL ALCOHOL",
@@ -1751,6 +1756,7 @@
             "description": "Recycling codes of packaging",
             "segment": "packaging",
             "model": true,
+            "quantity": "KG",
             "owner_ref": "manufacturer",
             "enum": [
                 "PET 1 (Polyethylene Terephthalate)",
