@@ -3,6 +3,7 @@
     "$id": "https://industry-fusion.org/base/v0.1/commonWood",
     "title": "Common template for wood products",
     "description": "Properties for common wood type",
+    "required": ["product_name", "asset_serial_number"],
     "type": "object",
     "properties": {
          "eclass_template_id": {
