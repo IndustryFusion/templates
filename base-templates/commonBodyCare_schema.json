@@ -325,7 +325,7 @@
         "restricted_ingredients": {
             "type": "array",
             "title": "Restricted Ingredients",
-            "description": "Restricted Ingredients (from INCI Database)",
+            "description": "Restricted Ingredients (from INCI Database). Quantity: Percentage of the content in the product.",
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
@@ -751,7 +751,7 @@
         "uv_filters": {
             "type": "array",
             "title": "UV Filters",
-            "description": "UV Filters (from INCI Database)",
+            "description": "UV Filters (from INCI Database) Quantity: Percentage of the content in the product.",
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
@@ -797,7 +797,7 @@
         "preservatives": {
             "type": "array",
             "title": "Preservatives",
-            "description": "Preservatives (from INCI Database)",
+            "description": "Preservatives (from INCI Database). Quantity: Percentage of the content in the product.",
             "segment": "content",
             "model": true,
             "owner_ref": "manufacturer",
@@ -930,7 +930,7 @@
         "colorants": {
             "type": "array",
             "title": "Colorants",
-            "description": "Colarants (from INCI Database)",
+            "description": "Colarants (from INCI Database). Quantity: Percentage of the content in the product.",
             "segment": "content",
             "model": true,
             "quantity": "%",
@@ -1097,7 +1097,7 @@
         "allergens": {
             "type": "array",
             "title": "Contained Allergens",
-            "description": "Allergens (from Allergen Database)",
+            "description": "Allergens (from Allergen Database). Quantity: Percentage of the content in the product.",
             "segment": "content",
             "model": true,
             "quantity": "%",
@@ -1753,7 +1753,7 @@
         "recycling_codes": {
             "type": "string",
             "title": "Recycling codes of packaging",
-            "description": "Recycling codes of packaging",
+            "description": "Recycling codes of packaging. Quantity: Kilogram of recyclable content in the product.",
             "segment": "packaging",
             "model": true,
             "quantity": "KG",
