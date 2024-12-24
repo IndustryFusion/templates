@@ -87,6 +87,20 @@
             "owner_ref": "manufacturer",
             "translation": true
         },
+        "asset_communication_protocol": {
+            "type": "array",
+            "title": "Communication Protocol",
+            "description": "The communication protocol of the asset",
+            "enum": [
+                "opc-ua",
+                "mqtt",
+                "modbus",
+                "http"
+            ],
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
         "asset_serial_number": {
             "type": "string",
             "title": "Serial Number",
