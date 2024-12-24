@@ -4,6 +4,7 @@
     "title": "Common template",
     "description": "Properties for common type",
     "type": "object",
+    "required": ["product_name", "asset_serial_number"],
     "properties": {
          "eclass_template_id": {
             "type": "string",
