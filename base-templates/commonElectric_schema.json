@@ -3,6 +3,7 @@
     "$id": "https://industry-fusion.org/base/v0.1/commonElectric",
     "title": "Common template for electric products",
     "description": "Properties for common electric type",
+    "required": ["product_name", "asset_serial_number"],
     "type": "object",
     "properties": {
          "eclass_template_id": {
