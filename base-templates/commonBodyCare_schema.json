@@ -3,6 +3,7 @@
     "$id": "https://industry-fusion.org/base/v0.1/commonBodyCare",
     "title": "Common template for body care products",
     "description": "Properties for common body care type",
+    "required": ["product_name", "asset_serial_number"],
     "type": "object",
     "properties": {
         "eclass_template_id": {
