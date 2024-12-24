@@ -16,12 +16,30 @@
             "model": true,
             "owner_ref": "application"
         },
-        "creation_date": {
+        "asset_status": {
             "type": "string",
-            "title": "Creation Date",
+            "title": "Asset Status",
+            "description": "State of the Asset in Scorpio",
+            "readOnly": true,
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "application"
+        },
+        "asset_category": {
+            "type": "string",
+            "title": "Asset Category",
+            "description": "Category of the asset",
+            "readOnly": true,
+            "segment": "model",
+            "model": true,
+            "owner_ref": "application"
+        },
+        "creation_date": {
+            "type": "date",
+            "title": "Asset Creation Date",
             "description": "Date of the creation of asset",
-            "segment": "parameter",
-            "readOnly" : true,
+            "segment": "model",
+            "readOnly": true,
             "model": false,
             "owner_ref": "application"
         },
@@ -29,50 +47,58 @@
             "type": "string",
             "title": "Asset Manufacturer Name",
             "description": "The manufacturer of the asset",
-            "segment": "identification",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "translation": true
+        },
+        "asset_manufacturer_address": {
+            "type": "string",
+            "title": "Asset Manufacturer Address",
+            "description": "Address of the manufacturer",
+            "segment": "model",
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "asset_category": {
+        "eu_regulation_reference": {
             "type": "string",
-            "title": "Asset Category",
-            "description": "Category of the asset",
-            "readOnly": true,
-            "segment": "identification",
+            "title": "EU Regulation Reference",
+            "description": "Specific regulations or directives adhered to",
+            "segment": "resource",
             "model": true,
-            "owner_ref": "application"
-        },
-        "asset_status": {
-            "type": "string",
-            "title": "Asset Status",
-            "description": "State of the Asset in application",
-            "readOnly": true,
-            "segment": "parameter",
-            "model": false,
-            "owner_ref": "application"
+            "owner_ref": "manufacturer"
         },
         "logo_manufacturer": {
             "type": "object",
-            "title": "Logo of the Manufacturer",
+            "title": "Logo Manufacturer",
             "contentEncoding": "base64",
             "contentMediaType": "image/png",
             "description": "Logo of the manufacturer",
-            "segment": "identification",
+            "segment": "model",
             "model": true,
             "owner_ref": "manufacturer"
         },
         "product_name": {
             "type": "string",
             "title": "Product Name",
-            "description": "Name of the asset from the manufacturer",
-            "segment": "identification",
+            "description": "Model name/Name of the asset from the manufacturer",
+            "segment": "model",
             "model": true,
-            "owner_ref": "manufacturer"
+            "owner_ref": "manufacturer",
+            "translation": true
         },
         "asset_serial_number": {
             "type": "string",
             "title": "Serial Number",
-            "description": "Serial number of asset",
+            "description": "Serial number of machine/product",
+            "segment": "identification",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "batch_number": {
+            "type": "string",
+            "title": "Batch Number",
+            "description": "Batch number of the product",
             "segment": "identification",
             "model": false,
             "owner_ref": "manufacturer"
@@ -83,41 +109,136 @@
             "contentEncoding": "base64",
             "contentMediaType": "image/png",
             "description": "The production icon of the asset",
-            "segment": "identification",
+            "segment": "model",
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "manufacturing_year": {
-            "type": "number",
-            "title": "Year of manufacturing",
-            "description": "The manufacturer year of the asset",
-            "segment": "identification",
+        "description": {
+            "type": "string",
+            "title": "Description",
+            "description": "Description of the asset",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "translation": true
+        },
+        "place_of_manufacture": {
+            "type": "string",
+            "title": "Place of Manufacture",
+            "description": "Place of the origin of the product",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "co2_emmision_per_unit": {
+            "type": "string",
+            "title": "Co2 Emissions Per Unit",
+            "description": "Co2 Emissions Per Unit",
+            "segment": "model",
+            "model": true,
+            "unit": "kg",
+            "owner_ref": "manufacturer"
+        },
+        "hazard_references": {
+            "type": "array",
+            "title": "Hazard References",
+            "description": "Hazard References",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [ "Excessive Alcohol", "May Cause Skin Irritation", "May Cause Eye Irritation", "Allergetic to Some Users", "Non-Ingestible", "Gas Under Pressure", "Explosive", "Oxidising", "Corrosive", "Flammable", "Health Harard/Hazardous to Ozone Layer", "Acute Toxicity", "Serious Health Hazard", "Hazardous to the Environment"]
+        },
+        "pif_documentation": {
+            "type": "object",
+            "title": "Product Information File",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "The legally required documentation for the machine (PID)",
+            "segment": "documentation",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "additional_files": {
+            "type": "object",
+            "title": "Additional Files",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "Additional Files related to asset",
+            "segment": "resource",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "instruction_documents": {
+            "type": "object",
+            "title": "Instructions",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "Additional instruction files related to asset",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "disposal_guidelines": {
+            "type": "object",
+            "title": "Disposal Guidelines",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "Disposal guidelines of the asset",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "complaince_documentation": {
+            "type": "object",
+            "title": "Complaince Documents",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "description": "Complaince documents of the asset",
+            "segment": "resource",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "usage_instructions": {
+            "type": "string",
+            "title": "Usage Instructions",
+            "description": "Usage instructions of the product",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "translation": true
+        },
+        "warning_message": {
+            "type": "string",
+            "title": "Warning Message",
+            "description": "Warning message for the user",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "translation": true
+        },
+        "warranty_till": {
+            "type": "date",
+            "title": "Last Date of Warranty",
+            "description": "Last Date of Warranty",
+            "segment": "instruction",
             "model": false,
             "owner_ref": "manufacturer"
         },
-        "documentation": {
+        "user_manual": {
             "type": "object",
-            "title": "Operating Manual",
+            "title": "User Manuals",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "description": "The legally required documentation for the machine",
-            "segment": "documentation",
+            "description": "User manual related to asset",
+            "segment": "instruction",
             "model": true,
-            "owner_ref": "manufacturer"
-        },
-        "asset_communication_protocol": {
-            "type": "array",
-            "title": "Communication Protocol",
-            "description": "The communication protocol of the asset",
-            "enum": [
-                "opc-ua",
-                "mqtt",
-                "modbus",
-                "http"
-            ],
-            "segment": "parameter",
-            "model": true,
-            "owner_ref": "manufacturer"
+            "owner_ref": "manufacturer",
+            "enum": []
         },
         "ce_marking": {
             "type": "object",
@@ -125,44 +246,147 @@
             "description": "The ce-marking of the asset",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "documentation",
+            "segment": "resource",
             "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "overall_weight": {
+            "type": "number",
+            "title": "Overall Weight",
+            "description": "Overall Weight in kilograms",
+            "unit": "kg",
+            "segment": "packaging",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "net_weight": {
+            "type": "number",
+            "title": "Net Weight",
+            "description": "Net Weight in kilograms",
+            "unit": "kg",
+            "segment": "packaging",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "stock_keeping_unit": {
+            "type": "string",
+            "title": "SKU",
+            "description": "SKU (Stock Keeping Unit)",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "brand_owner": {
+            "type": "string",
+            "title": "Brand Owner",
+            "description": "Brand Owner (Company)",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "production_date": {
+            "type": "date",
+            "title": "Production Date",
+            "description": "Production Date",
+            "segment": "model",
+            "model": false,
+            "owner_ref": "manufacturer"
+        },
+        "country_of_manufacturing": {
+            "type": "string",
+            "title": "Country of Manufacturing",
+            "description": "Country of Manufacturing",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "certifications": {
+            "type": "object",
+            "title": "Certifications",
+            "description": "Certifications for the product",
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf",
+            "segment": "resource",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "badges_seals": {
+            "type": "array",
+            "title": "Badges",
+            "description": "Badges",
+            "segment": "resource",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Vegan",
+                "EU Bio",
+                "Eco Certified",
+                "Bioland"
+            ]
+        },
+        "links": {
+            "type": "string",
+            "title": "Links",
+            "description": "Links",
+            "segment": "resource",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": []
+        },
+        "recycling_codes": {
+            "type": "string",
+            "title": "Recycling codes of packaging",
+            "description": "Recycling codes of packaging",
+            "segment": "packaging",
+            "model": true,
+            "quantity": "KG",
+            "owner_ref": "manufacturer",
+            "enum": [
+                "PET 1 (Polyethylene Terephthalate)",
+                "HDPE 2 (High-Density Polyethylene)",
+                "PVC 3 (Polyvinyl Chloride)",
+                "LDPE 4 (Low-Density Polyethylene)",
+                "PP 5 (Polypropylene)",
+                "PS 6 (Polystyrene)",
+                "Code 7 (Other)",
+                "Polycarbonate",
+                "PAP 20: Corrugated fiberboard",
+                "PAP 21: Non-corrugated fiberboard",
+                "PAP 22: Paper",
+                "FE 40: Steel",
+                "ALU 41: Aluminum",
+                "GL 70: Clear glass",
+                "GL 71: Green glass",
+                "GL 72: Brown glass",
+                "COM 81: Compostable materials"
+            ]
+        },
+        "width": {
+            "type": "string",
+            "title": "Width",
+            "description": "Width",
+            "segment": "packaging",
+            "model": true,
+            "unit": "MM",
             "owner_ref": "manufacturer"
         },
         "height": {
-            "type": "number",
+            "type": "string",
             "title": "Height",
-            "description": "The height of the asset in millimeters",
-            "unit": "mm",
-            "segment": "parameter",
+            "description": "Height",
+            "segment": "packaging",
             "model": true,
+            "unit": "MM",
             "owner_ref": "manufacturer"
         },
-        "width": {
-            "type": "number",
-            "title": "Width",
-            "description": "the width of the asset in millimeters",
-            "unit": "mm",
-            "segment": "parameter",
+        "depth": {
+            "type": "string",
+            "title": "Depth",
+            "description": "Depth",
+            "segment": "packaging",
             "model": true,
-            "owner_ref": "manufacturer"
-        },
-        "length": {
-            "type": "number",
-            "title": "Length",
-            "description": "the length of the asset in millimeters",
-            "unit": "mm",
-            "segment": "parameter",
-            "model": true,
-            "owner_ref": "manufacturer"
-        },
-        "weight": {
-            "type": "number",
-            "title": "Weight",
-            "description": "the weight of the asset in kilograms",
-            "unit": "kg",
-            "segment": "parameter",
-            "model": true,
+            "unit": "MM",
             "owner_ref": "manufacturer"
         },
         "ambient_operating_temperature_min": {
