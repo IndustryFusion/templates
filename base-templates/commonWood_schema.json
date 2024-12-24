@@ -144,7 +144,7 @@
             "segment": "instruction",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": [ "Excessive Alcohol", "May Cause Skin Irritation", "May Cause Eye Irritation", "Allergetic to Some Users", "Non-Ingestible", "Gas Under Pressure", "Explosive", "Oxidising", "Corrosive", "Flammable", "Health Harard/Hazardous to Ozone Layer", "Acute Toxicity", "Serious Health Hazard", "Hazardous to the Environment"]
+            "enum": [ "Sharp Edges", "Excessive Alcohol", "May Cause Skin Irritation", "May Cause Eye Irritation", "Allergetic to Some Users", "Non-Ingestible", "Gas Under Pressure", "Explosive", "Oxidising", "Corrosive", "Flammable", "Health Harard/Hazardous to Ozone Layer", "Acute Toxicity", "Serious Health Hazard", "Hazardous to the Environment"]
         },
         "pif_documentation": {
             "type": "object",
