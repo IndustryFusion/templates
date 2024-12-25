@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://industry-fusion.org/base/v0.1/bendingMachine",
-    "title": "Bending machine template",
+    "title": "IF-X Ready: Bending machine template",
     "description": "Properties for type bending machine",
     "type": "object",
     "required": ["product_name", "asset_serial_number"],
