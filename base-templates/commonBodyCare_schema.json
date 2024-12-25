@@ -1775,7 +1775,7 @@
             "enum": []
         },
         "recycling_codes": {
-            "type": "string",
+            "type": "array",
             "title": "Recycling codes of packaging",
             "description": "Recycling codes of packaging. Quantity: Kilogram of recyclable content in the product.",
             "segment": "packaging",
