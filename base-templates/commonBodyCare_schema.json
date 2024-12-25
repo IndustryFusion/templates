@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://industry-fusion.org/base/v0.1/commonBodyCare",
-    "title": "Common template for body care products",
+    "title": "Common template for body care/cosmetics products",
     "description": "Properties for common body care type",
     "required": ["product_name", "asset_serial_number"],
     "type": "object",
