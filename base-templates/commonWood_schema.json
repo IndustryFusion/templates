@@ -630,7 +630,7 @@
             "type": "array",
             "title": "Ergonomics: Features for comfort",
             "description": "Ergonomics: Features for comfort included in the product",
-            "segment": "model",
+            "segment": "instruction",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": [
@@ -655,6 +655,145 @@
                 "Pressure Relief Cushioning",
                 "Seat Slide Function",
                 "Dynamic Backrest Support"
+            ]
+        },
+        "construction_techniques": {
+            "type": "array",
+            "title": "Joinery Details",
+            "description": "Construction techniques used for joineries.",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Dovetail Joints",
+                "Mortise and Tenon",
+                "Finger Joints",
+                "Butt Joints",
+                "Lap Joints",
+                "Pocket Hole Joints",
+                "Dowels",
+                "Biscuit Joints",
+                "Bridle Joints",
+                "Miter Joints",
+                "Half-Lap Joints",
+                "Rabbet Joints",
+                "Dado Joints",
+                "Box Joints",
+                "Knock-Down Joints",
+                "Spline Joints",
+                "Scarf Joints",
+                "Tongue and Groove",
+                "Domino Joints",
+                "Loose Tenon Joints"
+            ]
+        },
+        "edges": {
+            "type": "array",
+            "title": "Edges of the Product",
+            "description": "Edge treatments of the product",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Rounded Edges",
+                "Beveled Edges",
+                "Chamfered Edges",
+                "Straight Edges",
+                "Sharp Edges",
+                "Eased Edges",
+                "Half-Round Edges",
+                "Quarter-Round Edges",
+                "Ogee Edges",
+                "Bullnose Edges",
+                "Mitred Edges",
+                "Scalloped Edges",
+                "Step Edges",
+                "Waterfall Edges",
+                "Curved Edges"
+            ]
+        },
+        "anti_tip_features": {
+            "type": "array",
+            "title": "Anti-Tip Features",
+            "description": "Anti-Tip features of the product",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Anti-Tip Straps",
+                "Wall Mount Anchors",
+                "Counterweights",
+                "Stabilizing Feet",
+                "Anti-Tip Brackets",
+                "Safety Chains",
+                "Floor Mount Brackets",
+                "Adjustable Levelers",
+                "Slip-Resistant Pads",
+                "Heavy Base Design"
+            ]
+        },
+        "intended_use": {
+            "type": "array",
+            "title": "Intended Use of the Product",
+            "description": "Intended Use of the Product",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Indoor Use",
+                "Outdoor Use",
+                "Dual Use (Indoor and Outdoor)",
+                "Patio Furniture",
+                "Office Furniture",
+                "Living Room Furniture",
+                "Bedroom Furniture",
+                "Dining Furniture",
+                "Commercial Use",
+                "Hospitality Use",
+                "Recreational Use",
+                "Garden Furniture",
+                "Event Furniture",
+                "Storage Furniture"
+            ]
+        },
+        "assembly": {
+            "type": "array",
+            "title": "Types of Assembly",
+            "description": "Types of assembly required for the Product",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Pre-Assembled",
+                "Requires Assembly",
+                "Partially Assembled",
+                "Flat-Pack Assembly",
+                "Tool-Free Assembly",
+                "Quick Assembly",
+                "Professional Assembly Recommended",
+                "DIY Assembly",
+                "Modular Assembly",
+                "Knock-Down Design"
+            ]
+        },
+        "pest_resistance": {
+            "type": "array",
+            "title": "Pest Resistances",
+            "description": "Pest Resistances of the product",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Termite-Resistant",
+                "Ant-Resistant",
+                "Wood-Borer Resistant",
+                "Mildew-Resistant",
+                "Fungus-Resistant",
+                "Rot-Resistant",
+                "Insect-Repellent Treated",
+                "Moisture-Resistant (Prevents Pest Growth)",
+                "Pressure-Treated Wood",
+                "Chemical Pest Treatment Applied"
             ]
         }
     }
