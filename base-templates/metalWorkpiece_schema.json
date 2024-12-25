@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://industry-fusion.org/base/v0.1/metalWorkpiece",
-    "title": "Metal Workpiece template",
+    "title": "IF-X Ready: Metal Workpiece template",
     "description": "Properties for type Metal Workpiece",
     "type": "object",
     "required": ["product_name", "asset_serial_number"],
