@@ -371,7 +371,7 @@
             "enum": []
         },
         "recycling_codes": {
-            "type": "string",
+            "type": "array",
             "title": "Recycling codes of packaging",
             "description": "Recycling codes of packaging",
             "segment": "packaging",
@@ -424,6 +424,26 @@
             "model": true,
             "unit": "MM",
             "owner_ref": "manufacturer"
+        },
+        "control_system_type": {
+            "type": "array",
+            "title": "Type of Control System",
+            "description": "Type of Control System",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Manual",
+                "Semi-Automatic",
+                "Fully Automated",
+                "Computerized (CNC)",
+                "Remote Controlled",
+                "Programmable Logic Control (PLC)",
+                "Touchscreen Interface",
+                "Voice-Controlled",
+                "Sensor-Based Control",
+                "Hybrid Control System"
+            ]
         }
     }
 }
