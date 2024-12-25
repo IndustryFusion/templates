@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://industry-fusion.org/base/v0.1/powerSource",
-    "title": "Power source template",
+    "title": "IF-X Ready: Power source template",
     "description": "Properties for type power source",
     "type": "object",
     "required": ["product_name", "asset_serial_number"],
