@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://industry-fusion.org/base/v0.1/airTracker",
-    "title": "Air tracker template",
+    "title": "IF-X Ready: Air tracker template",
     "description": "Properties for type air tracker",
     "type": "object",
     "required": ["product_name", "asset_serial_number"],
