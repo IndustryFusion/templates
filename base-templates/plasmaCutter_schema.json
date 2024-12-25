@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://industry-fusion.org/base/v0.1/plasmaCutter",
-    "title": "Plasma cutter template",
+    "title": "IF-X Ready: Plasma cutter template",
     "description": "Properties for type plasma cutter",
     "type": "object",
     "required": ["asset_category", "product_name"],
