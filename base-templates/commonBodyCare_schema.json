@@ -1737,10 +1737,18 @@
             "model": true,
             "owner_ref": "manufacturer",
             "enum": [
-                "Vegan",
-                "EU Bio",
-                "Eco Certified",
-                "Bioland"
+                "European Ecolabel - EE-ECOLAB",
+                "USDA National Organic Program - USDA NOP",
+                "COSMetic Organic and natural Standard - COSMOS",
+                "Fair For Life - FFL",
+                "Ecocert Sustainable Wellbeing Center Standard - WELLBEING",
+                "Climate Activator Certification Standard - Climate Activator",
+                "For Life - FL",
+                "Ecocert 26000 standard - Ecocert 26000",
+                "Forest Stewardship Council® - FSC®",
+                "Ecocert Ecopetcare standard - Ecopetcare",
+                "Union for Ethical Biotrade standard - UEBT",
+                "Ecoresponsible Program - CID"
             ]
         },
         "links": {
