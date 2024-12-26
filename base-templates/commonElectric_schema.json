@@ -522,6 +522,70 @@
             "segment": "parameter",
             "model": true,
             "owner_ref": "manufacturer"
+        },
+        "operational_hours": {
+            "type": "number",
+            "title": "Operational Hours",
+            "description": "Total operational usage hours of the equipment in its lifetime",
+            "unit": "hrs",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "chemical_composition": {
+            "type": "array",
+            "title": "Chemical Composition",
+            "description": "Chemical composition of the battery/electronic component",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Lithium",
+                "Cobalt",
+                "Nickel",
+                "Manganese",
+                "Graphite",
+                "Silicon",
+                "Lead",
+                "Sulfuric Acid",
+                "Zinc",
+                "Cadmium",
+                "Aluminum",
+                "Potassium Hydroxide",
+                "Phosphate",
+                "Iron",
+                "Rare Earth Elements",
+                "Carbon",
+                "Hydrogen",
+                "Oxygen",
+                "Sodium",
+                "Chloride"
+            ]
+        },
+        "degradation_rate": {
+            "type": "array",
+            "title": "Electronic Degradation Rate",
+            "description": "Degradation rate of the battery/electronic component",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Cycle Life Degradation",
+                "Capacity Retention Over Time",
+                "Voltage Drop Over Cycles",
+                "Self-Discharge Rate",
+                "Thermal Degradation Rate",
+                "Chemical Stability Over Time",
+                "Internal Resistance Increase",
+                "Charge Retention Loss Per Month",
+                "Efficiency Decrease Per Cycle",
+                "Expected Lifespan in Years",
+                "Temperature-Dependent Degradation",
+                "Stress-Induced Material Fatigue",
+                "Calendar Aging Effects",
+                "Overcharge-Induced Degradation",
+                "Depth of Discharge Impact on Degradation"
+            ]
         }
     }
 }
