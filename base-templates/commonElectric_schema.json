@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://industry-fusion.org/base/v0.1/commonElectric",
-    "title": "Common template for electric products",
-    "description": "Properties for common electric type",
+    "title": "Common template for electric/electronic products",
+    "description": "Properties for common electric/electronic type",
     "required": ["product_name", "asset_serial_number"],
     "type": "object",
     "properties": {
