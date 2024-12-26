@@ -130,10 +130,19 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "co2_emmision_per_unit": {
+        "co2_emmision_per_unit_production": {
             "type": "string",
             "title": "Co2 Emissions Per Unit",
-            "description": "Co2 Emissions Per Unit",
+            "description": "Co2 Emissions Per Unit, For eg, 1 kg of co2 emission during design/production/logistics of the product per unit",
+            "segment": "model",
+            "model": true,
+            "unit": "kg",
+            "owner_ref": "manufacturer"
+        },
+        "co2_emmision_per_unit_year": {
+            "type": "string",
+            "title": "Co2 Emissions Per Unit/Year",
+            "description": "Co2 Emissions Per Unit per year (Approx. and for machines), For eg, 1 kg of co2 emission during lifecycle of the product per unit",
             "segment": "model",
             "model": true,
             "unit": "kg",
