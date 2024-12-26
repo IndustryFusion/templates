@@ -133,7 +133,7 @@
         "co2_emmision_per_unit": {
             "type": "string",
             "title": "Co2 Emissions Per Unit",
-            "description": "Co2 Emissions Per Unit",
+            "description": "Co2 Emissions Per Unit, For eg, 1.2 kg CO₂ emission per 100 ml jar/unit/product.",
             "segment": "model",
             "model": true,
             "unit": "kg",
