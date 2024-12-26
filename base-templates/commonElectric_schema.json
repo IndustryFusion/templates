@@ -353,7 +353,9 @@
                 "China Organic Standard GB/T 19630-2019 - GB/T 19630-2019",
                 "Chilean organic regulation - Law 20.089",
                 "Peruvian organic regulation - DS 044-2006-AG",
-                "National Program for Organic Production - NPOP"
+                "National Program for Organic Production - NPOP",
+                "REACH Regulation (EC 1907/2006) Compliant",
+                "RoHS (Restriction of Hazardous Substances Directive) Compliant"
             ]
         },
         "links": {
@@ -560,6 +562,27 @@
                 "Oxygen",
                 "Sodium",
                 "Chloride"
+            ]
+        },
+        "charge_time": {
+            "type": "number",
+            "title": "Full Charge Time",
+            "description": "Time required to fully charge the device.",
+            "unit": "hrs",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
+        "overcharge_protection": {
+            "type": "string",
+            "title": "Overcharge Protection",
+            "description": "Set to Present if the device can be safely overcharged.",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Included",
+                "Not Supported"
             ]
         }
     }
