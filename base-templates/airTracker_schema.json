@@ -20,7 +20,7 @@
             "type": "string",
             "title": "IFX Readiness",
             "description": "IFX Readiness",
-            "default": true,
+            "default": "true",
             "readOnly": true,
             "segment": "identification",
             "model": true,
