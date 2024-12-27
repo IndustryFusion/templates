@@ -584,6 +584,18 @@
                 "Included",
                 "Not Supported"
             ]
+        },
+        "short_circuit_protection": {
+            "type": "string",
+            "title": "Short-Circuit Protection",
+            "description": "Protection against short circuit in the device/product.",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Included",
+                "Not Supported"
+            ]
         }
     }
 }
