@@ -470,6 +470,36 @@
                 "Rotary Friction Welding",
                 "Hybrid Welding"
             ]
+        },
+        "metal_types": {
+            "type": "array",
+            "title": "Metal Types",
+            "description": "Types of metals used in the manufacturing of the product.",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Carbon Steel",
+                "Stainless Steel",
+                "Aluminum",
+                "Copper",
+                "Brass",
+                "Bronze",
+                "Titanium",
+                "Inconel",
+                "Cast Iron",
+                "Tool Steel",
+                "Galvanized Steel",
+                "Nickel Alloys",
+                "Magnesium",
+                "Zinc",
+                "Chromoly Steel",
+                "Plastics (e.g., PVC, ABS)",
+                "Composites (e.g., Carbon Fiber, Fiberglass)",
+                "Ceramics",
+                "High-Strength Low-Alloy Steel (HSLA)",
+                "Silicon Bronze"
+            ]
         }
     }
 }
