@@ -27,9 +27,9 @@
         },
         "ifx_ready": {
             "type": "string",
-            "title": "IFRIC Readiness",
-            "description": "IFRIC Readiness",
-            "default": true,
+            "title": "IFX Readiness",
+            "description": "IFX Readiness",
+            "default": "true",
             "readOnly": true,
             "segment": "identification",
             "model": true,
