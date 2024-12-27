@@ -638,6 +638,75 @@
                 "Marine Grade Weld",
                 "Automotive Grade Weld"
             ]
+        },
+        "non_destructive_testing": {
+            "type": "array",
+            "title": "Non-Destructive Testing",
+            "description": "Non-Destructive testing done on the product.",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Ultrasonic Testing (UT)",
+                "Radiographic Testing (RT)",
+                "Magnetic Particle Testing (MT)",
+                "Dye Penetrant Testing (PT)",
+                "Visual Testing (VT)",
+                "Eddy Current Testing (ECT)",
+                "Acoustic Emission Testing (AET)",
+                "Thermographic Testing (Infrared)",
+                "Leak Testing (LT)",
+                "Phased Array Ultrasonic Testing (PAUT)",
+                "Time-of-Flight Diffraction (TOFD)",
+                "Microwave Testing",
+                "Laser Testing",
+                "Magnetic Flux Leakage Testing (MFL)",
+                "Shear Wave Testing",
+                "Backscatter Radiography",
+                "Digital Radiography",
+                "Gamma Radiography",
+                "Hardness Testing (Rebound or Static)",
+                "X-Ray Computed Tomography (CT)"
+            ]
+        },
+        "load_capacity": {
+            "type": "number",
+            "title": "Load Capacity",
+            "description": "Maximum load-bearing capacity (e.g., 500 kg, 10 tons)",
+            "segment": "model",
+            "model": true,
+            "unit": "Kg",
+            "owner_ref": "manufacturer"
+        },
+        "finish_type": {
+            "type": "array",
+            "title": "Finish Type",
+            "description": "Non-Destructive testing done on the product.",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Polished Finish",
+                "Brushed Finish",
+                "Matte Finish",
+                "Glossy Finish",
+                "Satin Finish",
+                "Textured Finish",
+                "Powder-Coated Finish",
+                "Anodized Finish",
+                "Galvanized Finish",
+                "Electroplated Finish",
+                "Painted Finish",
+                "Chrome Finish",
+                "Black Oxide Finish",
+                "Oil-Rubbed Finish",
+                "Clear Coated Finish",
+                "Heat-Treated Finish",
+                "Etched Finish",
+                "Bead-Blasted Finish",
+                "Antique Finish",
+                "Natural Finish"
+            ]
         }
     }
 }
