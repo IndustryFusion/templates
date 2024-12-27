@@ -410,6 +410,66 @@
             "model": true,
             "unit": "MM",
             "owner_ref": "manufacturer"
+        },
+        "type_of_weld": {
+            "type": "array",
+            "title": "Weld Type",
+            "description": "Type of welding process involved in the manufacturing of the product.",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "MIG Welding",
+                "TIG Welding",
+                "Stick Welding",
+                "Spot Welding",
+                "Plasma Arc Welding",
+                "Flux-Cored Arc Welding (FCAW)",
+                "Submerged Arc Welding (SAW)",
+                "Electron Beam Welding",
+                "Laser Welding",
+                "Gas Welding (Oxy-Acetylene)",
+                "Friction Welding",
+                "Resistance Welding",
+                "Seam Welding",
+                "Stud Welding",
+                "Explosive Welding",
+                "Projection Welding",
+                "Cold Welding",
+                "Ultrasonic Welding",
+                "Rotary Friction Welding",
+                "Hybrid Welding"
+            ]
+        },
+        "type_of_weld": {
+            "type": "array",
+            "title": "Weld Type",
+            "description": "Type of welding process involved in the manufacturing of the product.",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "MIG Welding",
+                "TIG Welding",
+                "Stick Welding",
+                "Spot Welding",
+                "Plasma Arc Welding",
+                "Flux-Cored Arc Welding (FCAW)",
+                "Submerged Arc Welding (SAW)",
+                "Electron Beam Welding",
+                "Laser Welding",
+                "Gas Welding (Oxy-Acetylene)",
+                "Friction Welding",
+                "Resistance Welding",
+                "Seam Welding",
+                "Stud Welding",
+                "Explosive Welding",
+                "Projection Welding",
+                "Cold Welding",
+                "Ultrasonic Welding",
+                "Rotary Friction Welding",
+                "Hybrid Welding"
+            ]
         }
     }
 }
