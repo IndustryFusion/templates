@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://industry-fusion.org/base/v0.1/commonWeldingAssemblies",
-    "title": "Common template for welding assemblies",
-    "description": "Properties for common welding assemblies type",
+    "$id": "https://industry-fusion.org/base/v0.1/commonWeldingProducts",
+    "title": "Common template for welding products",
+    "description": "Properties for common welding products type",
     "required": ["product_name", "asset_serial_number"],
     "type": "object",
     "properties": {
@@ -503,7 +503,7 @@
         },
         "grade_alloys": {
             "type": "array",
-            "title": "Grades/Alloys",
+            "title": "Metal Grades/Alloys",
             "description": "Types of metal grades/alloys used in the manufacturing of the product.",
             "segment": "model",
             "model": true,
@@ -598,6 +598,45 @@
                 "J-Groove Joint",
                 "U-Groove Joint",
                 "Flare-Bevel Weld Joint"
+            ]
+        },
+        "weld_strength": {
+            "type": "number",
+            "title": "Weld strength",
+            "description": "Tensile strength of the weld in the product. E.g 500 MPa",
+            "segment": "model",
+            "model": true,
+            "unit": "MPa",
+            "owner_ref": "manufacturer"
+        },
+        "weld_class": {
+            "type": "array",
+            "title": "Weld Class/Grade",
+            "description": "Weld Class/Grade used in the manufacturing of the product.",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Class 1 Weld (High Strength)",
+                "Class 2 Weld (Moderate Strength)",
+                "Class 3 Weld (Low Strength)",
+                "Grade A Weld (Highest Quality)",
+                "Grade B Weld (Standard Quality)",
+                "Grade C Weld (Basic Quality)",
+                "AWS D1.1 Structural Weld",
+                "AWS D1.3 Sheet Metal Weld",
+                "ISO 5817 Class B (Stringent)",
+                "ISO 5817 Class C (Intermediate)",
+                "ISO 5817 Class D (Permissible)",
+                "ASME Section IX Qualified Weld",
+                "API 1104 Pipeline Weld",
+                "EN 1090-2 Execution Class Weld",
+                "Nuclear Grade Weld",
+                "Military Specification Weld",
+                "Aerospace Grade Weld",
+                "Commercial Grade Weld",
+                "Marine Grade Weld",
+                "Automotive Grade Weld"
             ]
         }
     }
