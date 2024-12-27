@@ -20,7 +20,7 @@
             "type": "string",
             "title": "IFRIC Readiness",
             "description": "IFRIC Readiness",
-            "default": "true",
+            "default": true,
             "readOnly": true,
             "segment": "identification",
             "model": true,
