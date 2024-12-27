@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://industry-fusion.org/base/v0.1/plasmaCutter",
-    "title": "IF-X Ready: Plasma cutter template",
+    "title": "Plasma cutter template",
     "description": "Properties for type plasma cutter",
     "type": "object",
     "required": ["asset_category", "product_name"],
@@ -15,6 +15,16 @@
             "segment": "identification",
             "model": true,
             "owner_ref": "manufacturer"
+        },
+        "ifx_ready": {
+            "type": "string",
+            "title": "IFX Readiness",
+            "description": "IFX Readiness",
+            "default": "true",
+            "readOnly": true,
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
         },
         "asset_status": {
             "type": "string",
