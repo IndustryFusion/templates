@@ -681,7 +681,7 @@
         "finish_type": {
             "type": "array",
             "title": "Finish Type",
-            "description": "Non-Destructive testing done on the product.",
+            "description": "Surface finish types of the product.",
             "segment": "model",
             "model": true,
             "owner_ref": "manufacturer",
