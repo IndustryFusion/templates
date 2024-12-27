@@ -500,6 +500,75 @@
                 "High-Strength Low-Alloy Steel (HSLA)",
                 "Silicon Bronze"
             ]
+        },
+        "grade_alloys": {
+            "type": "array",
+            "title": "Grades/Alloys",
+            "description": "Types of metal grades/alloys used in the manufacturing of the product.",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "ASTM A36 (Carbon Steel)",
+                "304 Stainless Steel",
+                "316 Stainless Steel",
+                "6061 Aluminum Alloy",
+                "7075 Aluminum Alloy",
+                "C101 Copper (Electrolytic Tough Pitch)",
+                "C110 Copper (Oxygen-Free)",
+                "Brass C36000 (Free-Cutting Brass)",
+                "Bronze C93200 (Bearing Bronze)",
+                "Ti-6Al-4V (Titanium Grade 5)",
+                "Inconel 718 (Nickel-Chromium Alloy)",
+                "Ductile Cast Iron (ASTM A536)",
+                "4140 Alloy Steel (Chromoly)",
+                "1045 Carbon Steel",
+                "Galvanized Steel G90",
+                "17-4 PH Stainless Steel",
+                "Nickel 200",
+                "AZ31 Magnesium Alloy",
+                "Zamak 3 (Zinc Alloy)",
+                "HSLA Grade 50 (High-Strength Low-Alloy Steel)"
+            ]
+        },
+        "material_thickness": {
+            "type": "number",
+            "title": "Material Thickness",
+            "description": "Material/Metal thickness of the product",
+            "segment": "model",
+            "model": true,
+            "unit": "MM",
+            "owner_ref": "manufacturer"
+        },
+        "surface_treatment": {
+            "type": "array",
+            "title": "Surface Treatment",
+            "description": "Surface treatment used in the manufacturing of the product.",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Galvanization",
+                "Powder Coating",
+                "Anodizing",
+                "Electroplating",
+                "Polishing",
+                "Painting",
+                "Passivation",
+                "Sandblasting",
+                "Shot Peening",
+                "Chemical Etching",
+                "Heat Treatment",
+                "Oil Coating",
+                "Pickling",
+                "PVD Coating (Physical Vapor Deposition)",
+                "Black Oxide Coating",
+                "Teflon Coating",
+                "Chromate Conversion Coating",
+                "Hot-Dip Galvanizing",
+                "Zinc Plating",
+                "Epoxy Coating"
+            ]
         }
     }
 }
