@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://industry-fusion.org/base/v0.1/airFilter",
-    "title": "IF-X Ready: Air filter template",
+    "title": "Air filter template",
     "description": "Properties for type air filter",
     "type": "object",
     "required": ["product_name", "asset_serial_number"],
@@ -11,6 +11,16 @@
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
             "default": "0173-1#01-AKL755#017",
+            "readOnly": true,
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
+        },
+        "ifx_ready": {
+            "type": "string",
+            "title": "IFRIC Readiness",
+            "description": "IFRIC Readiness",
+            "default": "true",
             "readOnly": true,
             "segment": "identification",
             "model": true,
