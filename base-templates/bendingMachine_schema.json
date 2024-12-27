@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://industry-fusion.org/base/v0.1/bendingMachine",
-    "title": "IF-X Ready: Bending machine template",
+    "title": "Bending machine template",
     "description": "Properties for type bending machine",
     "type": "object",
     "required": ["product_name", "asset_serial_number"],
@@ -23,6 +23,16 @@
             "readOnly": true,
             "segment": "identification",
             "model": false,
+            "owner_ref": "application"
+        },
+        "ifx_ready": {
+            "type": "string",
+            "title": "IFRIC Readiness",
+            "description": "IFRIC Readiness",
+            "default": true,
+            "readOnly": true,
+            "segment": "identification",
+            "model": true,
             "owner_ref": "application"
         },
         "asset_category": {
