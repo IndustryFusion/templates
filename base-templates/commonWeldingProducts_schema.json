@@ -544,7 +544,7 @@
             "type": "array",
             "title": "Surface Treatment",
             "description": "Surface treatment used in the manufacturing of the product.",
-            "segment": "model",
+            "segment": "instruction",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": [
@@ -568,6 +568,36 @@
                 "Hot-Dip Galvanizing",
                 "Zinc Plating",
                 "Epoxy Coating"
+            ]
+        },
+        "welding_joint_types": {
+            "type": "array",
+            "title": "Welding Joint Types",
+            "description": "Welding joint types used in the manufacturing of the product.",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Butt Joint",
+                "Lap Joint",
+                "T-Joint",
+                "Corner Joint",
+                "Edge Joint",
+                "Scarf Joint",
+                "Flanged Joint",
+                "Cruciform Joint",
+                "Double-V Joint",
+                "Double-Bevel Joint",
+                "Fillet Weld Joint",
+                "Groove Weld Joint",
+                "Plug Weld Joint",
+                "Slot Weld Joint",
+                "Spot Weld Joint",
+                "Seam Weld Joint",
+                "Square-Groove Joint",
+                "J-Groove Joint",
+                "U-Groove Joint",
+                "Flare-Bevel Weld Joint"
             ]
         }
     }
