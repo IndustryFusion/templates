@@ -343,6 +343,7 @@
             "model": true,
             "owner_ref": "manufacturer",
             "enum": [
+                "Vegan V-Label",
                 "European Ecolabel - EE-ECOLAB",
                 "USDA National Organic Program - USDA NOP",
                 "COSMetic Organic and natural Standard - COSMOS",
