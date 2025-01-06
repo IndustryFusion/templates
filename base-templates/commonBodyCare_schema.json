@@ -229,6 +229,16 @@
             "model": false,
             "owner_ref": "manufacturer"
         },
+         "other_ingredients": {
+            "type": "array",
+            "title": "Other Ingredients",
+            "description": "Other Ingredients to mention. Quantity: Percentage of the content in the product.",
+            "segment": "content",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "quantity": "%",
+            "enum": []
+        },
         "user_manual": {
             "type": "object",
             "title": "User Manuals",
