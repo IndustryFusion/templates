@@ -6,6 +6,16 @@
     "required": ["product_name", "asset_serial_number"],
     "type": "object",
     "properties": {
+        "brand_icon": {
+          "contentEncoding": "base64",
+          "contentMediaType": "image/png",
+          "title": "Brand Icon",
+          "type": "object",
+          "description": "Brand Icon",
+          "segment": "model",
+          "model": true,
+          "owner_ref": "manufacturer"
+        },
          "eclass_template_id": {
             "type": "string",
             "title": "IFRIC Template ID",
