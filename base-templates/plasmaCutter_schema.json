@@ -6,7 +6,7 @@
     "type": "object",
     "required": ["asset_category", "product_name"],
     "properties": {
-        "brand_icon": {
+        "brand_image": {
           "contentEncoding": "base64",
           "contentMediaType": "image/png",
           "title": "Brand Icon",
