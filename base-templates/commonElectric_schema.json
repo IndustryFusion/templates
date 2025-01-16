@@ -98,20 +98,6 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "asset_communication_protocol": {
-            "type": "array",
-            "title": "Communication Protocol",
-            "description": "The communication protocol of the asset",
-            "enum": [
-                "opc-ua",
-                "mqtt",
-                "modbus",
-                "http"
-            ],
-            "segment": "parameter",
-            "model": true,
-            "owner_ref": "manufacturer"
-        },
         "product_name": {
             "type": "string",
             "title": "Product Name",
