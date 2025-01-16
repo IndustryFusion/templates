@@ -26,16 +26,6 @@
             "model": true,
             "owner_ref": "application"
         },
-        "ifx_ready": {
-            "type": "string",
-            "title": "IFX Readiness",
-            "description": "IFX Readiness",
-            "default": "true",
-            "readOnly": true,
-            "segment": "identification",
-            "model": true,
-            "owner_ref": "application"
-        },
         "asset_status": {
             "type": "string",
             "title": "Asset Status",
