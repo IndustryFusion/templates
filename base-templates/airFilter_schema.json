@@ -20,7 +20,7 @@
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
-            "default": "0173-1#01-AKL755#017",
+            "default": "",
             "readOnly": true,
             "segment": "identification",
             "model": true,
