@@ -20,7 +20,7 @@
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
-            "default": "",
+            "default": "0173-1#01-AKL755#017",
             "readOnly": true,
             "segment": "identification",
             "model": true,
@@ -84,7 +84,7 @@
             "type": "string",
             "title": "EU Regulation Reference",
             "description": "Specific regulations or directives adhered to",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -98,11 +98,25 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
+        "asset_communication_protocol": {
+            "type": "array",
+            "title": "Communication Protocol",
+            "description": "The communication protocol of the asset",
+            "enum": [
+                "opc-ua",
+                "mqtt",
+                "modbus",
+                "http"
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
         "product_name": {
             "type": "string",
             "title": "Product Name",
             "description": "Model name/Name of the asset from the manufacturer",
-            "segment": "model",
+            "segment": "identification",
             "model": true,
             "owner_ref": "manufacturer",
             "translation": true
@@ -159,6 +173,15 @@
             "unit": "kg",
             "owner_ref": "manufacturer"
         },
+        "co2_emmision_per_unit_year": {
+            "type": "string",
+            "title": "Co2 Emissions Per Unit Per Year",
+            "description": "Co2 Emissions Per Unit per year (Approx. and for machines), For eg, 1 kg of co2 emission during lifecycle of the product per unit",
+            "segment": "model",
+            "model": true,
+            "unit": "kg",
+            "owner_ref": "manufacturer"
+        },
         "hazard_references": {
             "type": "array",
             "title": "Hazard References",
@@ -174,7 +197,7 @@
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
             "description": "The legally required documentation for the machine (PID)",
-            "segment": "documentation",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -218,7 +241,7 @@
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
             "description": "Complaince documents of the asset",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -266,7 +289,7 @@
             "description": "The ce-marking of the asset",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -308,7 +331,7 @@
             "type": "date",
             "title": "Production Date",
             "description": "Production Date",
-            "segment": "model",
+            "segment": "identification",
             "model": false,
             "owner_ref": "manufacturer"
         },
@@ -326,7 +349,7 @@
             "description": "Certifications for the product",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
