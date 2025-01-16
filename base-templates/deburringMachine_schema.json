@@ -20,7 +20,7 @@
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
-            "default": "",
+            "default": "0173-1#01-AKL755#017",
             "readOnly": true,
             "segment": "identification",
             "model": true,
@@ -80,25 +80,11 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "asset_communication_protocol": {
-            "type": "array",
-            "title": "Communication Protocol",
-            "description": "The communication protocol of the asset",
-            "enum": [
-                "opc-ua",
-                "mqtt",
-                "modbus",
-                "http"
-            ],
-            "segment": "model",
-            "model": true,
-            "owner_ref": "manufacturer"
-        },
         "eu_regulation_reference": {
             "type": "string",
             "title": "EU Regulation Reference",
             "description": "Specific regulations or directives adhered to",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -112,11 +98,25 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
+        "asset_communication_protocol": {
+            "type": "array",
+            "title": "Communication Protocol",
+            "description": "The communication protocol of the asset",
+            "enum": [
+                "opc-ua",
+                "mqtt",
+                "modbus",
+                "http"
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
         "product_name": {
             "type": "string",
             "title": "Product Name",
             "description": "Model name/Name of the asset from the manufacturer",
-            "segment": "model",
+            "segment": "identification",
             "model": true,
             "owner_ref": "manufacturer",
             "translation": true
@@ -197,7 +197,7 @@
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
             "description": "The legally required documentation for the machine (PID)",
-            "segment": "documentation",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -241,7 +241,7 @@
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
             "description": "Complaince documents of the asset",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -289,7 +289,7 @@
             "description": "The ce-marking of the asset",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -331,7 +331,7 @@
             "type": "date",
             "title": "Production Date",
             "description": "Production Date",
-            "segment": "model",
+            "segment": "identification",
             "model": false,
             "owner_ref": "manufacturer"
         },
@@ -349,7 +349,7 @@
             "description": "Certifications for the product",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -459,7 +459,7 @@
             "type": "array",
             "title": "Type of Control System",
             "description": "Type of Control System",
-            "segment": "model",
+            "segment": "parameter",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": [
@@ -524,7 +524,7 @@
             "type": "array",
             "title": "Software Compatibility",
             "description": "Software Compatibility of the machine.",
-            "segment": "model",
+            "segment": "parameter",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": [
@@ -551,41 +551,11 @@
                 "Firmware Upgradability"
             ]
         },
-        "feed_mechanism": {
-            "type": "array",
-            "title": "Feeding Mechanisms",
-            "description": "Feeding mechanism type of the machine.",
-            "segment": "instruction",
-            "model": true,
-            "owner_ref": "manufacturer",
-            "enum": [
-                "Manual Feed",
-                "Gravity Feed",
-                "Automatic Feed",
-                "Power Feed",
-                "Hydraulic Feed",
-                "Pneumatic Feed",
-                "Servo-Driven Feed",
-                "Belt Feed",
-                "Chain Feed",
-                "Roller Feed",
-                "Vibration Feed",
-                "Screw Feed",
-                "Vacuum Feed",
-                "Stepper Motor Feed",
-                "Push Feed",
-                "Pull Feed",
-                "Linear Actuator Feed",
-                "Rotary Feed",
-                "Batch Feed",
-                "Continuous Feed"
-            ]
-        },
         "power_source": {
             "type": "array",
             "title": "Power Sources",
             "description": "Possible power sources of the machine.",
-            "segment": "model",
+            "segment": "parameter",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": [
@@ -639,6 +609,36 @@
                 "Safety Cut-Off Switch",
                 "Double Insulation",
                 "Compliance with OSHA Standards"
+            ]
+        },
+        "feed_mechanism": {
+            "type": "array",
+            "title": "Feeding Mechanisms",
+            "description": "Feeding mechanism type of the machine.",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Manual Feed",
+                "Gravity Feed",
+                "Automatic Feed",
+                "Power Feed",
+                "Hydraulic Feed",
+                "Pneumatic Feed",
+                "Servo-Driven Feed",
+                "Belt Feed",
+                "Chain Feed",
+                "Roller Feed",
+                "Vibration Feed",
+                "Screw Feed",
+                "Vacuum Feed",
+                "Stepper Motor Feed",
+                "Push Feed",
+                "Pull Feed",
+                "Linear Actuator Feed",
+                "Rotary Feed",
+                "Batch Feed",
+                "Continuous Feed"
             ]
         },
         "ambient_operating_temperature_min": {
