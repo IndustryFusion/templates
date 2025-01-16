@@ -16,11 +16,21 @@
           "model": true,
           "owner_ref": "manufacturer"
         },
-         "eclass_template_id": {
+        "eclass_template_id": {
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
             "default": "",
+            "readOnly": true,
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "application"
+        },
+        "ifx_ready": {
+            "type": "string",
+            "title": "IFX Readiness",
+            "description": "IFX Readiness",
+            "default": "true",
             "readOnly": true,
             "segment": "identification",
             "model": true,
@@ -74,7 +84,7 @@
             "type": "string",
             "title": "EU Regulation Reference",
             "description": "Specific regulations or directives adhered to",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -88,11 +98,25 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
+        "asset_communication_protocol": {
+            "type": "array",
+            "title": "Communication Protocol",
+            "description": "The communication protocol of the asset",
+            "enum": [
+                "opc-ua",
+                "mqtt",
+                "modbus",
+                "http"
+            ],
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer"
+        },
         "product_name": {
             "type": "string",
             "title": "Product Name",
             "description": "Model name/Name of the asset from the manufacturer",
-            "segment": "model",
+            "segment": "identification",
             "model": true,
             "owner_ref": "manufacturer",
             "translation": true
@@ -156,7 +180,7 @@
             "segment": "instruction",
             "model": true,
             "owner_ref": "manufacturer",
-            "enum": [ "Sharp Edges", "Excessive Alcohol", "May Cause Skin Irritation", "May Cause Eye Irritation", "Allergetic to Some Users", "Non-Ingestible", "Gas Under Pressure", "Explosive", "Oxidising", "Corrosive", "Flammable", "Health Harard/Hazardous to Ozone Layer", "Acute Toxicity", "Serious Health Hazard", "Hazardous to the Environment"]
+            "enum": [ "Excessive Alcohol", "May Cause Skin Irritation", "May Cause Eye Irritation", "Allergetic to Some Users", "Non-Ingestible", "Gas Under Pressure", "Explosive", "Oxidising", "Corrosive", "Flammable", "Health Harard/Hazardous to Ozone Layer", "Acute Toxicity", "Serious Health Hazard", "Hazardous to the Environment"]
         },
         "pif_documentation": {
             "type": "object",
@@ -164,7 +188,7 @@
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
             "description": "The legally required documentation for the machine (PID)",
-            "segment": "documentation",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -208,7 +232,7 @@
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
             "description": "Complaince documents of the asset",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -256,7 +280,7 @@
             "description": "The ce-marking of the asset",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -298,7 +322,7 @@
             "type": "date",
             "title": "Production Date",
             "description": "Production Date",
-            "segment": "model",
+            "segment": "identification",
             "model": false,
             "owner_ref": "manufacturer"
         },
@@ -316,7 +340,7 @@
             "description": "Certifications for the product",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -452,36 +476,6 @@
                 "Hybrid Welding"
             ]
         },
-        "type_of_weld": {
-            "type": "array",
-            "title": "Weld Type",
-            "description": "Type of welding process involved in the manufacturing of the product.",
-            "segment": "model",
-            "model": true,
-            "owner_ref": "manufacturer",
-            "enum": [
-                "MIG Welding",
-                "TIG Welding",
-                "Stick Welding",
-                "Spot Welding",
-                "Plasma Arc Welding",
-                "Flux-Cored Arc Welding (FCAW)",
-                "Submerged Arc Welding (SAW)",
-                "Electron Beam Welding",
-                "Laser Welding",
-                "Gas Welding (Oxy-Acetylene)",
-                "Friction Welding",
-                "Resistance Welding",
-                "Seam Welding",
-                "Stud Welding",
-                "Explosive Welding",
-                "Projection Welding",
-                "Cold Welding",
-                "Ultrasonic Welding",
-                "Rotary Friction Welding",
-                "Hybrid Welding"
-            ]
-        },
         "metal_types": {
             "type": "array",
             "title": "Metal Types",
@@ -555,7 +549,7 @@
             "type": "array",
             "title": "Surface Treatment",
             "description": "Surface treatment used in the manufacturing of the product.",
-            "segment": "instruction",
+            "segment": "model",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": [
@@ -615,7 +609,7 @@
             "type": "number",
             "title": "Weld strength",
             "description": "Tensile strength of the weld in the product. E.g 500 MPa",
-            "segment": "model",
+            "segment": "parameter",
             "model": true,
             "unit": "MPa",
             "owner_ref": "manufacturer"
@@ -654,7 +648,7 @@
             "type": "array",
             "title": "Non-Destructive Testing",
             "description": "Non-Destructive testing done on the product.",
-            "segment": "model",
+            "segment": "instruction",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": [
@@ -684,7 +678,7 @@
             "type": "number",
             "title": "Load Capacity",
             "description": "Maximum load-bearing capacity (e.g., 500 kg, 10 tons)",
-            "segment": "model",
+            "segment": "instruction",
             "model": true,
             "unit": "Kg",
             "owner_ref": "manufacturer"
