@@ -20,7 +20,7 @@
             "type": "string",
             "title": "IFRIC Template ID",
             "description": "ID mapping for ECLASS",
-            "default": "",
+            "default": "0173-1#01-AKL755#017",
             "readOnly": true,
             "segment": "identification",
             "model": true,
@@ -84,7 +84,7 @@
             "type": "string",
             "title": "EU Regulation Reference",
             "description": "Specific regulations or directives adhered to",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -98,15 +98,6 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "product_name": {
-            "type": "string",
-            "title": "Product Name",
-            "description": "Model name/Name of the asset from the manufacturer",
-            "segment": "model",
-            "model": true,
-            "owner_ref": "manufacturer",
-            "translation": true
-        },
         "asset_communication_protocol": {
             "type": "array",
             "title": "Communication Protocol",
@@ -117,9 +108,18 @@
                 "modbus",
                 "http"
             ],
-            "segment": "model",
+            "segment": "parameter",
             "model": true,
             "owner_ref": "manufacturer"
+        },
+        "product_name": {
+            "type": "string",
+            "title": "Product Name",
+            "description": "Model name/Name of the asset from the manufacturer",
+            "segment": "identification",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "translation": true
         },
         "asset_serial_number": {
             "type": "string",
@@ -197,7 +197,7 @@
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
             "description": "The legally required documentation for the machine (PID)",
-            "segment": "documentation",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -241,7 +241,7 @@
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
             "description": "Complaince documents of the asset",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -289,7 +289,7 @@
             "description": "The ce-marking of the asset",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer"
         },
@@ -331,7 +331,7 @@
             "type": "date",
             "title": "Production Date",
             "description": "Production Date",
-            "segment": "model",
+            "segment": "identification",
             "model": false,
             "owner_ref": "manufacturer"
         },
@@ -349,7 +349,7 @@
             "description": "Certifications for the product",
             "contentEncoding": "base64",
             "contentMediaType": "application/pdf",
-            "segment": "resource",
+            "segment": "Compliance&Certification",
             "model": true,
             "owner_ref": "manufacturer",
             "enum": []
@@ -455,19 +455,161 @@
             "unit": "MM",
             "owner_ref": "manufacturer"
         },
-        "asset_communication_protocol": {
+        "control_system_type": {
             "type": "array",
-            "title": "Communication Protocol",
-            "description": "The communication protocol of the asset",
-            "enum": [
-                "opc-ua",
-                "mqtt",
-                "modbus",
-                "http"
-            ],
+            "title": "Type of Control System",
+            "description": "Type of Control System",
             "segment": "parameter",
             "model": true,
-            "owner_ref": "manufacturer"
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Manual",
+                "Semi-Automatic",
+                "Fully Automated",
+                "Computerized (CNC)",
+                "Remote Controlled",
+                "Programmable Logic Control (PLC)",
+                "Touchscreen Interface",
+                "Voice-Controlled",
+                "Sensor-Based Control",
+                "Hybrid Control System"
+            ]
+        },
+        "noise_level_labels": {
+            "type": "array",
+            "title": "Noise Level Labels",
+            "description": "Noise level of the machine/motor",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Low Noise (<50 dB)",
+                "Moderate Noise (50-70 dB)",
+                "High Noise (70-90 dB)",
+                "Industrial Noise (>90 dB)",
+                "Silent Operation",
+                "Noise-Reduced Design",
+                "Acoustic Insulation Included",
+                "Variable Noise Levels Based on Operation",
+                "Compliance with OSHA Noise Standards",
+                "Eco-Quiet Technology"
+            ]
+        },
+        "energy_efficiency_labels": {
+            "type": "array",
+            "title": "Energy Efficiency Labels",
+            "description": "Energy Efficiency Labels of the product",
+            "segment": "model",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Energy Star Certified",
+                "High Efficiency (HE)",
+                "Low Power Consumption",
+                "Eco-Friendly Mode",
+                "Standby Power Reduction",
+                "Variable Frequency Drive (VFD)",
+                "Solar-Powered Capability",
+                "Battery-Efficient Design",
+                "Energy Recovery System",
+                "Compliance with ISO 50001 Standards",
+                "Automated Power Saving",
+                "LED Indicators for Low Power Usage",
+                "Optimized Energy Usage for Load Variations",
+                "Thermal Efficiency Improvement",
+                "Low Heat Dissipation"
+            ]
+        },
+        "software_compatibility": {
+            "type": "array",
+            "title": "Software Compatibility",
+            "description": "Software Compatibility of the machine.",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "G-Code Compatible",
+                "G-Code Compatible",
+                "CAD Software Support",
+                "CAM Software Integration",
+                "DXF File Compatibility",
+                "STL File Compatibility",
+                "3D Modeling Software Integration",
+                "Proprietary Software Support",
+                "Open-Source Software Support",
+                "Cloud-Based Software Integration",
+                "Remote Monitoring Software",
+                "API Support for Custom Software",
+                "Windows OS Compatibility",
+                "Mac OS Compatibility",
+                "Linux OS Compatibility",
+                "Mobile App Integration",
+                "IoT Platform Integration",
+                "Real-Time Data Logging",
+                "AI-Assisted Software Compatibility",
+                "Plug-and-Play Software Setup",
+                "Firmware Upgradability"
+            ]
+        },
+        "power_source": {
+            "type": "array",
+            "title": "Power Sources",
+            "description": "Possible power sources of the machine.",
+            "segment": "parameter",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Electric",
+                "Gasoline",
+                "Diesel",
+                "Battery-Powered",
+                "Hydraulic",
+                "Pneumatic",
+                "Solar-Powered",
+                "Wind-Powered",
+                "Manual Power",
+                "Steam-Powered",
+                "Hybrid (Electric and Gasoline)",
+                "AC Power",
+                "DC Power",
+                "Generator-Powered",
+                "Fuel Cell",
+                "Compressed Air",
+                "Renewable Energy-Powered",
+                "Microturbine",
+                "Magnetic Drive Power",
+                "Thermal Energy"
+            ]
+        },
+        "safety_features": {
+            "type": "array",
+            "title": "Safety Features",
+            "description": "Safety Features included/can be included for the machine.",
+            "segment": "instruction",
+            "model": true,
+            "owner_ref": "manufacturer",
+            "enum": [
+                "Emergency Stop Button",
+                "Overload Protection",
+                "Auto Shut-Off",
+                "Protective Shields",
+                "Lockout/Tagout (LOTO) Capability",
+                "Anti-Restart Mechanism",
+                "Thermal Overload Protection",
+                "Interlock System",
+                "Pressure Relief Valve",
+                "Safety Sensors",
+                "Fire-Resistant Materials",
+                "Non-Slip Base",
+                "Safety Alarms",
+                "Child Lock",
+                "Blade Guard",
+                "Shockproof Insulation",
+                "Fault Detection System",
+                "Safety Cut-Off Switch",
+                "Double Insulation",
+                "Compliance with OSHA Standards"
+            ]
         },
         "ambient_operating_temperature_min": {
             "type": "number",
