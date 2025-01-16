@@ -133,15 +133,6 @@
             "model": true,
             "owner_ref": "manufacturer"
         },
-        "description": {
-            "type": "string",
-            "title": "Description",
-            "description": "Description of the asset",
-            "segment": "model",
-            "model": true,
-            "owner_ref": "manufacturer",
-            "translation": true
-        },
         "place_of_manufacture": {
             "type": "string",
             "title": "Place of Manufacture",
