@@ -95,7 +95,7 @@
         "readOnly": true,
         "default": [
             "alerts",
-            "live",
+            "live"
         ],
         "app": "creator"
       },
