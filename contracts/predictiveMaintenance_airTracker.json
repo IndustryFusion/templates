@@ -1,0 +1,158 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://industry-fusion.org/contracts/v0.1/predictiveMaintenanceAirTracker",
+    "title": "Predictive maintenance for air tracker",
+    "description": "Properties for predictive maintenance contract for air tracker",
+    "type": "object",
+    "properties": {
+      "contract_binding_ifric_id": {
+        "type": "string",
+        "title": "Unique ID of the contract binding",
+        "description": "Unique ID of the contract binding (accepted by both parties)",
+        "readOnly": true,
+        "app": "client"
+      },
+      "contract_ifric_id": {
+        "type": "string",
+        "title": "Unique ID of the contract",
+        "description": "Unique ID of the contract",
+        "readOnly": true,
+        "app": "creator"
+      },
+      "asset_ifric_id": {
+        "type": "string",
+        "title": "Unique ID of the asset",
+        "description": "Unique ID of the asset",
+        "readOnly": true,
+        "app": "client"
+      },
+      "asset_type": {
+        "type": "string",
+        "title": "Applicable Asset Type",
+        "description": "Applicable Asset Type",
+        "default": "https://industry-fusion.org/base/v0.1/airTracker",
+        "readOnly": true,
+        "app": "creator"
+      },
+      "contract_name": {
+        "type": "string",
+        "title": "Name of the contract",
+        "description": "Name of the contract given by creator",
+        "app": "creator"
+      },
+      "provider_company_name": {
+        "type": "string",
+        "title": "Name of the data provider",
+        "description": "Name of the data provider",
+        "readOnly": true,
+        "app": "client"
+      },
+      "consumer_company_name": {
+        "type": "string",
+        "title": "Name of the data consumer",
+        "description": "Name of the data consumer",
+        "readOnly": true,
+        "app": "creator"
+      },
+      "data_consumer_company_ifric_id" : {
+        "type": "string",
+        "title": "IFRIC ID of the consumer",
+        "description": "Consumer company IFRIC ID",
+        "readOnly": true,
+        "app": "creator"
+      },
+      "data_provider_company_ifric_id" : {
+        "type": "string",
+        "title": "IFRIC ID of the company",
+        "description": "Provider company IFRIC ID",
+        "readOnly": true,
+        "app": "client"
+      },
+      "contract_type": {
+        "type": "string",
+        "title": "type of the contract",
+        "description": "Company IFRIC ID",
+        "readOnly": true,
+        "default": "https://industry-fusion.org/contracts/v0.1/predictiveMaintenanceAirTracker",
+        "app": "creator"
+      },
+      "contract_clauses": {
+        "type": "array",
+        "title": "Clauses of the contract",
+        "description": "Clauses of the contract",
+        "readOnly": true,
+        "enums": [
+            "All data collected from the equipment during predictive maintenance activities, including sensor data, operational data, and performance metrics, shall remain the property of the data owner [provider]. The data processor [consumer] is granted limited access to the data solely for the purpose of performing predictive maintenance services as described in this agreement.",
+            "The data processor [consumer] is authorized to process the data exclusively for the purposes of analyzing, predicting, and reporting potential equipment failures or performance issues. The processor shall not use, share, or process the data for any other purpose without the explicit consent of the data owner [provider]",
+            "Maintenance reports for this machine can be visulaized in the data consumer's application in your IF-X suite. Predictive Maintenance service would atleast need one year of data sharing to be effective. The service provider [provider] is solely responsible for issues or quality related to the service deliverables of the shared data."
+        ],
+        "app": "creator"
+      },
+      "data_type" : {
+        "type": "array",
+        "title": "Clauses of the contract",
+        "description": "Clauses of the contract",
+        "readOnly": true,
+        "default": [
+            "alerts",
+            "live",
+        ],
+        "app": "creator"
+      },
+      "interval": {
+        "type": "number",
+        "title": "Interval for datasharing",
+        "description": "Interval for datasharing",
+        "default": 30,
+        "unit": "Mins",
+        "app": "creator",
+        "minimum": 10,
+        "maximum": 60
+      },
+      "contract_valid_till": {
+        "type": "date",
+        "title": "Validity of the contract",
+        "description": "Validity of the contract",
+        "app": "creator",
+        "default_validity": "2 years"
+      },
+      "contract_binding_valid_till": {
+        "type": "date",
+        "title": "Validity of the contract binding",
+        "description": "Validity of the contract binding",
+        "app": "client",
+        "default_validity": "2 years"
+      },
+      "asset_properties" : {
+        "type": "array",
+        "title": "Properties of the asset to fetch",
+        "description": "Properties of the asset to fetch",
+        "readOnly": true,
+        "default": [
+            "https://industry-fusion.org/base/v0.1/dustiness"
+        ],
+        "app": "creator"
+      },
+      "asset_certificate_data" : {
+        "type": "string",
+        "title": "Certificate data of the asset",
+        "description": "Certificate data of the asset",
+        "readOnly": true,
+        "app": "client"
+      },
+      "provider_company_certificate_data" : {
+        "type": "string",
+        "title": "Certificate data of the asset",
+        "description": "Certificate data of the asset",
+        "readOnly": true,
+        "app": "client"
+      },
+      "consumer_company_certificate_data" : {
+        "type": "string",
+        "title": "Certificate data of the data consumer",
+        "description": "Certificate data of the data consumer",
+        "readOnly": true,
+        "app": "creator"
+      }
+    }
+}
